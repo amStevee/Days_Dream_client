@@ -42,7 +42,7 @@ const Register = () => {
         input,
         image,
       });
-      console.log(data);
+
       if (data) navigate("/login");
     } catch (err) {
       setErr(err.Message);
