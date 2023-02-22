@@ -1,0 +1,197 @@
+import { useContext, useState } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import WriteComponent from "../styles/Write.styled";
+import Button from "../styles/Button.styled";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
+
+export default function Write() {
+  const state = useLocation().state;
+  const [value, setValue] = useState(state?.title || "");
+  const [title, setTitle] = useState(state?.description || "");
+  const [category, setCategory] = useState(state?.category || "");
+  const [image, setImage] = useState(null);
+  const { currentUser } = useContext(AuthContext);
+  const userid = currentUser.userid;
+  const url = "https://day-dream-server.onrender.com";
+
+  const handleUpload = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("file", image);
+      const { data } = await axios.post(`${url}/api/v1/upload`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const imgUrl = await handleUpload();
+    try {
+      state
+        ? await axios.put(`${url}/api/v1/posts/${state.userid}`, {
+            title,
+            description: value,
+            category,
+            image: image ? imgUrl : "",
+          })
+        : await axios.post(`${url}/api/v1/posts/`, {
+            userid,
+            title,
+            description: value,
+            category,
+            image: image ? imgUrl : "",
+          });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return (
+    <>
+      <Navbar />
+      <WriteComponent>
+        <div className="content">
+          <input
+            type="text"
+            value={title}
+            name="title"
+            id="title"
+            placeholder="Title"
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <div className="editorContainer">
+            <ReactQuill
+              className="editor"
+              theme="snow"
+              value={value}
+              onChange={setValue}
+            />
+          </div>
+        </div>
+        <div className="menu">
+          <div className="item">
+            <h1>Publish</h1>
+            <span>
+              <b>Status: </b> Draft
+            </span>
+            <span>
+              <b>Visibility: </b> Public
+            </span>
+
+            <input
+              type="file"
+              style={{ display: "none" }}
+              name="file"
+              id="file"
+              accept=".jpg, .png"
+              onChange={(e) => setImage(e.target.files[0])}
+            />
+            <label htmlFor="file" className="file">
+              Upload Image
+            </label>
+            <div className="buttons">
+              <Button
+                color={"#c1b49f"}
+                background={"#fff"}
+                padding={"3px 5px"}
+                border={"1px solid #c1b49f"}
+              >
+                Save as draft
+              </Button>
+              {/* <Button
+                color={"#fff"}
+                background={"#c1b49f"}
+                padding={"3px 5px"}
+                border={"1px solid #c1b49f"}
+                handleOption={handleSubmit}
+              >
+                Publish
+              </Button> */}
+              <button onClick={handleSubmit}>Publish</button>
+            </div>
+          </div>
+          {/* DRY: find a waay round this */}
+          <div className="item">
+            <h1>Category</h1>
+            <div className="category">
+              <input
+                type="radio"
+                name="category"
+                id="art"
+                value={"art"}
+                checked={category === "art"}
+                onChange={(e) => setCategory(e.target.value)}
+              />
+              <label htmlFor="art">Art</label>
+            </div>
+            <div className="category">
+              <input
+                type="radio"
+                name="category"
+                id="science"
+                value={"science"}
+                checked={category === "science"}
+                onChange={(e) => setCategory(e.target.value)}
+              />
+              <label htmlFor="science">Science</label>
+            </div>
+            <div className="category">
+              <input
+                type="radio"
+                name="category"
+                id="technology"
+                value={"technology"}
+                checked={category === "technology"}
+                onChange={(e) => setCategory(e.target.value)}
+              />
+              <label htmlFor="technology">Technology</label>
+            </div>
+            <div className="category">
+              <input
+                type="radio"
+                name="category"
+                id="cinema"
+                value={"cinema"}
+                checked={category === "cinema"}
+                onChange={(e) => setCategory(e.target.value)}
+              />
+              <label htmlFor="cinema">Cinema</label>
+            </div>
+            <div className="category">
+              <input
+                type="radio"
+                name="category"
+                id="design"
+                value={"design"}
+                checked={category === "design"}
+                onChange={(e) => setCategory(e.target.value)}
+              />
+              <label htmlFor="design">Design</label>
+            </div>
+            <div className="category">
+              <input
+                type="radio"
+                name="category"
+                id="food"
+                value={"food"}
+                checked={category === "food"}
+                onChange={(e) => setCategory(e.target.value)}
+              />
+              <label htmlFor="food">Food</label>
+            </div>
+          </div>
+        </div>
+      </WriteComponent>
+      <Footer />
+    </>
+  );
+}
