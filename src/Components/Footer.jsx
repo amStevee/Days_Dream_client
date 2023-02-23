@@ -1,6 +1,5 @@
 import FooterComponent from "../styles/Footer.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import {
   faTwitterSquare,
   faGithubSquare,
@@ -18,18 +17,18 @@ const Footer = () => {
       <div className="social">
         <p>Socials:</p>
         <div className="icons">
-          <Link to={"https://twitter.com/am_stevenanongo"}>
-            <FontAwesomeIcon icon={faTwitterSquare} />
-          </Link>
-          <Link to={"https://instagram.com/am_stevee"}>
-            <FontAwesomeIcon icon={faInstagramSquare} />
-          </Link>
-          <Link to={"https://github.com/amStevee"}>
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </Link>
+          <a href="https://twitter.com/am_stevenanongo">
+            <FontAwesomeIcon icon={faTwitterSquare} /> Twitter
+          </a>
+          <a href="https://instagram.com/am_stevee">
+            <FontAwesomeIcon icon={faInstagramSquare} /> Instagram
+          </a>
+          <a href="https://twitter.com/amStevee">
+            <FontAwesomeIcon icon={faGithubSquare} /> Github
+          </a>
         </div>
-        <div className="copyright">Copyright &copy; {year} Days Dream Blog</div>
       </div>
+      <div className="copyright">&copy; Copyright {year} Days Dream Blog</div>
     </FooterComponent>
   );
 };

@@ -15,14 +15,16 @@ const FooterComponent = styled.footer`
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 
-  .socials {
+  .social {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    .icon {
+
+    .icons {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 10px;
     }
   }
 `;
