@@ -63,7 +63,10 @@ const Single = () => {
                 />
                 <div className="user">
                   {post.user_image && (
-                    <img src={`${post?.user_image}`} alt="user" />
+                    <img
+                      src={`https://day-dream-server.onrender.com/${post?.user_image}`}
+                      alt="user"
+                    />
                   )}
                   <div className="info">
                     <span>{post.username}</span>
