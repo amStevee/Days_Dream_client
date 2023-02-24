@@ -45,13 +45,13 @@ const Home = () => {
                   <Link to={`/post/${post.id}`}>
                     <h1>{post.title}</h1>
                   </Link>
-                  <div className="desc">
-                    <ReactQuill
-                      value={post.description}
-                      readOnly={true}
-                      theme={"bubble"}
-                    />
-                  </div>
+
+                  <ReactQuill
+                    value={post.description}
+                    readOnly={true}
+                    theme={"bubble"}
+                  />
+
                   <Link to={`/post/${post.id}`}>
                     <Button
                       border={"1px solid #c1b49f"}

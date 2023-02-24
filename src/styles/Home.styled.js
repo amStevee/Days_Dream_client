@@ -12,6 +12,7 @@ const HomePage = styled.div`
   .desc {
     height: 6rem;
     overflow: hidden;
+    margin: 0;
   }
   .posts {
     margin-top: 1rem;
