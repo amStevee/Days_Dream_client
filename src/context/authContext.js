@@ -20,6 +20,7 @@ export const AuthContextProvider = ({ children }) => {
       if (data === null || data.msg) setErr(data);
     } catch (error) {
       setErr(error.response.data.msg);
+      console.log(error);
     }
   };
 
