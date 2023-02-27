@@ -12,10 +12,11 @@ export const AuthContextProvider = ({ children }) => {
   const login = async (inputs) => {
     try {
       const { data } = await axios.post(
-        `https://day-dream-server.onrender.com/api/v1/auth/login`,
+        "https://day-dream-server.onrender.com/api/v1/auth/login",
         inputs,
         { withCredentials: true }
       );
+      console.log(data);
       setCurrentUser(data);
       if (data === null || data.msg) setErr(data);
     } catch (error) {
