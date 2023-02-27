@@ -13,7 +13,8 @@ export const AuthContextProvider = ({ children }) => {
     try {
       const { data } = await axios({
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin":
+            "https://day-dream-server.onrender.com",
           Accept: "application/json",
           "Content-Type": "application/json",
         },
