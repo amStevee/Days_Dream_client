@@ -17,6 +17,7 @@ export const AuthContextProvider = ({ children }) => {
           method: "POST",
           mode: "same-origin",
           credentials: "include",
+          headers: { "content-Type": "application/json" },
           body: inputs,
         }
       );
