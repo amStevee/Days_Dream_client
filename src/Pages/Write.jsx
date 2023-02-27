@@ -25,6 +25,7 @@ export default function Write() {
       formData.append("file", image);
       const { data } = await axios.post(`${url}/api/v1/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
+        withCredentials: true,
       });
       return data;
     } catch (err) {
