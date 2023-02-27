@@ -15,7 +15,6 @@ export const AuthContextProvider = ({ children }) => {
         `https://day-dream-server.onrender.com/api/v1/auth/login`,
         inputs
       );
-      console.log(data);
       setCurrentUser(data);
       if (data === null || data.msg) setErr(data);
     } catch (error) {
