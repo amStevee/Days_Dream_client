@@ -13,15 +13,7 @@ export const AuthContextProvider = ({ children }) => {
     try {
       const { data } = await axios.post(
         `https://day-dream-server.onrender.com/api/v1/auth/login`,
-        inputs,
-        {
-          withCredentials: true,
-          headers: {
-            "Access-Control-Allow-Origin":
-              "https://day-dream-server.onrender.com",
-            "Content-Type": "application/json",
-          },
-        }
+        inputs
       );
       console.log(data);
       setCurrentUser(data);
