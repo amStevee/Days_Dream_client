@@ -18,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
           "Content-Type": "application/json",
         },
         url: `https://day-dream-server.onrender.com/api/v1/auth/login`,
-        body: inputs,
+        data: inputs,
         method: "POST",
       });
       setCurrentUser(data);
