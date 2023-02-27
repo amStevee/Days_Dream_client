@@ -7,8 +7,8 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Register from "./Pages/Register";
 import Write from "./Pages/Write";
-import axios from "axios";
-axios.defaults.withCredentials = true;
+// import axios from "axios";
+// axios.defaults.withCredentials = true;
 
 const queryClient = new QueryClient();
 function App() {
