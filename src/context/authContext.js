@@ -11,15 +11,30 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (inputs) => {
     try {
-      const { data } = await axios.post(
+      const data = fetch(
         `https://day-dream-server.onrender.com/api/v1/auth/login`,
-        inputs
+        {
+          method: "POST",
+          mode: "same-origin",
+          credentials: "include",
+          body: inputs,
+        }
       );
       setCurrentUser(data);
       if (data === null || data.msg) setErr(data);
     } catch (error) {
       setErr(error.response.data.msg);
     }
+    // try {
+    //   const { data } = await axios.post(
+    //     `https://day-dream-server.onrender.com/api/v1/auth/login`,
+    //     inputs
+    //   );
+    //   setCurrentUser(data);
+    //   if (data === null || data.msg) setErr(data);
+    // } catch (error) {
+    //   setErr(error.response.data.msg);
+    // }
   };
 
   const logout = async () => {
