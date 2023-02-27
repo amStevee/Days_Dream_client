@@ -38,8 +38,15 @@ const Single = () => {
   const handleDelete = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.delete(`${url}/api/v1/posts/${location}`, {
-        withCredentials: true,
+      const { data } = await axios({
+        headers: {
+          "Access-Control-Allow-Origin":
+            "https://day-dream-server.onrender.com",
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        url: `${url}/api/v1/posts/${location}`,
+        method: "DELETE",
       });
       setPost(data);
       setLoading(false);
