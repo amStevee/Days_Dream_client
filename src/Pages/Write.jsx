@@ -16,6 +16,7 @@ export default function Write() {
   const [category, setCategory] = useState(state?.category || "");
   const [image, setImage] = useState(null);
   const { currentUser } = useContext(AuthContext);
+  const location = useLocation().pathname.split("/")[2];
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
 
@@ -38,7 +39,7 @@ export default function Write() {
     const imgUrl = await handleUpload();
     try {
       state
-        ? await axios.put(`${url}/api/v1/posts/${state.userid}`, {
+        ? await axios.put(`${url}/api/v1/posts/${location}`, {
             title,
             description: value,
             category,
