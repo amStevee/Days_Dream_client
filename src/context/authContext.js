@@ -1,7 +1,40 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
+// const INIL_STATE = {
+//   user: JSON.parse(localStorage.getItem("user") || null),
+//   loading: true,
+//   err: null
+// }
+
 export const AuthContext = createContext();
+
+// const AuthReduser = (state, action) => {
+//   switch (action.type) {
+//     case "LOGING_IN":
+//       return {
+//         user: action.payload,
+//         loading: false,
+//         err: null,
+//       };
+//     case "LOGIN_SUCCESS":
+//       return {
+//         user: action.payload,
+//         loading: false,
+//         err: null,
+//       };
+
+//     case "LOGIN_FAIL":
+//       return {
+//         user: action.payload,
+//         loading: false,
+//         err: null,
+//       };
+
+//     default:
+//       return state;
+//   }
+// }
 
 export const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(

@@ -18,6 +18,12 @@ const NavbarComponent = styled.nav`
     li {
       list-style: none;
     }
+
+    button {
+      outline: none;
+      background: none;
+      border: none;
+    }
   }
 
   .writeCategory {

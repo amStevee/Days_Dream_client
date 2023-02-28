@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavbarComponent from "../styles/Navbar.styled";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
@@ -9,6 +9,14 @@ const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
   const windowSize = window.innerWidth;
   const [dropDown, setDropDown] = useState(false);
+  const navigate = useNavigate();
+
+  const login = () => {
+    navigate("/login");
+  };
+  const register = () => {
+    navigate("/register");
+  };
   return (
     <NavbarComponent>
       <div className="logo">
@@ -66,8 +74,8 @@ const Navbar = () => {
           </Link>
         ) : (
           <>
-            <Link to={"/login"}>Login</Link>
-            <Link to={"/register"}>Register</Link>
+            <button onClick={login}>Login</button>
+            <button onClick={register}>Register</button>
           </>
         )}
         <li>
