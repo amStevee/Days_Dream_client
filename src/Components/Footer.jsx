@@ -28,7 +28,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="copyright">&copy; Copyright {year} Days Dream Blog</div>
+      <div className="copyright">&copy; {year} Days Dream Blog</div>
     </FooterComponent>
   );
 };
