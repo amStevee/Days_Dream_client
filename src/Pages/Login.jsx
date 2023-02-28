@@ -14,7 +14,7 @@ const Login = () => {
       const fdata = await Object.fromEntries(dataf.entries());
 
       await login(fdata);
-      navigate("/");
+      if (!err) navigate("/");
     } catch (error) {
       console.log(error);
     }
