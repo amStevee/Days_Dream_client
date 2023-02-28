@@ -46,6 +46,7 @@ const Single = () => {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
+        data: currentUser.userid,
         url: `${url}/api/v1/posts/${location}`,
         method: "DELETE",
       });
