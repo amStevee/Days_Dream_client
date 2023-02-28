@@ -23,6 +23,7 @@ const Single = () => {
   const url = "https://day-dream-server.onrender.com";
 
   useEffect(() => {
+    if (!currentUser) navigate("/login");
     const getPosts = async () => {
       try {
         const { data } = await axios.get(`${url}/api/v1/posts/${location}`);
@@ -33,7 +34,7 @@ const Single = () => {
       }
     };
     getPosts();
-  }, [location]);
+  }, [location, currentUser, navigate]);
 
   const handleDelete = async () => {
     try {

@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const dataf = await new FormData(e.target);
+      const dataf = new FormData(e.target);
       const fdata = await Object.fromEntries(dataf.entries());
 
       await login(fdata);

@@ -1,0 +1,126 @@
+am trying to send cookies to my clients browers using cookie-parser in my express js server, i can see the cookie in
+the set-cookie in my response header but the cookie is not being set in the brower. I have tried to google the problem 
+and learnt it has to do with CORS error so i set up my code on the frontend and backend as shown below to sovle the 
+problem but the cookie is still not being set on the brower. my frontend is being hosted on netlify while the backend is
+being hosted on render. i'll appriciate if someone can help me with this problem thanks.
+
+frontend request:
+`` const login = async (inputs) => {
+    try {
+      const { data } = await axios({
+        headers: {
+          "Access-Control-Allow-Origin":
+            "url-to-my-backend-server-hosted-on-render",
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        url: `url-to-my-backend-server-hosted-on-render/api/v1/auth/login`,
+        data: inputs,
+        method: "POST",
+      });
+      setCurrentUser(data);
+      if (data === null || data.msg) setErr(data);
+    } catch (error) {
+      setErr(error.response.data.msg);
+    }
+  };
+  ``
+
+my backend server code:
+index.js
+``
+const morgan = require("morgan");
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const path = require("path");
+const rateLimit = require("express-rate-limit");
+const cors = require("cors");
+const app = express();
+const dotenv = require("dotenv");
+const multer = require("multer");
+const auths = require("./routes/auth");
+const port = process.env.PORT || 3001;
+dotenv.config();
+let dir = path.join(\_\_dirname, "uploads");
+
+app.use(morgan("dev"));
+app.use(cors());
+app.use((req, res, next) => {
+res.setHeader(
+"Access-Control-Allow-Origin",
+"url-to-my-client-hosted-on-netlify.app"
+);
+res.setHeader("Access-Control-Allow-Credentials", "true");
+next();
+});
+app.use(cookieParser(process.env.JWT));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(dir));
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./uploads");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + file.originalname);
+  },
+});
+const upload = multer({ storage });
+
+app.post("/api/v1/upload", upload.single("file"), function (req, res) {
+  const file = req.file;
+  res.status(200).json(file.filename);
+});
+
+app.use("/api/v1/auth", auths);
+
+app.all("*", (req, res) => {
+  res.status(404).json("routh not found, please use /api/v1/posts");
+});
+
+app.listen(port, () => {
+  console.log(`server is running on ${port}`);
+});
+``
+
+controller/login.js:
+``
+const login = async (req, res, next) => {
+  const q = 'query'
+
+  try {
+    const isUser = await pool.query(q, [req.body.username]);
+
+    if (!isUser.rows[0]) return res.status(404).json({ msg: "usernot found" });
+    if (req.body.username === undefined || req.body.password === undefined) {
+      return res
+        .status(400)
+        .json({ msg: "please fill out the fileds in other to login" });
+    }
+
+    // COMPARE PASSWORD
+    const cPassword = await bcrypt.compare(
+      req.body.password,
+      isUser.rows[0].password
+    );
+    if (!cPassword) {
+      return res.status(400).json({ msg: "incorrect username or password" });
+    }
+    const token = jwt.sign({ id: isUser.rows[0].userid }, process.env.JWT, {
+      expiresIn: "24h",
+    });
+    const { password, ...others } = isUser.rows[0];
+
+    res
+      .cookie("access_token", token, { httpOnly: true })
+      .status(200)
+      .json({ ...others });
+
+    next();
+  } catch (error) {
+    next(createError(401, "invalid cridentials", error.stack));
+  }
+};
+
+``
