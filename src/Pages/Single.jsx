@@ -39,17 +39,10 @@ const Single = () => {
   const handleDelete = async () => {
     try {
       setLoading(true);
-      const { data } = await axios({
-        headers: {
-          "Access-Control-Allow-Origin":
-            "https://day-dream-server.onrender.com",
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        data: currentUser.userid,
-        url: `${url}/api/v1/posts/${location}`,
-        method: "DELETE",
-      });
+      const { data } = await axios.delete(
+        `${url}/api/v1/posts/${location}`,
+        currentUser.userid
+      );
       setPost(data);
       setLoading(false);
       navigate("/");
