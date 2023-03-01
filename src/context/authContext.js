@@ -46,8 +46,7 @@ export const AuthContextProvider = ({ children }) => {
     try {
       const { data } = await axios({
         headers: {
-          "Access-Control-Allow-Origin":
-            "https://day-dream-server.onrender.com",
+          "Access-Control-Allow-Origin": "https://daydreamblog.netlify.app",
           Accept: "application/json",
           "Content-Type": "application/json",
         },
