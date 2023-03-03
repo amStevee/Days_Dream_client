@@ -14,7 +14,7 @@ export default function Write() {
   const [value, setValue] = useState(state?.title || "");
   const [title, setTitle] = useState(state?.description || "");
   const [category, setCategory] = useState(state?.category || "");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(state?.image || null);
   const { currentUser } = useContext(AuthContext);
   const location = useLocation().pathname.split("/")[2];
   const userid = currentUser.userid;
@@ -39,6 +39,7 @@ export default function Write() {
     try {
       state
         ? await axios.put(`${url}/api/v1/posts/${location}`, {
+            userid,
             title,
             description: value,
             category,
@@ -120,7 +121,7 @@ export default function Write() {
               <button onClick={handleSubmit}>Publish</button>
             </div>
           </div>
-          {/* DRY: find a waay round this */}
+          {/* use DRY concept: find a way round this */}
           <div className="item">
             <h1>Category</h1>
             <div className="category">

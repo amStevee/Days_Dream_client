@@ -52,7 +52,7 @@ const Home = () => {
                     theme={"bubble"}
                   />
 
-                  <Link to={`/post/${post.id}`}>
+                  <Link to={`/posts/${post.id}`}>
                     <Button
                       border={"1px solid #c1b49f"}
                       background={"transparent"}

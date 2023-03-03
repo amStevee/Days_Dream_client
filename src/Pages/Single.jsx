@@ -20,6 +20,7 @@ const Single = () => {
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
   const { currentUser } = useContext(AuthContext);
+  const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const Single = () => {
       setLoading(true);
       const { data } = await axios({
         url: `${url}/api/v1/posts/${location}`,
-        data: currentUser.userid,
+        data: userid,
         method: "DELETE",
         withCredentials: true,
       });
@@ -80,7 +81,7 @@ const Single = () => {
                   </div>
                   {currentUser.username === post.username && (
                     <div className="edit">
-                      <Link to={`/edit=${location}`} state={post}>
+                      <Link to={`/edit=${post.id}`} state={post}>
                         <FontAwesomeIcon
                           color="green"
                           fontSize={"1.5rem"}

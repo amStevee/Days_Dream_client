@@ -54,11 +54,14 @@ const AuthComponent = styled.div`
         font-size: large;
       }
     }
-    input:invalid[focused="true"] {
+    input:not(:focus):not(:placeholder-shown):invalid {
       border: 2px solid red;
     }
+    input:not(:focus):not(:placeholder-shown):valid {
+      border: 2px solid green;
+    }
 
-    input:invalid[focused="true"] ~ span {
+    input:not(:focus):not(:placeholder-shown):invalid ~ span {
       display: block;
     }
 
