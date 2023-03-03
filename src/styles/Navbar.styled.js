@@ -24,7 +24,7 @@ const NavbarComponent = styled.nav`
       background: none;
       border: none;
       color: #c1b49f;
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 
