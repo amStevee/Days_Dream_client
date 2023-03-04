@@ -81,7 +81,7 @@ const Single = () => {
                   </div>
                   {currentUser.username === post.username && (
                     <div className="edit">
-                      <Link to={`/posts/?edit=${post.id}`} state={post}>
+                      <Link to={`/posts/write/?edit=${post.id}`} state={post}>
                         <FontAwesomeIcon
                           color="green"
                           fontSize={"1.5rem"}
