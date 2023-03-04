@@ -47,6 +47,7 @@ const Home = () => {
                   </Link>
 
                   <ReactQuill
+                    className="editor"
                     value={post.description}
                     readOnly={true}
                     theme={"bubble"}

@@ -21,6 +21,14 @@ const HomePage = styled.div`
     gap: 2rem;
     padding: 1rem;
 
+    .editor {
+      height: 100%;
+      border: none;
+      padding: 0;
+      margin: 0;
+      text-align: justify;
+    }
+
     .post {
       display: flex;
       gap: 100px;
