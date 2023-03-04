@@ -6,11 +6,12 @@ import Footer from "../Components/Footer";
 import WriteComponent from "../styles/Write.styled";
 import Button from "../styles/Button.styled";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 
 export default function Write() {
   const state = useLocation().state;
+  const navigate = useNavigate();
   const [value, setValue] = useState(state?.title || "");
   const [title, setTitle] = useState(state?.description || "");
   const [category, setCategory] = useState(state?.category || "");
@@ -52,6 +53,7 @@ export default function Write() {
             category,
             image: image ? imgUrl : "",
           });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
