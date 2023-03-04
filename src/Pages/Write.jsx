@@ -39,7 +39,7 @@ export default function Write() {
     const imgUrl = await handleUpload();
     try {
       state
-        ? await axios.put(`${url}/api/v1/posts/write?edit${location}`, {
+        ? await axios.put(`${url}/api/v1/posts/write?edit=${location}`, {
             userid,
             title,
             description: value,
