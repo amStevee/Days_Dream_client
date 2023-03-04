@@ -41,6 +41,13 @@ const AuthComponent = styled.div`
       margin-bottom: 2px;
     }
 
+    span {
+      color: #e6e6eb;
+      font-size: small;
+      text-align: center;
+      display: none;
+    }
+
     input {
       border: none;
       border-bottom: 1px solid #e6e6eb;
@@ -64,9 +71,9 @@ const AuthComponent = styled.div`
     input:not(:focus):not(:placeholder-shown):invalid ~ span {
       display: block;
     }
-    input:not(:focus):not(:placeholder-shown):valid ~ span {
+    /* input:not(:focus):not(:placeholder-shown):valid ~ span {
       display: none;
-    }
+    } */
 
     button {
       cursor: pointer;
@@ -77,13 +84,6 @@ const AuthComponent = styled.div`
       font-size: large;
       font-weight: 700;
       color: ${({ theme }) => theme.color.primary_backround};
-    }
-
-    span {
-      color: #e6e6eb;
-      font-size: small;
-      text-align: center;
-      display: none;
     }
 
     /* .error {
