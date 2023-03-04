@@ -80,7 +80,7 @@ const Navbar = () => {
         )}
         <li>
           <span className="writeCategory">
-            <Link to="/write">Write</Link>
+            <Link to="/posts/write">Write</Link>
           </span>
         </li>
       </ul>
