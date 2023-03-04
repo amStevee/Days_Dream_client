@@ -103,7 +103,7 @@ const Register = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
         <label htmlFor="file" className="reg">
-          Upload profile
+          Upload profile picture
         </label>
         {inputs.map((inp) => (
           <>
