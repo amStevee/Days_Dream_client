@@ -21,10 +21,14 @@ const WriteComponent = styled.div`
       height: 300px;
       overflow: scroll;
       border: 1px solid lightgray;
+      padding: 0;
 
       .editor {
         height: 100%;
         border: none;
+        padding: 0;
+        margin: 0;
+        text-align: justify;
       }
     }
   }
