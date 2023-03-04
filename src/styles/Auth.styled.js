@@ -80,6 +80,7 @@ const AuthComponent = styled.div`
       color: #e6e6eb;
       font-size: small;
       text-align: center;
+      display: none;
     }
 
     /* .error {
