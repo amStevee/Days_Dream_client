@@ -9,7 +9,6 @@ const SinglePage = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 10px;
 
     img {
       width: 100%;

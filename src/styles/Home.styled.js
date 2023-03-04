@@ -27,6 +27,11 @@ const HomePage = styled.div`
       padding: 0;
       margin: 0;
       text-align: justify;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
     }
 
     .post {
