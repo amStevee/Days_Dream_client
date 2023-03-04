@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 import WriteComponent from "../styles/Write.styled";
 import Button from "../styles/Button.styled";
 import axios from "axios";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 
 export default function Write() {
@@ -17,7 +17,9 @@ export default function Write() {
   const [category, setCategory] = useState(state?.category || "");
   const [image, setImage] = useState(state?.image || null);
   const { currentUser } = useContext(AuthContext);
-  const location = useLocation().pathname.split("/")[2];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = searchParams.get("edit");
+  console.log(location);
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
 
