@@ -28,6 +28,10 @@ const AuthComponent = styled.div`
     color: ${({ theme }) => theme.color.text};
   }
 
+  p {
+    color: #fff;
+  }
+
   form {
     width: 400px;
     max-width: 300px;
