@@ -21,7 +21,7 @@ function App() {
           <Route path="/posts/:id" element={<Single />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/write" element={<Write />} />
+          <Route path="/posts/write/?edit" element={<Write />} />
         </Routes>
       </div>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
