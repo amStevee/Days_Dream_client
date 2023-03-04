@@ -82,11 +82,11 @@ const AuthComponent = styled.div`
       text-align: center;
     }
 
-    .error {
+    /* .error {
       color: yellow;
       font-size: 0.7rem;
       text-align: center;
-    }
+    } */
   }
   .login {
     gap: 2rem;
