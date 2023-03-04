@@ -122,9 +122,12 @@ const Register = () => {
         ))}
         <button type="submit">Register</button>
         {err && <span>{err}</span>}
-        <span>
-          already have an Account? <Link to="/login">Login</Link>
-        </span>
+        <p>
+          already have an Account?{" "}
+          <Link to="/login">
+            <u>Login</u>
+          </Link>
+        </p>
       </form>
     </AuthComponent>
   );
