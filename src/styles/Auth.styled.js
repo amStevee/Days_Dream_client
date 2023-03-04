@@ -64,6 +64,9 @@ const AuthComponent = styled.div`
     input:not(:focus):not(:placeholder-shown):invalid ~ span {
       display: block;
     }
+    input:not(:focus):not(:placeholder-shown):valid ~ span {
+      display: none;
+    }
 
     button {
       cursor: pointer;
