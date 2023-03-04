@@ -9,11 +9,7 @@ import AuthComponent from "../styles/Auth.styled";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [focused, setFocused] = useState(false);
   const [image, setImage] = useState(null);
-  const handlefocused = () => {
-    setFocused(true);
-  };
   const [err, setErr] = useState(null);
   const [input, setInput] = useState({});
   const url = "https://day-dream-server.onrender.com";
@@ -118,9 +114,6 @@ const Register = () => {
               placeholder={inp.placeholder}
               required={inp.required}
               pattern={inp.pattern}
-              onBlur={handlefocused}
-              onFocus={() => inp.name === "confirmPassword" && setFocused(true)}
-              focused={focused.toString()}
             />
             <span className="error" key={inp.id}>
               {inp.erroMessage}
