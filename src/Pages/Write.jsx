@@ -17,8 +17,7 @@ export default function Write() {
   const [category, setCategory] = useState(state?.category || "");
   const [image, setImage] = useState(state?.image || null);
   const { currentUser } = useContext(AuthContext);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const location = searchParams.get("edit");
+  const location = useLocation().pathname.split("=")[0];
   console.log(location);
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
