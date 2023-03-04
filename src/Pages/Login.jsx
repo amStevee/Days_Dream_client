@@ -30,7 +30,10 @@ const Login = () => {
         <button type="submit">Login</button>
         {err && <p className="error">{err}</p>}
         <span>
-          Dont have an Account? <Link to="/register">Register</Link>
+          Dont have an Account?{" "}
+          <Link to="/register">
+            <u>Register</u>
+          </Link>
         </span>
       </form>
     </AuthComponent>
