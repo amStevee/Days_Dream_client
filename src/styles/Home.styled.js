@@ -10,11 +10,10 @@ const HomePage = styled.div`
     line-height: 1.42;
     outline: none;
     overflow-y: auto;
-
     tab-size: 4;
     -moz-tab-size: 4;
-
     white-space: pre-wrap;
+    padding: 0 !important;
   }
 
   .readm {
