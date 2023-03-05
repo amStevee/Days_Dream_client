@@ -9,7 +9,7 @@ import axios from "axios";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 
-export default function Write() {
+export default async function Write() {
   const state = useLocation().state;
   const navigate = useNavigate();
   const [value, setValue] = useState(state?.title || "");
@@ -17,7 +17,7 @@ export default function Write() {
   const [category, setCategory] = useState(state?.category || "");
   const [image, setImage] = useState(state?.image || null);
   const { currentUser } = useContext(AuthContext);
-  const location = useLocation().pathname.split("=")[0];
+  const location = await useLocation().pathname.split("=")[0];
   const [searchParams, setSearchParams] = useSearchParams();
   const params = searchParams.get("edit");
   console.log(params);
