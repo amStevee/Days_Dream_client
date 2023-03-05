@@ -23,6 +23,8 @@ const Single = () => {
   const userid = { userid: currentUser.userid };
   const url = "https://day-dream-server.onrender.com";
 
+  console.log("single: ", location);
+
   useEffect(() => {
     if (!currentUser) navigate("/login");
     const getPosts = async () => {
