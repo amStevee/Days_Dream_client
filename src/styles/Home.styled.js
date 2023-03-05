@@ -2,6 +2,21 @@ import styled from "styled-components";
 
 const HomePage = styled.div`
   margin: 1rem;
+
+  .ql-editor {
+    word-wrap: break-word;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 1.42;
+    outline: none;
+    overflow-y: auto;
+
+    tab-size: 4;
+    -moz-tab-size: 4;
+
+    white-space: pre-wrap;
+  }
+
   .readm {
     border: 1px solid #c1b49f;
     background: transparent;
