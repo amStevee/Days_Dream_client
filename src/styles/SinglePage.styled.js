@@ -3,13 +3,13 @@ import styled from "styled-components";
 const SinglePage = styled.div`
   display: flex;
   gap: 50px;
+  margin: 10px;
 
   .content {
     flex: 5;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 5px;
 
     img {
       width: 100%;
