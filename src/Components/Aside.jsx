@@ -14,7 +14,6 @@ export default function Aside({ category }) {
           `${url}/api/v1/posts/?category=${category}`
         );
         setPosts(data);
-        console.log(data);
       } catch (err) {
         console.log(err);
       }
