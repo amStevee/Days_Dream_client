@@ -40,7 +40,7 @@ const Single = () => {
   const handleDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`${url}/api/v1/posts/${location}`, { userid, url });
+      await axios.delete(`${url}/api/v1/posts/${location}`);
       setPost([]);
       setLoading(false);
       navigate("/");
