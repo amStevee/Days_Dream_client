@@ -15,7 +15,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <GlobalStyle />
-      <div className="container">
+      <main className="container">
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/posts/:id" element={<Single />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/posts/write" element={<Write />} />
         </Routes>
-      </div>
+      </main>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
     </QueryClientProvider>
   );
