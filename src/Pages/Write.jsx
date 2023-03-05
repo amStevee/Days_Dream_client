@@ -10,14 +10,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 
 export default async function Write() {
-  const state = useLocation().state;
+  const location = useLocation();
+  const state = location.state;
   const navigate = useNavigate();
   const [value, setValue] = useState(state?.title || "");
   const [title, setTitle] = useState(state?.description || "");
   const [category, setCategory] = useState(state?.category || "");
   const [image, setImage] = useState(state?.image || null);
   const { currentUser } = useContext(AuthContext);
-  const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const editValue = searchParams.get("edit");
   const userid = currentUser.userid;
