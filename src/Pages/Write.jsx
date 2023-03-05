@@ -9,7 +9,7 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 
-export default async function Write() {
+export default function Write() {
   const location = useLocation();
   const state = location.state;
   const navigate = useNavigate();
