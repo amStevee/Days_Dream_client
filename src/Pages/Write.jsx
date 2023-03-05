@@ -13,8 +13,8 @@ export default function Write() {
   const location = useLocation();
   const state = location.state;
   const navigate = useNavigate();
-  const [value, setValue] = useState(state?.title || "");
-  const [title, setTitle] = useState(state?.description || "");
+  const [value, setValue] = useState(state?.description || "");
+  const [title, setTitle] = useState(state?.title || "");
   const [category, setCategory] = useState(state?.category || "");
   const [image, setImage] = useState(state?.image || null);
   const { currentUser } = useContext(AuthContext);
