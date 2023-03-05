@@ -20,7 +20,6 @@ export default async function Write() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const editValue = searchParams.get("edit");
-  console.log(editValue);
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
 
