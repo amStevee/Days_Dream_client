@@ -27,9 +27,7 @@ const SinglePage = styled.div`
         background-color: #ececec;
         border-radius: 50%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px;
+        padding: 5px 5px 0px 5px;
         overflow: hidden;
       }
 
