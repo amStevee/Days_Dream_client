@@ -30,6 +30,7 @@ const SinglePage = styled.div`
         align-items: center;
         justify-content: center;
         padding: 4px;
+        overflow: hidden;
       }
 
       img {
