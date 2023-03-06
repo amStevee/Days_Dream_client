@@ -5,6 +5,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: Josefin;
     src: url('../fonts/Josefin/static/JosefinSans-Bold.ttf');
 }
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
 
 * {
     box-sizing: border-box;
