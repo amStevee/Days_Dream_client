@@ -6,7 +6,6 @@ const HomePage = styled.div`
   .ql-editor {
     word-wrap: break-word;
     box-sizing: border-box;
-    height: 100%;
     line-height: 1.42;
     outline: none;
     overflow-y: auto;
