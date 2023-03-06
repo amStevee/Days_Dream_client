@@ -64,7 +64,7 @@ export default function Write() {
   return (
     <>
       <Navbar />
-      {currentUser ? (
+      {currentUser.username ? (
         <WriteComponent>
           <div className="content">
             <input
