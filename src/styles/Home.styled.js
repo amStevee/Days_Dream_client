@@ -28,7 +28,7 @@ const HomePage = styled.div`
     padding: 1rem;
 
     .editor {
-      height: 50%;
+      height: 40%;
       border: none;
       padding: 0;
       margin: 0;
