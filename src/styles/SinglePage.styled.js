@@ -19,7 +19,7 @@ const SinglePage = styled.div`
     }
 
     .fauser {
-      background-color: #fafafa;
+      background-color: #ececec;
       border-radius: 50%;
       display: flex;
       align-items: center;

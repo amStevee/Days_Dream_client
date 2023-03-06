@@ -67,7 +67,7 @@ const Single = () => {
                   {post.user_image ? (
                     <div className="fauser">
                       <FontAwesomeIcon
-                        color="green"
+                        color="gray"
                         fontSize={"9rem"}
                         icon={faUser}
                       />
