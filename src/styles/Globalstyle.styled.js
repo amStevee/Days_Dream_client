@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+    font-family: Josefin;
+    src: url('../fonts/Josefin/static/JosefinSans-Bold.ttf');
+}
+
 * {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -17,6 +22,10 @@ a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+}
+
+.logo {
+    font-family: Josefin;
 }
 
 .container {
