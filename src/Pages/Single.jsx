@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import SinglePage from "../styles/SinglePage.styled";
-import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrash, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Aside from "../Components/Aside";
 import { useEffect, useState } from "react";
@@ -64,7 +64,15 @@ const Single = () => {
                   alt="content"
                 />
                 <div className="user">
-                  {post.user_image && (
+                  {post.user_image ? (
+                    <div className="fauser">
+                      <FontAwesomeIcon
+                        color="green"
+                        fontSize={"1.5rem"}
+                        icon={faUser}
+                      />
+                    </div>
+                  ) : (
                     <img
                       src={`https://day-dream-server.onrender.com/${post?.user_image}`}
                       alt="user"

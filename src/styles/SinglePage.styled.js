@@ -18,6 +18,14 @@ const SinglePage = styled.div`
       object-fit: cover;
     }
 
+    .fauser {
+      background-color: #fafafa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .user {
       display: flex;
       align-items: center;
