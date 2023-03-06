@@ -63,7 +63,7 @@ const Single = () => {
                 alt="content"
               />
               <div className="user">
-                {post.user_image ? (
+                {!post.user_image ? (
                   <div className="fauser">
                     <FontAwesomeIcon
                       color="gray"
