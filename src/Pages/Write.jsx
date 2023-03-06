@@ -64,56 +64,57 @@ export default function Write() {
   return (
     <>
       <Navbar />
-      <WriteComponent>
-        <div className="content">
-          <input
-            type="text"
-            value={title}
-            name="title"
-            id="title"
-            placeholder="Title"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <div className="editorContainer">
-            <ReactQuill
-              className="editor"
-              theme="snow"
-              value={value}
-              onChange={setValue}
-            />
-          </div>
-        </div>
-        <div className="menu">
-          <div className="item">
-            <h1>Publish</h1>
-            <span>
-              <b>Status: </b> Draft
-            </span>
-            <span>
-              <b>Visibility: </b> Public
-            </span>
-
+      {currentUser ? (
+        <WriteComponent>
+          <div className="content">
             <input
-              type="file"
-              style={{ display: "none" }}
-              name="file"
-              id="file"
-              accept=".jpg, .png"
-              onChange={(e) => setImage(e.target.files[0])}
+              type="text"
+              value={title}
+              name="title"
+              id="title"
+              placeholder="Title"
+              onChange={(e) => setTitle(e.target.value)}
             />
-            <label htmlFor="file" className="file">
-              Upload Image
-            </label>
-            <div className="buttons">
-              <Button
-                color={"#c1b49f"}
-                background={"#fff"}
-                padding={"3px 5px"}
-                border={"1px solid #c1b49f"}
-              >
-                Save as draft
-              </Button>
-              {/* <Button
+            <div className="editorContainer">
+              <ReactQuill
+                className="editor"
+                theme="snow"
+                value={value}
+                onChange={setValue}
+              />
+            </div>
+          </div>
+          <div className="menu">
+            <div className="item">
+              <h1>Publish</h1>
+              <span>
+                <b>Status: </b> Draft
+              </span>
+              <span>
+                <b>Visibility: </b> Public
+              </span>
+
+              <input
+                type="file"
+                style={{ display: "none" }}
+                name="file"
+                id="file"
+                accept=".jpg, .png"
+                onChange={(e) => setImage(e.target.files[0])}
+              />
+              <label htmlFor="file" className="file">
+                Upload Image
+              </label>
+              <div className="buttons">
+                <Button
+                  color={"#c1b49f"}
+                  background={"#fff"}
+                  padding={"3px 5px"}
+                  border={"1px solid #c1b49f"}
+                >
+                  Save as draft
+                </Button>
+                {/* <Button
                 color={"#fff"}
                 background={"#c1b49f"}
                 padding={"3px 5px"}
@@ -122,81 +123,84 @@ export default function Write() {
               >
                 Publish
               </Button> */}
-              <button onClick={handleSubmit}>Publish</button>
+                <button onClick={handleSubmit}>Publish</button>
+              </div>
+            </div>
+            {/* use DRY concept: find a way round this */}
+            <div className="item">
+              <h1>Category</h1>
+              <div className="category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="art"
+                  value={"art"}
+                  checked={category === "art"}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="art">Art</label>
+              </div>
+              <div className="category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="science"
+                  value={"science"}
+                  checked={category === "science"}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="science">Science</label>
+              </div>
+              <div className="category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="technology"
+                  value={"technology"}
+                  checked={category === "technology"}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="technology">Technology</label>
+              </div>
+              <div className="category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="cinema"
+                  value={"cinema"}
+                  checked={category === "cinema"}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="cinema">Cinema</label>
+              </div>
+              <div className="category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="design"
+                  value={"design"}
+                  checked={category === "design"}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="design">Design</label>
+              </div>
+              <div className="category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="food"
+                  value={"food"}
+                  checked={category === "food"}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="food">Food</label>
+              </div>
             </div>
           </div>
-          {/* use DRY concept: find a way round this */}
-          <div className="item">
-            <h1>Category</h1>
-            <div className="category">
-              <input
-                type="radio"
-                name="category"
-                id="art"
-                value={"art"}
-                checked={category === "art"}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <label htmlFor="art">Art</label>
-            </div>
-            <div className="category">
-              <input
-                type="radio"
-                name="category"
-                id="science"
-                value={"science"}
-                checked={category === "science"}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <label htmlFor="science">Science</label>
-            </div>
-            <div className="category">
-              <input
-                type="radio"
-                name="category"
-                id="technology"
-                value={"technology"}
-                checked={category === "technology"}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <label htmlFor="technology">Technology</label>
-            </div>
-            <div className="category">
-              <input
-                type="radio"
-                name="category"
-                id="cinema"
-                value={"cinema"}
-                checked={category === "cinema"}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <label htmlFor="cinema">Cinema</label>
-            </div>
-            <div className="category">
-              <input
-                type="radio"
-                name="category"
-                id="design"
-                value={"design"}
-                checked={category === "design"}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <label htmlFor="design">Design</label>
-            </div>
-            <div className="category">
-              <input
-                type="radio"
-                name="category"
-                id="food"
-                value={"food"}
-                checked={category === "food"}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <label htmlFor="food">Food</label>
-            </div>
-          </div>
-        </div>
-      </WriteComponent>
+        </WriteComponent>
+      ) : (
+        navigate("/login")
+      )}
       <Footer />
     </>
   );
