@@ -4,14 +4,7 @@ const HomePage = styled.div`
   margin: 1rem;
 
   .ql-editor {
-    word-wrap: break-word;
-    box-sizing: border-box;
-    line-height: 1.42;
-    outline: none;
-    overflow-y: auto;
-    tab-size: 4;
-    -moz-tab-size: 4;
-    white-space: pre-wrap;
+    text-align: justify;
     padding: 0 !important;
   }
 
