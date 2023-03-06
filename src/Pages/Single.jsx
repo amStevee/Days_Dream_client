@@ -68,7 +68,7 @@ const Single = () => {
                     <div className="fauser">
                       <FontAwesomeIcon
                         color="green"
-                        fontSize={"1.5rem"}
+                        fontSize={"9rem"}
                         icon={faUser}
                       />
                     </div>
