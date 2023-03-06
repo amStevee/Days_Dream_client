@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
-    font-family: Josefin;
-    src: url('../fonts/Josefin/static/JosefinSans-Bold.ttf');
+    font-family: Lobster;
+    src: url('../fonts/Lobster/Lobster-Regular.ttf');
 }
 @font-face {
     font-family: Roboto;
