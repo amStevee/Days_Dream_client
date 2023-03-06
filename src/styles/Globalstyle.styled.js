@@ -29,7 +29,7 @@ a {
 }
 
 .logo {
-    font-family: Josefin;
+    font-family: Lobster;
 }
 
 .container {
