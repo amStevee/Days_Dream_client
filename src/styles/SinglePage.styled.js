@@ -18,18 +18,19 @@ const SinglePage = styled.div`
       object-fit: cover;
     }
 
-    .fauser {
-      background-color: #ececec;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
     .user {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
+
+      .fauser {
+        background-color: #ececec;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+      }
 
       img {
         width: 50px;
