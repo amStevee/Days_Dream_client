@@ -16,7 +16,6 @@ const Home = () => {
   let perPage = 10;
   const [loading, setLoading] = useState(true);
   const url = "https://day-dream-server.onrender.com";
-  // const urlh = "http://localhost:3001";
 
   useEffect(() => {
     const getPosts = async () => {
