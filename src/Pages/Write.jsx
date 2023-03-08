@@ -45,7 +45,7 @@ export default function Write() {
             title,
             description: value,
             category,
-            image: !image ? imgUrl : image,
+            image: image === null ? imgUrl : image,
           })
         : await axios.post(`${url}/api/v1/posts/`, {
             userid,
