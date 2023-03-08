@@ -18,17 +18,17 @@ const Footer = () => {
         <p>Socials:</p>
         <div className="icons">
           <a href="https://twitter.com/am_stevenanongo">
-            <FontAwesomeIcon icon={faTwitterSquare} /> Twitter
+            <FontAwesomeIcon fontSize={"2rem"} icon={faTwitterSquare} />
           </a>
           <a href="https://instagram.com/am_stevee">
-            <FontAwesomeIcon icon={faInstagramSquare} /> Instagram
+            <FontAwesomeIcon fontSize={"2rem"} icon={faInstagramSquare} />
           </a>
           <a href="https://twitter.com/amStevee">
-            <FontAwesomeIcon icon={faGithubSquare} /> Github
+            <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
           </a>
         </div>
       </div>
-      <div className="copyright">&copy; {year} Days Dream Blog</div>
+      <div className="copyright">Copyright &copy; {year} Days Dream Blog</div>
     </FooterComponent>
   );
 };
