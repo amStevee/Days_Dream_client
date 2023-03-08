@@ -14,6 +14,7 @@ export default function UserAccount() {
   const [image, setImage] = useState(null);
   const [input, setInput] = useState({});
   const [err, setErr] = useState(null);
+  const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
 
   const handleUpload = async () => {
@@ -39,6 +40,7 @@ export default function UserAccount() {
       const { data } = await axios.post(`${url}/api/v1/auth/update`, {
         input,
         image,
+        userid,
       });
 
       if (data) navigate("/login");
