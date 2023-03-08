@@ -12,7 +12,7 @@ const User = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     max-width: 500px;
     width: 300px;
     margin: 50%;
