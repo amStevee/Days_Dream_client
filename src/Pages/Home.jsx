@@ -16,7 +16,7 @@ const Home = () => {
   let perPage = 10;
   const [loading, setLoading] = useState(true);
   const url = "https://day-dream-server.onrender.com";
-  const imageUrl = `https://daysdreamhub.s3.amazonaws.com/api/v1/upload/`;
+  // const imageUrl = `https://daysdreamhub.s3.amazonaws.com/api/v1/upload/`;
 
   useEffect(() => {
     const getPosts = async () => {
