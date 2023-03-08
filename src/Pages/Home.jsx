@@ -16,7 +16,7 @@ const Home = () => {
   let perPage = 10;
   const [loading, setLoading] = useState(true);
   const url = "https://day-dream-server.onrender.com";
-  // const imageUrl = `https://daysdreamhub.s3.amazonaws.com/api/v1/upload/`;
+  const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
   useEffect(() => {
     const getPosts = async () => {
@@ -33,8 +33,6 @@ const Home = () => {
           setPosts(data.data.rows);
           setTotalPages(data.data.rowCount);
         }
-        console.log(posts?.image);
-
         setLoading(false);
       } catch (err) {
         console.log(err);
@@ -62,7 +60,7 @@ const Home = () => {
               {posts.map((post) => (
                 <div className="post" key={post.id}>
                   <div className="image">
-                    <img src={`${post.image}`} alt={post.title} />
+                    <img src={`${imageUrl}${post.image}`} alt={post.title} />
                   </div>
 
                   <div className="content">
