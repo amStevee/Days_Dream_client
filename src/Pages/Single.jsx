@@ -59,7 +59,7 @@ const Single = () => {
         <>
           <SinglePage>
             <div className="content">
-              <img src={`${imageUrl}${post.image}`} alt="content" />
+              <img src={`${post.image.imageUrl}`} alt="content" />
               <div className="user">
                 {!post.user_image ? (
                   <div className="fauser">
@@ -70,7 +70,7 @@ const Single = () => {
                     />
                   </div>
                 ) : (
-                  <img src={`${imageUrl}${post?.user_image}`} alt="user" />
+                  <img src={`${post?.user_image.imageUrl}`} alt="user" />
                 )}
                 <div className="info">
                   <span>{post.username}</span>
