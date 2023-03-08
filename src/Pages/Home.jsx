@@ -33,6 +33,7 @@ const Home = () => {
           setPosts(data.data.rows);
           setTotalPages(data.data.rowCount);
         }
+        console.log(posts?.image);
 
         setLoading(false);
       } catch (err) {
@@ -40,9 +41,7 @@ const Home = () => {
       }
     };
     getPosts();
-  }, [location, currentPage, perPage]);
-
-  console.log(posts?.image);
+  }, [location, currentPage, perPage, posts]);
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
