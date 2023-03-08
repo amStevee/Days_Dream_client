@@ -14,13 +14,13 @@ const User = styled.div`
     gap: 10px;
     max-width: 500px;
     width: 300px;
-    margin: auto;
+    margin: 50%;
 
     .file {
       border: 2px solid ${({ theme }) => theme.color.primary_backround};
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
       cursor: pointer;
 
       .fauser {
@@ -47,6 +47,7 @@ const User = styled.div`
 
     label {
       display: flex;
+      gap: 2rem;
       font-weight: 500;
       color: ${({ theme }) => theme.color.primary_backround};
     }
