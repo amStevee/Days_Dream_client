@@ -1,6 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import SinglePage from "../styles/SinglePage.styled";
 import { faEdit, faTrash, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
