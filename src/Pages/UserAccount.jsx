@@ -56,7 +56,7 @@ export default function UserAccount() {
             </div>
           ) : (
             <div className="fauser">
-              <FontAwesomeIcon color="gray" fontSize={"2.2rem"} icon={faUser} />
+              <FontAwesomeIcon color="gray" fontSize={"4rem"} icon={faUser} />
             </div>
           )}
           <span>Tap to change</span>
