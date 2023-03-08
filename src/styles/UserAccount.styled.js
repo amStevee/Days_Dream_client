@@ -22,6 +22,7 @@ const User = styled.div`
       display: flex;
       align-items: center;
       gap: 1rem;
+      overflow: hidden;
       cursor: pointer;
 
       .fauser {
@@ -47,8 +48,6 @@ const User = styled.div`
     }
 
     label {
-      display: flex;
-      gap: 2rem;
       font-weight: 500;
       color: ${({ theme }) => theme.color.primary_backround};
     }
