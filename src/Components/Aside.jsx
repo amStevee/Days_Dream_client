@@ -3,7 +3,7 @@ import Button from "../styles/Button.styled";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Aside({ category }) {
+export default function Aside({ category, title }) {
   const [posts, setPosts] = useState([]);
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
@@ -12,7 +12,8 @@ export default function Aside({ category }) {
     const getRelatedPosts = async () => {
       try {
         const { data } = await axios.get(
-          `${url}/api/v1/posts/aside?category=${category}`
+          `${url}/api/v1/posts/aside?category=${category}`,
+          title
         );
         setPosts(data);
       } catch (err) {

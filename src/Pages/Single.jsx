@@ -101,7 +101,7 @@ const Single = () => {
                   theme={"bubble"}
                 />
               </div>
-              <Aside category={post.category} />
+              <Aside category={post.category} title={post.title} />
             </SinglePage>
           </>
         )}
