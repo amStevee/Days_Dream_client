@@ -19,10 +19,6 @@ const Home = () => {
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
-  // PARSE IMAGE URL
-
-  console.log(filename); // Output: "2021_10_13_10_14_IMG_2193.JPG"
-
   useEffect(() => {
     const getPosts = async () => {
       try {
@@ -31,7 +27,7 @@ const Home = () => {
             `${url}/api/v1/posts?category=${location}`
           );
           setPosts(data);
-          const response = posts.image;
+          const response = await posts.image;
           const responseObject = JSON.parse(response);
           const imageUrls = responseObject.imageUrl;
           const urlParts = imageUrls.split("/");
