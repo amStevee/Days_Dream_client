@@ -1,5 +1,3 @@
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import HomePage from "../styles/Home.styled";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../styles/Button.styled";
@@ -7,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactQuill from "react-quill";
 import Loading from "../Components/reuseables/Loading";
+import Wraper from "../Components/reuseables/Wraper";
 
 const Home = () => {
   const location = useLocation().search || null;
@@ -51,58 +50,58 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <HomePage>
-        {loading ? (
-          <Loading />
-        ) : (
-          <>
-            <div className="posts">
-              {posts.map((post) => (
-                <div className="post" key={post.id}>
-                  <div className="image">
-                    <img src={`${imageUrl}${post.image}`} alt={post.title} />
+      <Wraper>
+        <HomePage>
+          {loading ? (
+            <Loading />
+          ) : (
+            <>
+              <div className="posts">
+                {posts.map((post) => (
+                  <div className="post" key={post.id}>
+                    <div className="image">
+                      <img src={`${imageUrl}${post.image}`} alt={post.title} />
+                    </div>
+
+                    <div className="content">
+                      <Link to={`/posts/${post.id}`}>
+                        <h1>{post.title}</h1>
+                      </Link>
+
+                      <ReactQuill
+                        className="editor"
+                        value={post.description}
+                        readOnly={true}
+                        theme={"bubble"}
+                      />
+
+                      <Link to={`/posts/${post.id}`}>
+                        <Button
+                          border={"1px solid #c1b49f"}
+                          background={"transparent"}
+                          margintop={".5rem"}
+                          padding={".9rem"}
+                          color={"#c1b49f"}
+                          className="readmore"
+                        >
+                          Read More...
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
-
-                  <div className="content">
-                    <Link to={`/posts/${post.id}`}>
-                      <h1>{post.title}</h1>
-                    </Link>
-
-                    <ReactQuill
-                      className="editor"
-                      value={post.description}
-                      readOnly={true}
-                      theme={"bubble"}
-                    />
-
-                    <Link to={`/posts/${post.id}`}>
-                      <Button
-                        border={"1px solid #c1b49f"}
-                        background={"transparent"}
-                        margintop={".5rem"}
-                        padding={".9rem"}
-                        color={"#c1b49f"}
-                        className="readmore"
-                      >
-                        Read More...
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="pagination">
-              <button onClick={handlePrevPage}>Prev</button>
-              <span>
-                page {currentPage} of {totalPages}
-              </span>
-              <button onClick={handleNextPage}>Next</button>
-            </div>
-          </>
-        )}
-      </HomePage>
-      <Footer />
+                ))}
+              </div>
+              <div className="pagination">
+                <button onClick={handlePrevPage}>Prev</button>
+                <span>
+                  page {currentPage} of {totalPages}
+                </span>
+                <button onClick={handleNextPage}>Next</button>
+              </div>
+            </>
+          )}
+        </HomePage>
+      </Wraper>
     </>
   );
 };
