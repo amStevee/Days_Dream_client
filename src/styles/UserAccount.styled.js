@@ -35,6 +35,7 @@ const User = styled.div`
       .img {
         border-radius: 50%;
         border: 2px solid ${({ theme }) => theme.color.primary_backround};
+        height: 4rem;
         img {
           object-fit: cover;
           border-radius: 50%;
