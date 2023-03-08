@@ -3,23 +3,25 @@ import styled from "styled-components";
 const User = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  width: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #f7f7f7;
 
   form {
-    width: 100%;
-    height: 100%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 500px;
+    width: 300px;
+    margin: auto;
 
     .file {
       border: 2px solid ${({ theme }) => theme.color.primary_backround};
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      cursor: pointer;
 
       .fauser {
         background-color: #ececec;
@@ -44,6 +46,7 @@ const User = styled.div`
     }
 
     label {
+      display: flex;
       font-weight: 500;
       color: ${({ theme }) => theme.color.primary_backround};
     }
