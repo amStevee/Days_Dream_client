@@ -19,6 +19,13 @@ const Home = () => {
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
+  //  const response = await posts.image;
+  //        responseObject = JSON.parse(response);
+  //        imageUrls = responseObject.imageUrl;
+  //        urlParts = imageUrls.split("/");
+  //        filename = urlParts[urlParts.length - 1];
+  //  setfilename(filename);
+
   useEffect(() => {
     const getPosts = async () => {
       try {
@@ -27,23 +34,11 @@ const Home = () => {
             `${url}/api/v1/posts?category=${location}`
           );
           setPosts(data);
-          const response = await posts.image;
-          const responseObject = JSON.parse(response);
-          const imageUrls = responseObject.imageUrl;
-          const urlParts = imageUrls.split("/");
-          const filename = urlParts[urlParts.length - 1];
-          setfilename(filename);
         } else {
           const data = await axios.get(
             `${url}/api/v1/posts?page=${currentPage}&limit=${perPage}`
           );
           setPosts(data.data.rows);
-          const response = posts.image;
-          const responseObject = JSON.parse(response);
-          const imageUrls = responseObject.imageUrl;
-          const urlParts = imageUrls.split("/");
-          const filename = urlParts[urlParts.length - 1];
-          setfilename(filename);
           setTotalPages(data.data.rowCount);
         }
         setLoading(false);
@@ -73,7 +68,7 @@ const Home = () => {
               {posts.map((post) => (
                 <div className="post" key={post.id}>
                   <div className="image">
-                    <img src={`${imageUrl}${filename}`} alt={post.title} />
+                    <img src={`${imageUrl}${post.image}`} alt={post.title} />
                   </div>
 
                   <div className="content">
