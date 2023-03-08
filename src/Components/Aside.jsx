@@ -12,7 +12,7 @@ export default function Aside({ category }) {
     const getRelatedPosts = async () => {
       try {
         const { data } = await axios.get(
-          `${url}/api/v1/posts/?category=${category}`
+          `${url}/api/v1/posts/aside?category=${category}`
         );
         setPosts(data);
       } catch (err) {
