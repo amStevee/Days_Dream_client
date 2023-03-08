@@ -37,7 +37,7 @@ export default function UserAccount() {
       const dataf = new FormData(e.target);
       const fdata = Object.fromEntries(dataf.entries());
       setInput(fdata);
-      const { data } = await axios.post(`${url}/api/v1/auth/update`, {
+      const { data } = await axios.put(`${url}/api/v1/auth/update`, {
         input,
         image,
         userid,
