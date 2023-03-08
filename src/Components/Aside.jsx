@@ -21,12 +21,13 @@ export default function Aside({ category }) {
     };
     getRelatedPosts();
   }, [category]);
+
   return (
     <AsideSection>
       <h1>Other posts you may like</h1>
       {posts.map((post) => (
         <div className="post" key={post.id}>
-          <img src={`${imageUrl}/${post.image}`} alt={post.title} />
+          <img src={`${post.image.imageUrl}`} alt={post.title} />
           <h2>{post.title}</h2>
           <Button
             border={"1px solid #c1b49f"}
