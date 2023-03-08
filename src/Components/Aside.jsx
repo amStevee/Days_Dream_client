@@ -6,6 +6,7 @@ import axios from "axios";
 export default function Aside({ category }) {
   const [posts, setPosts] = useState([]);
   const url = "https://day-dream-server.onrender.com";
+  const imageUrl = `https://daysdreamhub.s3.amazonaws.com/api/v1/images/`;
 
   useEffect(() => {
     const getRelatedPosts = async () => {
@@ -25,7 +26,7 @@ export default function Aside({ category }) {
       <h1>Other posts you may like</h1>
       {posts.map((post) => (
         <div className="post" key={post.id}>
-          <img src={`${url}/${post.image}`} alt={post.title} />
+          <img src={`${imageUrl}/${post.image}`} alt={post.title} />
           <h2>{post.title}</h2>
           <Button
             border={"1px solid #c1b49f"}
