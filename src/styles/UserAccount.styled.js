@@ -15,6 +15,7 @@ const User = styled.div`
     max-width: 500px;
     width: 300px;
     margin: 50%;
+    padding: 10px;
 
     .file {
       border: 2px solid ${({ theme }) => theme.color.primary_backround};
