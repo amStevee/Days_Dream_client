@@ -19,10 +19,9 @@ const User = styled.div`
     padding: 10px;
 
     .file {
-      border: 2px solid ${({ theme }) => theme.color.primary_backround};
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
       cursor: pointer;
 
       .fauser {
