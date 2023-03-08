@@ -16,6 +16,7 @@ export default function UserAccount() {
   const [err, setErr] = useState(null);
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
+  const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
   const handleUpload = async () => {
     try {
@@ -55,7 +56,7 @@ export default function UserAccount() {
         <form onSubmit={handleUpdate}>
           <label htmlFor="file" className="file">
             {currentUser.user_image ? (
-              <img src={currentUser.user_image} alt="user" />
+              <img src={`${imageUrl}${currentUser.user_image}`} alt="user" />
             ) : (
               <div className="fauser">
                 <FontAwesomeIcon color="gray" fontSize={"4rem"} icon={faUser} />
