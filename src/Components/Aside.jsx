@@ -5,7 +5,6 @@ import axios from "axios";
 
 export default function Aside(props) {
   const [posts, setPosts] = useState([]);
-  const title = props.title;
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
@@ -13,8 +12,7 @@ export default function Aside(props) {
     const getRelatedPosts = async () => {
       try {
         const { data } = await axios.get(
-          `${url}/api/v1/posts/aside?category=${props.category}`,
-          title
+          `${url}/api/v1/posts/aside?category=${props.category}&title=${props.title}`
         );
         setPosts(data);
       } catch (err) {
@@ -22,7 +20,7 @@ export default function Aside(props) {
       }
     };
     getRelatedPosts();
-  }, [props.category, title]);
+  }, [props.category, props.title]);
 
   return (
     <AsideSection>
