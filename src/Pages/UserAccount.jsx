@@ -49,7 +49,7 @@ export default function UserAccount() {
   return (
     <User>
       <form onSubmit={handleUpdate}>
-        <label htmlFor="file">
+        <label htmlFor="file" className="file">
           {currentUser.user_image ? (
             <div className="img">
               <img src={currentUser.user_image} alt="user" />
