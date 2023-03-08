@@ -10,6 +10,7 @@ const User = styled.div`
   form {
     width: 100%;
     height: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -50,6 +51,7 @@ const User = styled.div`
       outline: none;
       border: none;
       border-bottom: 1px solid black;
+      background-color: inherit;
     }
 
     button {

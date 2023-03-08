@@ -63,6 +63,7 @@ export default function UserAccount() {
         </label>
         <input
           type="file"
+          style={{ display: "none" }}
           name="file"
           id="file"
           accept=".jpg, .png"

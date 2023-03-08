@@ -1,5 +1,3 @@
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,34 +9,18 @@ import AuthComponent from "../styles/Auth.styled";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [image, setImage] = useState(null);
   const [err, setErr] = useState(null);
   const [input, setInput] = useState({});
   const url = "https://day-dream-server.onrender.com";
 
-  const handleUpload = async () => {
-    try {
-      const formData = new FormData();
-      formData.append("file", image);
-      const { data } = await axios.post(`${url}/api/v1/upload`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const image = await handleUpload();
     try {
       const dataf = new FormData(e.target);
       const fdata = Object.fromEntries(dataf.entries());
       setInput(fdata);
       const { data } = await axios.post(`${url}/api/v1/auth/register`, {
         input,
-        image,
       });
 
       if (data) navigate("/login");
@@ -96,20 +78,6 @@ const Register = () => {
     <AuthComponent>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="file"
-          style={{ display: "none" }}
-          name="file"
-          id="file"
-          accept=".jpg, .png"
-          onChange={(e) => setImage(e.target.files[0])}
-        />
-        <label htmlFor="file" className="reg">
-          <div className="fauser">
-            <FontAwesomeIcon color="gray" fontSize={"2.2rem"} icon={faUser} />
-          </div>
-          Upload profile picture
-        </label>
         {inputs.map((inp) => (
           <>
             <input
