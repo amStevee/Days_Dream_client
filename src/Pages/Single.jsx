@@ -22,6 +22,7 @@ const Single = () => {
   const { currentUser } = useContext(AuthContext);
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
+  const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
   useEffect(() => {
     if (!currentUser) navigate("/login");
@@ -58,7 +59,7 @@ const Single = () => {
         <>
           <SinglePage>
             <div className="content">
-              <img src={`${post.image.imageUrl}`} alt="content" />
+              <img src={`${imageUrl}${post.image}`} alt="content" />
               <div className="user">
                 {!post.user_image ? (
                   <div className="fauser">
@@ -69,7 +70,7 @@ const Single = () => {
                     />
                   </div>
                 ) : (
-                  <img src={`${post?.user_image.imageUrl}`} alt="user" />
+                  <img src={`${imageUrl}${post?.user_image}`} alt="user" />
                 )}
                 <div className="info">
                   <span>{post.username}</span>
