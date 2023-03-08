@@ -13,6 +13,7 @@ import { AuthContext } from "../context/authContext";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 import Loading from "../Components/reuseables/Loading";
+import Wraper from "../Components/reuseables/Wraper";
 
 const Single = () => {
   const navigate = useNavigate();
@@ -52,61 +53,61 @@ const Single = () => {
 
   return (
     <>
-      <Navbar />
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          <SinglePage>
-            <div className="content">
-              <img src={`${imageUrl}${post.image}`} alt="content" />
-              <div className="user">
-                {!post.user_image ? (
-                  <div className="fauser">
-                    <FontAwesomeIcon
-                      color="gray"
-                      fontSize={"2rem"}
-                      icon={faUser}
-                    />
+      <Wraper>
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            <SinglePage>
+              <div className="content">
+                <img src={`${imageUrl}${post.image}`} alt="content" />
+                <div className="user">
+                  {!post.user_image ? (
+                    <div className="fauser">
+                      <FontAwesomeIcon
+                        color="gray"
+                        fontSize={"2rem"}
+                        icon={faUser}
+                      />
+                    </div>
+                  ) : (
+                    <img src={`${imageUrl}${post?.user_image}`} alt="user" />
+                  )}
+                  <div className="info">
+                    <span>{post.username}</span>
+                    <p>posted {moment(post.created_at).fromNow()}</p>
                   </div>
-                ) : (
-                  <img src={`${imageUrl}${post?.user_image}`} alt="user" />
-                )}
-                <div className="info">
-                  <span>{post.username}</span>
-                  <p>posted {moment(post.created_at).fromNow()}</p>
+                  {currentUser.username === post.username && (
+                    <div className="edit">
+                      <Link to={`/posts/write?edit=${post.id}`} state={post}>
+                        <FontAwesomeIcon
+                          color="green"
+                          fontSize={"1.5rem"}
+                          icon={faEdit}
+                        />
+                      </Link>
+                      <i onClick={handleDelete}>
+                        <FontAwesomeIcon
+                          color="red"
+                          fontSize={"1.5rem"}
+                          icon={faTrash}
+                        />
+                      </i>
+                    </div>
+                  )}
                 </div>
-                {currentUser.username === post.username && (
-                  <div className="edit">
-                    <Link to={`/posts/write?edit=${post.id}`} state={post}>
-                      <FontAwesomeIcon
-                        color="green"
-                        fontSize={"1.5rem"}
-                        icon={faEdit}
-                      />
-                    </Link>
-                    <i onClick={handleDelete}>
-                      <FontAwesomeIcon
-                        color="red"
-                        fontSize={"1.5rem"}
-                        icon={faTrash}
-                      />
-                    </i>
-                  </div>
-                )}
+                <h1>{post.title}</h1>
+                <ReactQuill
+                  value={post.description}
+                  readOnly={true}
+                  theme={"bubble"}
+                />
               </div>
-              <h1>{post.title}</h1>
-              <ReactQuill
-                value={post.description}
-                readOnly={true}
-                theme={"bubble"}
-              />
-            </div>
-            <Aside category={post.category} />
-          </SinglePage>
-        </>
-      )}
-      <Footer />
+              <Aside category={post.category} />
+            </SinglePage>
+          </>
+        )}
+      </Wraper>
     </>
   );
 };
