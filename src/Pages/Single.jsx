@@ -22,7 +22,6 @@ const Single = () => {
   const { currentUser } = useContext(AuthContext);
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
-  const imageUrl = `https://daysdreamhub.s3.amazonaws.com/api/v1/images/`;
 
   useEffect(() => {
     if (!currentUser) navigate("/login");
