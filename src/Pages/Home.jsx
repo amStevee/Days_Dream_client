@@ -11,6 +11,7 @@ import Loading from "../Components/reuseables/Loading";
 const Home = () => {
   const location = useLocation().search || null;
   const [posts, setPosts] = useState([]);
+  const [filename, setfilename] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   let perPage = 10;
@@ -19,19 +20,6 @@ const Home = () => {
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
   // PARSE IMAGE URL
-  const response = posts.image;
-
-  // Parse the JSON response to a JavaScript object
-  const responseObject = JSON.parse(response);
-
-  // Get the image URL from the response object
-  const imageUrls = responseObject.imageUrl;
-
-  // Split the URL using the "/" character as the delimiter
-  const urlParts = imageUrls.split("/");
-
-  // Get the last part of the URL, which should be the filename
-  const filename = urlParts[urlParts.length - 1];
 
   console.log(filename); // Output: "2021_10_13_10_14_IMG_2193.JPG"
 
@@ -43,11 +31,23 @@ const Home = () => {
             `${url}/api/v1/posts?category=${location}`
           );
           setPosts(data);
+          const response = posts.image;
+          const responseObject = JSON.parse(response);
+          const imageUrls = responseObject.imageUrl;
+          const urlParts = imageUrls.split("/");
+          const filename = urlParts[urlParts.length - 1];
+          setfilename(filename);
         } else {
           const data = await axios.get(
             `${url}/api/v1/posts?page=${currentPage}&limit=${perPage}`
           );
           setPosts(data.data.rows);
+          const response = posts.image;
+          const responseObject = JSON.parse(response);
+          const imageUrls = responseObject.imageUrl;
+          const urlParts = imageUrls.split("/");
+          const filename = urlParts[urlParts.length - 1];
+          setfilename(filename);
           setTotalPages(data.data.rowCount);
         }
         setLoading(false);
