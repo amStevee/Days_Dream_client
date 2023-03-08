@@ -32,16 +32,12 @@ const User = styled.div`
         padding: 5px 5px 0px 5px;
         overflow: hidden;
       }
-      .img {
+
+      img {
+        object-fit: cover;
         border-radius: 50%;
-        border: 2px solid ${({ theme }) => theme.color.primary_backround};
-        height: 4rem;
-        img {
-          object-fit: cover;
-          border-radius: 50%;
-          width: 100%;
-          height: 100%;
-        }
+        width: 100%;
+        height: 100%;
       }
 
       span {
