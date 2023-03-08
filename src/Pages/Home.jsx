@@ -11,7 +11,7 @@ import Loading from "../Components/reuseables/Loading";
 const Home = () => {
   const location = useLocation().search || null;
   const [posts, setPosts] = useState([]);
-  const [filename, setfilename] = useState([]);
+  // const [filename, setfilename] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   let perPage = 10;
