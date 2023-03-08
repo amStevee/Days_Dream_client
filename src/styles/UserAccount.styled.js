@@ -48,6 +48,7 @@ const User = styled.div`
     label {
       font-weight: 500;
       color: ${({ theme }) => theme.color.primary_backround};
+      text-align: start;
     }
 
     input {
