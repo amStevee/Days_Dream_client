@@ -19,13 +19,6 @@ const Home = () => {
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
-  //  const response = await posts.image;
-  //        responseObject = JSON.parse(response);
-  //        imageUrls = responseObject.imageUrl;
-  //        urlParts = imageUrls.split("/");
-  //        filename = urlParts[urlParts.length - 1];
-  //  setfilename(filename);
-
   useEffect(() => {
     const getPosts = async () => {
       try {
@@ -47,7 +40,7 @@ const Home = () => {
       }
     };
     getPosts();
-  }, [location, currentPage, perPage, posts]);
+  }, [location, currentPage, perPage]);
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
