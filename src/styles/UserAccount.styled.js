@@ -5,7 +5,6 @@ const User = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: #f7f7f7;
   height: 100vh;
 
