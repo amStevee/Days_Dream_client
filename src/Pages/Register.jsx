@@ -1,3 +1,5 @@
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -103,6 +105,9 @@ const Register = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
         <label htmlFor="file" className="reg">
+          <div className="fauser">
+            <FontAwesomeIcon color="gray" fontSize={"2.2rem"} icon={faUser} />
+          </div>
           Upload profile picture
         </label>
         {inputs.map((inp) => (

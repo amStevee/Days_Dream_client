@@ -11,6 +11,8 @@ const AuthComponent = styled.div`
   color: #c1b49f;
 
   .reg {
+    display: flex;
+    gap: 10px;
     outline: none;
     border: none;
     color: #fff;
@@ -18,8 +20,15 @@ const AuthComponent = styled.div`
     margin: 10px;
     font-weight: 700;
     font-size: 1rem;
-    background-color: rgb(69, 12, 154);
     cursor: pointer;
+  }
+
+  .fauser {
+    background-color: #ececec;
+    border-radius: 50%;
+    display: flex;
+    padding: 5px 5px 0px 5px;
+    overflow: hidden;
   }
 
   h1 {
