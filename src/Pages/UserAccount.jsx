@@ -51,9 +51,7 @@ export default function UserAccount() {
       <form onSubmit={handleUpdate}>
         <label htmlFor="file" className="file">
           {currentUser.user_image ? (
-            <div className="img">
-              <img src={currentUser.user_image} alt="user" />
-            </div>
+            <img src={currentUser.user_image} alt="user" />
           ) : (
             <div className="fauser">
               <FontAwesomeIcon color="gray" fontSize={"4rem"} icon={faUser} />
