@@ -21,7 +21,7 @@ export default function Aside({ category, title }) {
       }
     };
     getRelatedPosts();
-  }, [category]);
+  }, [category, title]);
 
   return (
     <AsideSection>
