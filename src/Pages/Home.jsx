@@ -18,6 +18,23 @@ const Home = () => {
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
+  // PARSE IMAGE URL
+  const response = posts.image;
+
+  // Parse the JSON response to a JavaScript object
+  const responseObject = JSON.parse(response);
+
+  // Get the image URL from the response object
+  const imageUrls = responseObject.imageUrl;
+
+  // Split the URL using the "/" character as the delimiter
+  const urlParts = imageUrls.split("/");
+
+  // Get the last part of the URL, which should be the filename
+  const filename = urlParts[urlParts.length - 1];
+
+  console.log(filename); // Output: "2021_10_13_10_14_IMG_2193.JPG"
+
   useEffect(() => {
     const getPosts = async () => {
       try {
@@ -60,7 +77,7 @@ const Home = () => {
               {posts.map((post) => (
                 <div className="post" key={post.id}>
                   <div className="image">
-                    <img src={`${imageUrl}${post.image}`} alt={post.title} />
+                    <img src={`${imageUrl}${filename}`} alt={post.title} />
                   </div>
 
                   <div className="content">
