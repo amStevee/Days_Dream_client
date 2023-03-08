@@ -42,7 +42,7 @@ const Home = () => {
     getPosts();
   }, [location, currentPage, perPage]);
 
-  console.log(post?.image);
+  console.log(posts?.image);
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
