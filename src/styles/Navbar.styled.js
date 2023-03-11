@@ -17,6 +17,10 @@ const NavbarComponent = styled.nav`
     gap: 2rem;
     li {
       list-style: none;
+
+      a:active {
+        color: #fff;
+      }
     }
 
     button {
