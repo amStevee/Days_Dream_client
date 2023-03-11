@@ -24,7 +24,6 @@ const Single = () => {
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
   useEffect(() => {
-    if (!currentUser) navigate("/login");
     const getPosts = async () => {
       try {
         const { data } = await axios.get(`${url}/api/v1/posts/${location}`);
@@ -35,7 +34,7 @@ const Single = () => {
       }
     };
     getPosts();
-  }, [location, currentUser, navigate]);
+  }, [location]);
 
   const handleDelete = async () => {
     try {
@@ -75,7 +74,7 @@ const Single = () => {
                     <span>{post.username}</span>
                     <p>posted {moment(post.created_at).fromNow()}</p>
                   </div>
-                  {currentUser.username === post.username && (
+                  {currentUser?.username === post.username && (
                     <div className="edit">
                       <Link to={`/posts/write?edit=${post.id}`} state={post}>
                         <FontAwesomeIcon
