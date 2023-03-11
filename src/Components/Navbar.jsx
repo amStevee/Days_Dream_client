@@ -48,22 +48,22 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/?category=technology">
+          <Link to="/posts?category=technology">
             <h4>Technology</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=cinema">
+          <Link to="/posts?category=cinema">
             <h4>Cinema</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=design">
+          <Link to="/posts?category=design">
             <h4>Design</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=food">
+          <Link to="/posts?category=food">
             <h4>Food</h4>
           </Link>
         </li>
