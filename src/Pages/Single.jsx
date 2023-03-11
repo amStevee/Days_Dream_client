@@ -15,8 +15,9 @@ import Wraper from "../Components/reuseables/Wraper";
 
 const Single = () => {
   const navigate = useNavigate();
-  const location = useLocation().pathname.split("/")[2];
-  const state = location.state;
+  const ulocation = useLocation();
+  const location = ulocation.pathname.split("/")[2];
+  const state = ulocation.state;
   const [post, setPost] = useState(state?.post || []);
   const [loading, setLoading] = useState(true);
   const { currentUser } = useContext(AuthContext);
