@@ -16,6 +16,7 @@ const FooterComponent = styled.footer`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px;
       gap: 10px;
 
       button {
