@@ -11,8 +11,22 @@ const FooterComponent = styled.footer`
   padding: 1rem;
   gap: 1rem;
 
-  .header h4 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  .header {
+    .hcontentent {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        outline: none;
+        border: none;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 20%;
+      }
+    }
+    h4 {
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
   }
 
   .social {
