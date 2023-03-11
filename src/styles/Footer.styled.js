@@ -12,7 +12,6 @@ const FooterComponent = styled.footer`
   gap: 1rem;
 
   .header {
-    width: 200px;
     .hcontentent {
       display: flex;
       justify-content: space-between;
