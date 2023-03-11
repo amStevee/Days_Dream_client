@@ -32,7 +32,7 @@ const Home = () => {
             `${url}/api/v1/posts?page=${currentPage}&limit=${perPage}`
           );
           setPosts(data.data.rows);
-          setTotalPages(data.data.rowCount);
+          setTotalPages(data.data.totalPage);
         }
         setLoading(false);
       } catch (err) {
