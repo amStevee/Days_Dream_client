@@ -12,7 +12,7 @@ const FooterComponent = styled.footer`
   gap: 1rem;
 
   .header {
-    width: 400px;
+    width: 200px;
     .hcontentent {
       display: flex;
       justify-content: space-between;
@@ -24,7 +24,7 @@ const FooterComponent = styled.footer`
         border: none;
         background-color: #f2f2f2;
         padding: 10px;
-        border-radius: 40%;
+        border-radius: 30%;
         color: #000;
       }
 
