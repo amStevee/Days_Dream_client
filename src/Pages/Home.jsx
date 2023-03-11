@@ -10,7 +10,8 @@ import Wraper from "../Components/reuseables/Wraper";
 const Home = () => {
   const location = useLocation().search || null;
   const [posts, setPosts] = useState([]);
-  // const [filename, setfilename] = useState([]);
+  const params = new URLSearchParams(location);
+  const q = parseInt(params.get("category"));
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   let perPage = 10;
@@ -18,13 +19,13 @@ const Home = () => {
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
+  console.log(q);
+
   useEffect(() => {
     const getPosts = async () => {
       try {
-        if (location) {
-          const { data } = await axios.get(
-            `${url}/api/v1/posts?category=${location}`
-          );
+        if (q) {
+          const { data } = await axios.get(`${url}/api/v1/posts?category=${q}`);
           setPosts(data);
         } else {
           const data = await axios.get(
@@ -39,7 +40,7 @@ const Home = () => {
       }
     };
     getPosts();
-  }, [location, currentPage, perPage]);
+  }, [q, currentPage, perPage]);
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
