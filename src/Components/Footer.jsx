@@ -16,10 +16,13 @@ const Footer = () => {
         <h4>Days Dream Blog</h4>
         <div className="hcontentent">
           <Link to={"/posts/write"}>
-            <button>Write</button>
+            <button>Write for us</button>
           </Link>
           <Link to={"/"}>
             <u>About Us</u>
+          </Link>
+          <Link to={"/"}>
+            <u>Terms of use</u>
           </Link>
         </div>
       </div>

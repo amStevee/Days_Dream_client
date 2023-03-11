@@ -24,7 +24,7 @@ const FooterComponent = styled.footer`
         border: none;
         background-color: #f2f2f2;
         padding: 10px;
-        border-radius: 50%;
+        border-radius: 45%;
         color: #000;
       }
 
