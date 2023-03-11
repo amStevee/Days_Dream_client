@@ -17,16 +17,11 @@ const NavbarComponent = styled.nav`
     gap: 2rem;
     li {
       list-style: none;
-
-      a {
-        color: inherit;
-      }
-
-      .currentLink {
-        color: #fff;
-      }
     }
 
+    .currentLink {
+      color: #fff;
+    }
     button {
       outline: none;
       background: none;
