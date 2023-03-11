@@ -43,29 +43,29 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <Link to="/?category=science">
+          <NavLink activeClassName="currentLink" to="/?category=science">
             <h4>Science</h4>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/?category=technology">
+          <NavLink activeClassName="currentLink" to="/?category=technology">
             <h4>Technology</h4>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/?category=cinema">
+          <NavLink activeClassName="currentLink" to="/?category=cinema">
             <h4>Cinema</h4>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/?category=design">
+          <NavLink activeClassName="currentLink" to="/?category=design">
             <h4>Design</h4>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/?category=food">
+          <NavLink activeClassName="currentLink" to="/?category=food">
             <h4>Food</h4>
-          </Link>
+          </NavLink>
         </li>
 
         <Link to={"/account"}>
