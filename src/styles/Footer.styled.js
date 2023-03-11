@@ -31,9 +31,6 @@ const FooterComponent = styled.footer`
         color: #f2f2f2;
       }
     }
-    h4 {
-      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    }
   }
 
   .social {
