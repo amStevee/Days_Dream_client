@@ -38,32 +38,32 @@ const Navbar = () => {
 
       <ul className={dropDown ? "drop" : ""}>
         <li>
-          <Link to="/?category=art">
+          <Link to="/art">
             <h4>Art</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=science">
+          <Link to="/science">
             <h4>Science</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=technology">
+          <Link to="/technology">
             <h4>Technology</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=cinema">
+          <Link to="/cinema">
             <h4>Cinema</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=design">
+          <Link to="/design">
             <h4>Design</h4>
           </Link>
         </li>
         <li>
-          <Link to="/?category=food">
+          <Link to="/food">
             <h4>Food</h4>
           </Link>
         </li>
