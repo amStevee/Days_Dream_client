@@ -2,7 +2,6 @@ import AsideSection from "../styles/Aside.styled";
 import Button from "../styles/Button.styled";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export default function Aside(props) {
   const [posts, setPosts] = useState([]);
@@ -30,18 +29,17 @@ export default function Aside(props) {
         <div className="post" key={post.id}>
           <img src={`${imageUrl}${post.image}`} alt={post.title} />
           <h2>{post.title}</h2>
-          <Link to={`/posts/${post.id}`}>
-            <Button
-              border={"1px solid #c1b49f"}
-              background={"transparent"}
-              margintop={".5rem"}
-              padding={".9rem"}
-              color={"#c1b49f"}
-              className="readmore"
-            >
-              Read More...
-            </Button>
-          </Link>
+
+          <Button
+            border={"1px solid #c1b49f"}
+            background={"transparent"}
+            margintop={".5rem"}
+            padding={".9rem"}
+            color={"#c1b49f"}
+            className="readmore"
+          >
+            Read More...
+          </Button>
         </div>
       ))}
     </AsideSection>

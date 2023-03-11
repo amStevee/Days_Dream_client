@@ -10,6 +10,7 @@ const Navbar = () => {
   const windowSize = window.innerWidth;
   const [dropDown, setDropDown] = useState(false);
   const navigate = useNavigate();
+  // const url = "https://day-dream-server.onrender.com";
 
   const login = () => {
     navigate("/login");
@@ -37,32 +38,32 @@ const Navbar = () => {
 
       <ul className={dropDown ? "drop" : ""}>
         <li>
-          <Link to="/posts?category=art">
+          <Link to={`/?category=art`}>
             <h4>Art</h4>
           </Link>
         </li>
         <li>
-          <Link to="/posts?category=science">
+          <Link to={`/?category=science`}>
             <h4>Science</h4>
           </Link>
         </li>
         <li>
-          <Link to="/posts?category=technology">
+          <Link to={`/?category=technology`}>
             <h4>Technology</h4>
           </Link>
         </li>
         <li>
-          <Link to="/posts?category=cinema">
+          <Link to={`/?category=cinema`}>
             <h4>Cinema</h4>
           </Link>
         </li>
         <li>
-          <Link to="/posts?category=design">
+          <Link to={`/?category=design`}>
             <h4>Design</h4>
           </Link>
         </li>
         <li>
-          <Link to="/posts?category=food">
+          <Link to={`/?category=food`}>
             <h4>Food</h4>
           </Link>
         </li>

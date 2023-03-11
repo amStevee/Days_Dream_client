@@ -14,9 +14,8 @@ const Footer = () => {
     <FooterComponent>
       <div className="header">
         <h4>Days Dream Blog</h4>
-        <Link to={"/write"}>
-          <button>Write for us</button>
-        </Link>
+
+        <button>Write for us</button>
 
         <Link>Home</Link>
         <Link>About Us</Link>
