@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import NavbarComponent from "../styles/Navbar.styled";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
@@ -9,8 +9,8 @@ const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
   const windowSize = window.innerWidth;
   const [dropDown, setDropDown] = useState(false);
+
   const navigate = useNavigate();
-  // const url = "https://day-dream-server.onrender.com";
 
   const login = () => {
     navigate("/login");
@@ -38,9 +38,9 @@ const Navbar = () => {
 
       <ul className={dropDown ? "drop" : ""}>
         <li>
-          <Link to="/?category=art">
+          <NavLink activeClassName="currentLink" to="/?category=art" activeC>
             <h4>Art</h4>
-          </Link>
+          </NavLink>
         </li>
         <li>
           <Link to="/?category=science">

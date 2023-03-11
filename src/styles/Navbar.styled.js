@@ -11,6 +11,10 @@ const NavbarComponent = styled.nav`
   background-color: ${({ theme }) => theme.color.primary_backround};
   z-index: 1000;
 
+  .currentLink {
+    color: #fff;
+  }
+
   ul {
     display: flex;
     background-color: ${({ theme }) => theme.color.primary_backround};
