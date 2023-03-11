@@ -6,16 +6,19 @@ import {
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext";
 
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
+  const { currentUser } = useContext(AuthContext);
   return (
     <FooterComponent>
       <div className="header">
         <h4>Days Dream Blog</h4>
         <div className="hcontentent">
-          <Link to={"/posts/write"}>
+          <Link to={currentUser.username ? "/posts/write" : "/login"}>
             <button>Write for us</button>
           </Link>
           <Link to={"/"}>
