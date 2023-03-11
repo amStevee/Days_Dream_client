@@ -71,6 +71,7 @@ const HomePage = styled.div`
         outline: none;
         border: none;
         background: transparent;
+        padding: 10px;
       }
       button:hover {
         color: #000;
