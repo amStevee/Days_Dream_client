@@ -98,13 +98,21 @@ const Home = () => {
                 ))}
                 <div className="pagination">
                   <button onClick={handlePrevPage}>
-                    <FontAwesomeIcon fontSize={"1rem"} icon={faChevronLeft} />
+                    <FontAwesomeIcon
+                      color="gray"
+                      fontSize={"1rem"}
+                      icon={faChevronLeft}
+                    />
                   </button>
                   <span>
                     page {currentPage} of {totalPages}
                   </span>
                   <button onClick={handleNextPage}>
-                    <FontAwesomeIcon fontSize={"1rem"} icon={faChevronRight} />
+                    <FontAwesomeIcon
+                      color="gray"
+                      fontSize={"1rem"}
+                      icon={faChevronRight}
+                    />
                   </button>
                 </div>
               </div>

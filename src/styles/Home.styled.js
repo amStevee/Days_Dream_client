@@ -64,7 +64,8 @@ const HomePage = styled.div`
       text-align: center;
       justify-content: center;
       align-items: center;
-      color: lightgray;
+      color: #c1b49f;
+      gap: 10px;
 
       button {
         outline: none;
