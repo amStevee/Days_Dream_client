@@ -19,7 +19,7 @@ const Single = () => {
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
   const { currentUser } = useContext(AuthContext);
-  const userid = currentUser.userid;
+  const userid = currentUser?.userid;
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
