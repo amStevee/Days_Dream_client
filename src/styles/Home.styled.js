@@ -48,7 +48,7 @@ const HomePage = styled.div`
         flex: 2;
         img {
           width: 100%;
-          max-height: 400px;
+          max-height: 300px;
           object-fit: cover;
         }
       }
