@@ -5,7 +5,6 @@ import {
   faGithubSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   const date = new Date();
@@ -14,11 +13,6 @@ const Footer = () => {
     <FooterComponent>
       <div className="header">
         <h4>Days Dream Blog</h4>
-
-        <button>Write for us</button>
-
-        <Link>Home</Link>
-        <Link>About Us</Link>
       </div>
       <div className="social">
         <p>Socials:</p>

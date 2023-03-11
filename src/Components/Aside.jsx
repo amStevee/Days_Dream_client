@@ -29,7 +29,6 @@ export default function Aside(props) {
         <div className="post" key={post.id}>
           <img src={`${imageUrl}${post.image}`} alt={post.title} />
           <h2>{post.title}</h2>
-
           <Button
             border={"1px solid #c1b49f"}
             background={"transparent"}
