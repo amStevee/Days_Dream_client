@@ -57,6 +57,26 @@ const HomePage = styled.div`
         flex: 3;
       }
     }
+
+    .pagination {
+      margin: 10px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: lightgray;
+
+      button {
+        outline: none;
+        border: none;
+        background: transparent;
+      }
+      button:hover {
+        color: #000;
+        background: lightgray;
+        border-radius: 5px;
+      }
+    }
   }
 
   @media only screen and (min-width: 768px) {

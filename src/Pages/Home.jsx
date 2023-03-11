@@ -6,6 +6,11 @@ import axios from "axios";
 import ReactQuill from "react-quill";
 import Loading from "../Components/reuseables/Loading";
 import Wraper from "../Components/reuseables/Wraper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const location = useLocation().search || null;
@@ -91,13 +96,17 @@ const Home = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-              <div className="pagination">
-                <button onClick={handlePrevPage}>Prev</button>
-                <span>
-                  page {currentPage} of {totalPages}
-                </span>
-                <button onClick={handleNextPage}>Next</button>
+                <div className="pagination">
+                  <button onClick={handlePrevPage}>
+                    <FontAwesomeIcon fontSize={"1rem"} icon={faChevronLeft} />
+                  </button>
+                  <span>
+                    page {currentPage} of {totalPages}
+                  </span>
+                  <button onClick={handleNextPage}>
+                    <FontAwesomeIcon fontSize={"1rem"} icon={faChevronRight} />
+                  </button>
+                </div>
               </div>
             </>
           )}
