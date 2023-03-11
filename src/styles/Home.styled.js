@@ -44,7 +44,7 @@ const HomePage = styled.div`
       display: flex;
       gap: 100px;
 
-      img {
+      .image {
         flex: 2;
         width: 100%;
         max-height: 400px;
