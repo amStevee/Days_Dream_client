@@ -11,8 +11,22 @@ const FooterComponent = styled.footer`
   padding: 1rem;
   gap: 1rem;
 
-  .header h4 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  .header {
+    display: flex;
+    gap: 15px;
+
+    h4 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background-color: #f2f2f2;
+      padding: 25px;
+      border-radius: 20%;
+    }
   }
 
   .social {
