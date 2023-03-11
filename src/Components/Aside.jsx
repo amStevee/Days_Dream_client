@@ -29,7 +29,11 @@ export default function Aside(props) {
       {posts.map((post) => (
         <div className="post" key={post.id}>
           <img src={`${imageUrl}${post.image}`} alt={post.title} />
-          <h2>{post.title}</h2>
+
+          <Link to={`/posts/${post.id}`}>
+            <h2>{post.title}</h2>
+          </Link>
+
           <Link to={`/posts/${post.id}`}>
             <Button
               border={"1px solid #c1b49f"}
