@@ -17,14 +17,14 @@ const FooterComponent = styled.footer`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      text-align: center;
+      gap: 10px;
 
       button {
         outline: none;
         border: none;
         background-color: #f2f2f2;
         padding: 10px;
-        border-radius: 30%;
+        border-radius: 50%;
         color: #000;
       }
 
