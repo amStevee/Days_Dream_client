@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="header">
         <h4>Days Dream Blog</h4>
         <div className="hcontentent">
-          <Link to={currentUser.username ? "/posts/write" : "/login"}>
+          <Link to={currentUser?.username ? "/posts/write" : "/login"}>
             <button>Write for us</button>
           </Link>
           <Link to={"/"}>
