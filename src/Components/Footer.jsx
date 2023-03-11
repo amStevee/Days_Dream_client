@@ -27,13 +27,13 @@ const Footer = () => {
         <p>Socials:</p>
         <div className="icons">
           <a href="https://twitter.com/am_stevenanongo">
-            <FontAwesomeIcon fontSize={"4rem"} icon={faTwitterSquare} />
+            <FontAwesomeIcon fontSize={"2rem"} icon={faTwitterSquare} />
           </a>
           <a href="https://instagram.com/am_stevee">
-            <FontAwesomeIcon fontSize={"4rem"} icon={faInstagramSquare} />
+            <FontAwesomeIcon fontSize={"2rem"} icon={faInstagramSquare} />
           </a>
           <a href="https://twitter.com/amStevee">
-            <FontAwesomeIcon fontSize={"4rem"} icon={faGithubSquare} />
+            <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
           </a>
         </div>
       </div>

@@ -12,16 +12,24 @@ const FooterComponent = styled.footer`
   gap: 1rem;
 
   .header {
+    width: 400px;
     .hcontentent {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      text-align: center;
 
       button {
         outline: none;
         border: none;
         background-color: #f2f2f2;
-        padding: 20px;
-        border-radius: 20%;
+        padding: 10px;
+        border-radius: 40%;
+        color: #000;
+      }
+
+      a {
+        color: #f2f2f2;
       }
     }
     h4 {
