@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import NavbarComponent from "../styles/Navbar.styled";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext";
 
 const Navbar = () => {
+  const location = useLocation().search || null;
+  const params = new URLSearchParams(location);
+  const q = params.get("category");
   const { currentUser, logout } = useContext(AuthContext);
   const windowSize = window.innerWidth;
   const [dropDown, setDropDown] = useState(false);
@@ -38,32 +41,51 @@ const Navbar = () => {
 
       <ul className={dropDown ? "drop" : ""}>
         <li>
-          <NavLink activeClassName="currentLink" to="/?category=art" activeC>
+          <NavLink
+            ClassName={q === "art" ? "currentLink" : ""}
+            to="/?category=art"
+            activeC
+          >
             <h4>Art</h4>
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="currentLink" to="/?category=science">
+          <NavLink
+            ClassName={q === "science" ? "currentLink" : ""}
+            to="/?category=science"
+          >
             <h4>Science</h4>
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="currentLink" to="/?category=technology">
+          <NavLink
+            ClassName={q === "technology" ? "currentLink" : ""}
+            to="/?category=technology"
+          >
             <h4>Technology</h4>
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="currentLink" to="/?category=cinema">
+          <NavLink
+            ClassName={q === "cinema" ? "currentLink" : ""}
+            to="/?category=cinema"
+          >
             <h4>Cinema</h4>
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="currentLink" to="/?category=design">
+          <NavLink
+            ClassName={q === "design" ? "currentLink" : ""}
+            to="/?category=design"
+          >
             <h4>Design</h4>
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="currentLink" to="/?category=food">
+          <NavLink
+            ClassName={q === "food" ? "currentLink" : ""}
+            to="/?category=food"
+          >
             <h4>Food</h4>
           </NavLink>
         </li>

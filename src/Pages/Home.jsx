@@ -14,9 +14,9 @@ import {
 
 const Home = () => {
   const location = useLocation().search || null;
-  const [posts, setPosts] = useState([]);
   const params = new URLSearchParams(location);
   const q = params.get("category");
+  const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   let perPage = 10;
