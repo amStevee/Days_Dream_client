@@ -26,8 +26,6 @@ const Home = () => {
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
-  console.log(q);
-
   useEffect(() => {
     const getPosts = async () => {
       try {
