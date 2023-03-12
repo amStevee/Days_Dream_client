@@ -70,7 +70,6 @@ const Home = () => {
                     <div className="image">
                       <LazyLoadImage
                         alt={post.title}
-                        effect="blur"
                         src={`${imageUrl}${post.image}`}
                         height={"200px"}
                         width={"100%"}
