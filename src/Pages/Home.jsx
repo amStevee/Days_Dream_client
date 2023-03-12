@@ -11,6 +11,8 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Home = () => {
   const location = useLocation().search || null;
@@ -66,10 +68,12 @@ const Home = () => {
                 {posts.map((post) => (
                   <div className="post" key={post.id}>
                     <div className="image">
-                      <img
-                        src={`${imageUrl}${post.image}`}
+                      <LazyLoadImage
                         alt={post.title}
-                        loading="lazy"
+                        effect="blur"
+                        src={`${imageUrl}${post.image}`}
+                        height={"200px"}
+                        width={"100%"}
                       />
                     </div>
 
