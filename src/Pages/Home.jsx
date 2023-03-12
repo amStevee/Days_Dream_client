@@ -71,6 +71,7 @@ const Home = () => {
                         src={`${imageUrl}${post.image}`}
                         height={"200px"}
                         width={"100%"}
+                        PlaceholderSrc={"../../public/stockphoto.jpg"}
                       />
                     </div>
 
