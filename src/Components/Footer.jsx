@@ -21,7 +21,7 @@ const Footer = () => {
           <Link to={currentUser?.username ? "/posts/write" : "/login"}>
             <button>Write for us</button>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/about"}>
             <u>About Us</u>
           </Link>
           <Link to={"/"}>
