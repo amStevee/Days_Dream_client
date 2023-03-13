@@ -62,10 +62,10 @@ const Home = () => {
             <Loading />
           ) : (
             <>
-              <div className="posts">
+              <article className="posts">
                 {posts.map((post) => (
                   <div className="post" key={post.id}>
-                    <div className="image">
+                    <figure className="image">
                       <LazyLoadImage
                         alt={post.title}
                         src={`${imageUrl}${post.image}`}
@@ -73,7 +73,7 @@ const Home = () => {
                         width={"100%"}
                         PlaceholderSrc={"../../public/stockphoto.jpg"}
                       />
-                    </div>
+                    </figure>
 
                     <div className="content">
                       <Link to={`/posts/${post.id}`}>
@@ -121,7 +121,7 @@ const Home = () => {
                     />
                   </button>
                 </div>
-              </div>
+              </article>
             </>
           )}
         </HomePage>

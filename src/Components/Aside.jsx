@@ -25,9 +25,9 @@ export default function Aside(props) {
 
   return (
     <AsideSection>
-      <h1>Other posts you may like</h1>
+      <h1>RELATED ARTICLES YOU MAY LIKE:</h1>
       {posts.map((post) => (
-        <div className="post" key={post.id}>
+        <article className="post" key={post.id}>
           <img
             src={`${imageUrl}${post.image}`}
             alt={post.title}
@@ -50,7 +50,7 @@ export default function Aside(props) {
               Read More...
             </Button>
           </Link>
-        </div>
+        </article>
       ))}
     </AsideSection>
   );

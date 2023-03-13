@@ -56,7 +56,7 @@ const Single = () => {
         ) : (
           <>
             <SinglePage>
-              <div className="content">
+              <article className="content">
                 <img src={`${imageUrl}${post.image}`} alt="content" />
                 <div className="user">
                   {!post.user_image ? (
@@ -99,7 +99,7 @@ const Single = () => {
                   readOnly={true}
                   theme={"bubble"}
                 />
-              </div>
+              </article>
               <Aside category={post.category} title={post.title} />
             </SinglePage>
           </>
