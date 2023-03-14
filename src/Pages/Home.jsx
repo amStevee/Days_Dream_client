@@ -11,6 +11,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import stockphoto from "../../public/stockphoto.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -71,7 +72,7 @@ const Home = () => {
                         src={`${imageUrl}${post.image}`}
                         height={"200px"}
                         width={"100%"}
-                        PlaceholderSrc={"../../public/stockphoto.jpg"}
+                        PlaceholderSrc={stockphoto}
                       />
                     </figure>
 
