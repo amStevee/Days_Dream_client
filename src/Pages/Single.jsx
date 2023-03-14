@@ -12,12 +12,14 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 import Loading from "../Components/reuseables/Loading";
 import Wraper from "../Components/reuseables/Wraper";
+import Verify from "../Components/reuseables/Verify";
 
 const Single = () => {
   const navigate = useNavigate();
   const location = useLocation().pathname.split("/")[2];
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [activedel, setActivedel] = useState(false);
   const { currentUser } = useContext(AuthContext);
   const userid = currentUser?.userid;
   const url = "https://day-dream-server.onrender.com";
@@ -83,7 +85,7 @@ const Single = () => {
                           icon={faEdit}
                         />
                       </Link>
-                      <i onClick={handleDelete}>
+                      <i onClick={() => setActivedel(true)}>
                         <FontAwesomeIcon
                           color="red"
                           fontSize={"1.5rem"}
@@ -100,6 +102,12 @@ const Single = () => {
                   theme={"bubble"}
                 />
               </article>
+              <Verify
+                handleDelete={handleDelete}
+                desc={"article"}
+                activedel={activedel}
+                setActivedel={setActivedel}
+              />
               <Aside category={post.category} title={post.title} />
             </SinglePage>
           </>
