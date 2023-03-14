@@ -28,6 +28,7 @@ const VerifyComponent = styled.div`
     padding: 10px;
     border-radius: 5px;
     gap: 10px;
+    width: fit-content;
   }
 
   .btn {

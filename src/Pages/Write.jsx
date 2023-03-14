@@ -87,9 +87,6 @@ export default function Write() {
               <div className="item">
                 <h1>Publish</h1>
                 <span>
-                  <b>Status: </b> Draft
-                </span>
-                <span>
                   <b>Visibility: </b> Public
                 </span>
 
