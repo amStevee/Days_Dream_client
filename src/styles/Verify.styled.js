@@ -25,6 +25,7 @@ const VerifyComponent = styled.div`
     align-items: center;
     background-color: #fff;
     padding: 10px;
+    border-radius: 5px;
   }
 
   .btn {
@@ -32,7 +33,7 @@ const VerifyComponent = styled.div`
     gap: 15px;
 
     button {
-      background-color: blue;
+      background-color: gray;
       padding: 10px;
       font-size: 1.5rem;
       color: #fff;
