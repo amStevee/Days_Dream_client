@@ -24,6 +24,7 @@ const VerifyComponent = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    padding: 10px;
   }
 
   .btn {
@@ -32,10 +33,11 @@ const VerifyComponent = styled.div`
 
     button {
       background-color: blue;
-      padding: 20px;
+      padding: 10px;
       font-size: 1.5rem;
       color: #fff;
       border: none;
+      border-radius: 5px;
       outline: none;
     }
   }
