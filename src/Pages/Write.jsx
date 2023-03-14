@@ -113,16 +113,18 @@ export default function Write() {
                   >
                     Save as draft
                   </Button>
-                  {/* <Button
-                color={"#fff"}
-                background={"#c1b49f"}
-                padding={"3px 5px"}
-                border={"1px solid #c1b49f"}
-                handleOption={handleSubmit}
-              >
-                Publish
-              </Button> */}
-                  <button onClick={handleSubmit}>Publish</button>
+
+                  <button
+                    onClick={handleSubmit}
+                    style={{
+                      color: "#fff",
+                      background: "#c1b49f",
+                      padding: "3px 5px",
+                      border: "1px solid #c1b49f",
+                    }}
+                  >
+                    Publish
+                  </button>
                 </div>
               </div>
               {/* use DRY concept: find a way round this */}
@@ -154,12 +156,12 @@ export default function Write() {
                   <input
                     type="radio"
                     name="category"
-                    id="technology"
-                    value={"technology"}
-                    checked={category === "technology"}
+                    id="business"
+                    value={"business"}
+                    checked={category === "business"}
                     onChange={(e) => setCategory(e.target.value)}
                   />
-                  <label htmlFor="technology">Technology</label>
+                  <label htmlFor="business">Business</label>
                 </div>
                 <div className="category">
                   <input
@@ -176,12 +178,12 @@ export default function Write() {
                   <input
                     type="radio"
                     name="category"
-                    id="design"
-                    value={"design"}
-                    checked={category === "design"}
+                    id="sport"
+                    value={"sport"}
+                    checked={category === "sport"}
                     onChange={(e) => setCategory(e.target.value)}
                   />
-                  <label htmlFor="design">Design</label>
+                  <label htmlFor="sport">Sport</label>
                 </div>
                 <div className="category">
                   <input

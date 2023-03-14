@@ -78,7 +78,7 @@ const Navbar = () => {
             ClassName={q === "design" ? "currentLink" : ""}
             to="/?category=design"
           >
-            <h4>Design</h4>
+            <h4>Sport</h4>
           </NavLink>
         </li>
         <li>
