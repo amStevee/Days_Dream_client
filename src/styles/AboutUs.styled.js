@@ -6,6 +6,11 @@ const About = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 10px;
+
+  .adv {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export default About;
