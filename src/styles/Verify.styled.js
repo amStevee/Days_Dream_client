@@ -22,6 +22,7 @@ const VerifyComponent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
   }
 
   .btn {
@@ -29,8 +30,12 @@ const VerifyComponent = styled.div`
     gap: 15px;
 
     button {
-      background-color: aliceblue;
+      background-color: blue;
+      padding: 20px;
+      font-size: 1.5rem;
       color: #fff;
+      border: none;
+      outline: none;
     }
   }
 `;
