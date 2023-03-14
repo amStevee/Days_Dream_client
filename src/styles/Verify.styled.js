@@ -27,6 +27,7 @@ const VerifyComponent = styled.div`
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
+    gap: 10px;
   }
 
   .btn {
