@@ -13,6 +13,7 @@ const VerifyComponent = styled.div`
     background: rgba(000, 000, 000, 0.3);
     width: 100vw;
     height: 100vh;
+    color: #ccc;
   }
   .rmv {
     display: none;
