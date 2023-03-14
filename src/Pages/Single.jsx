@@ -81,6 +81,7 @@ const Single = () => {
                       <Link to={`/posts/write?edit=${post.id}`} state={post}>
                         <FontAwesomeIcon
                           color="green"
+                          cursor={"pointer"}
                           fontSize={"1.5rem"}
                           icon={faEdit}
                         />
@@ -88,6 +89,7 @@ const Single = () => {
                       <i onClick={() => setActivedel(true)}>
                         <FontAwesomeIcon
                           color="red"
+                          cursor={"pointer"}
                           fontSize={"1.5rem"}
                           icon={faTrash}
                         />
