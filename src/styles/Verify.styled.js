@@ -13,6 +13,8 @@ const VerifyComponent = styled.div`
   width: 100vw;
   height: 100vh;
 
+  .content {
+  }
   .rmv {
     display: none;
   }
