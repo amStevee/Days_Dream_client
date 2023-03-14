@@ -13,7 +13,7 @@ const VerifyComponent = styled.div`
     background: rgba(000, 000, 000, 0.3);
     width: 100vw;
     height: 100vh;
-    color: #ccc;
+    color: gray;
   }
   .rmv {
     display: none;
@@ -41,6 +41,7 @@ const VerifyComponent = styled.div`
       border: none;
       border-radius: 5px;
       outline: none;
+      width: 2rem;
     }
   }
 `;
