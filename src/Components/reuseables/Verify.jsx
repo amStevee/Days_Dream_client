@@ -8,7 +8,7 @@ export default function Verify({
 }) {
   return (
     <VerifyComponent>
-      <div className={activedel ? "rmv" : "contain"}>
+      <div className={activedel ? "contain" : "rmv"}>
         <h3>Are you sure you want to delete this {desc} </h3>
         <div className="btn">
           <button onClick={handleDelete}>Yes</button>
