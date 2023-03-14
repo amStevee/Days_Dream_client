@@ -42,7 +42,7 @@ const VerifyComponent = styled.div`
       border: none;
       border-radius: 5px;
       outline: none;
-      width: 2rem;
+      width: 7rem;
     }
   }
 `;
