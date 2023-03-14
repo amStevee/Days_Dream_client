@@ -117,8 +117,8 @@ export default function Write() {
                   <button
                     onClick={handleSubmit}
                     style={{
-                      color: "#fff",
-                      background: "#c1b49f",
+                      color: "#c1b49f",
+                      background: "#fff",
                       padding: "3px 5px",
                       border: "1px solid #c1b49f",
                     }}
