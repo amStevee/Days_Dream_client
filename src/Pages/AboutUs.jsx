@@ -12,7 +12,7 @@ const AboutUs = () => {
       <About>
         <h1>ABOUT US</h1>
         <p>
-          Days dream blog provides you with the best articles the covers
+          Days dream blog provides you with the best articles that covers
           different aspect of your day to day life ranging from Business, Sport,
           Science, Art, Movies/celebrity gist e.t.c.
         </p>

@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
 }
 
+body {
+    height: 100%;
+}
+
 html {
     scroll-behavior: smooth;
 
