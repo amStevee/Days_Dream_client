@@ -45,19 +45,33 @@ const FooterComponent = styled.footer`
       align-items: center;
       gap: 10px;
 
-      #insta {
-        color: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
+      .instagram {
+        background: #f09433;
+        background: -moz-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
         );
-        -webkit-background-clip: text;
-        /* Also define standard property for compatibility */
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: -webkit-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
       }
     }
   }
