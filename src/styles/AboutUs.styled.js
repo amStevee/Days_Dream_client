@@ -7,10 +7,10 @@ const About = styled.div`
   flex-direction: column;
   padding: 10px;
   gap: 10px;
+  text-align: justify;
 
   .adv {
     display: flex;
-    flex-direction: column;
   }
 `;
 
