@@ -54,6 +54,8 @@ const Home = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
+  const img404 = ["../../public/images/computer.png"];
+
   return (
     <>
       <Wraper>
@@ -64,7 +66,9 @@ const Home = () => {
             <>
               {posts.length === 0 ? (
                 <div className="noContent">
-                  <img src="../../public/images/computer.png" alt="404" />
+                  {img404.map((im) => (
+                    <img src={im} alt="404" />
+                  ))}
                   <h3>No contents for this category yet</h3>
                 </div>
               ) : (
