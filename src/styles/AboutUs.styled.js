@@ -5,7 +5,7 @@ const About = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   gap: 10px;
   text-align: justify;
 
