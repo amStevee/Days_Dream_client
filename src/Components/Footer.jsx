@@ -2,7 +2,6 @@ import FooterComponent from "../styles/Footer.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitterSquare,
-  faGithubSquare,
   faInstagramSquare,
   faYoutubeSquare,
   faTelegram,
@@ -10,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 // Footer dose not look nice at the moment, need to add better styling to make it look appealing
 
@@ -44,8 +44,8 @@ const Footer = () => {
       <div className="social">
         <h4>Socials:</h4>
         <div className="icons">
-          <a href="https://twitter.com/amStevee">
-            <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
+          <a href="https://daysdreamhub@gmail.com">
+            <FontAwesomeIcon fontSize={"2rem"} icon={faEnvelope} />
           </a>
           <a href="https://twitter.com/am_stevenanongo">
             <FontAwesomeIcon fontSize={"2rem"} icon={faTwitterSquare} />

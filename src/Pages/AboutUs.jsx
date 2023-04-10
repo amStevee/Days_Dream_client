@@ -1,10 +1,10 @@
 import {
-  faInstagramSquare,
-  faTwitterSquare,
+  faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Wraper from "../Components/reuseables/Wraper";
 import About from "../styles/AboutUs.styled";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const AboutUs = () => {
   return (
@@ -49,13 +49,13 @@ const AboutUs = () => {
         <div>
           <h3>For Advert placement/Sponsorship contact:</h3>
           <div className="adv">
-            <a href="https://twitter.com/am_stevenanongo">
-              <FontAwesomeIcon fontSize={"1rem"} icon={faTwitterSquare} />{" "}
-              Twitter
+            <a href="https://daysdreamhub@gmail.com">
+              <FontAwesomeIcon fontSize={"2rem"} icon={faEnvelope} />
+              Email
             </a>
-            <a href="https://instagram.com/am_stevee">
-              <FontAwesomeIcon fontSize={"1rem"} icon={faInstagramSquare} />{" "}
-              Instagram
+            <a href="https://telegram.com/daysdreamhub">
+              <FontAwesomeIcon fontSize={"2rem"} icon={faTelegram} />
+              Telegram
             </a>
           </div>
         </div>
