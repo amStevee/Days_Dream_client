@@ -69,7 +69,7 @@ const Home = () => {
                   {img404.map((im) => (
                     <img src={im} alt="404" />
                   ))}
-                  <h3>No contents for this category yet</h3>
+                  <h3>Contents for this category is currently not available</h3>
                 </div>
               ) : (
                 <article className="posts">
