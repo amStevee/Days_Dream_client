@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="social">
-        <p>Socials:</p>
+        <h4>Socials:</h4>
         <div className="icons">
           <a href="https://twitter.com/amStevee">
             <FontAwesomeIcon
