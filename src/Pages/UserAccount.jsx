@@ -81,7 +81,7 @@ export default function UserAccount() {
             id="username"
           />
 
-          <label htmlFor="email">Username</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             value={currentUser.email}
