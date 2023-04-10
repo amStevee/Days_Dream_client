@@ -3,6 +3,15 @@ import styled from "styled-components";
 const HomePage = styled.div`
   margin: 1rem;
 
+  .noContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    color: gray;
+  }
+
   .ql-editor {
     text-align: justify;
     padding: 0 !important;
@@ -38,15 +47,6 @@ const HomePage = styled.div`
         margin: 0;
         padding: 0;
       }
-    }
-
-    .noContent {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      gap: 2rem;
-      color: gray;
     }
 
     .post {
