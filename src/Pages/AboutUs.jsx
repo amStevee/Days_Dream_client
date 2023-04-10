@@ -6,6 +6,9 @@ import Wraper from "../Components/reuseables/Wraper";
 import About from "../styles/AboutUs.styled";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+
+// Needs better styling
+
 const AboutUs = () => {
   return (
     <Wraper>
