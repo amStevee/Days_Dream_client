@@ -40,6 +40,15 @@ const HomePage = styled.div`
       }
     }
 
+    .noContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      color: gray;
+    }
+
     .post {
       display: flex;
       gap: 100px;

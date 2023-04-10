@@ -63,7 +63,8 @@ const Home = () => {
           ) : (
             <>
               {posts.length === 0 ? (
-                <div>
+                <div className="noContent">
+                  <img src="../../public/images/computer.png" alt="404" />
                   <h3>No contents for this category yet</h3>
                 </div>
               ) : (
