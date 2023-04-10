@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitterSquare,
   faGithubSquare,
+  faInstagramSquare,
   faYoutubeSquare,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
@@ -40,11 +41,15 @@ const Footer = () => {
               icon={faTwitterSquare}
             />
           </a>
-          <div className="instagram">
-            <a href="https://instagram.com/am_stevee" style={{display:'none'}}>instagram</a>
-          </div>
+          <a href="https://instagram.com/am_stevee">
+            <FontAwesomeIcon
+              fontSize={"2rem"}
+              color="#fff"
+              icon={faInstagramSquare}
+            />
+          </a>
           <a href="https://twitter.com/amStevee">
-            <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
+            <FontAwesomeIcon fontSize={"2rem"} color="#fff" icon={faGithubSquare} />
           </a>
           <a href="https://youtube.com/daysdreamhub">
             <FontAwesomeIcon
