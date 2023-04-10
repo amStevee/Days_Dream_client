@@ -54,7 +54,7 @@ const Home = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
-  const img404 = ["./computer.png"];
+  const img404 = ["../../public/images/computer.png"];
 
   return (
     <>
