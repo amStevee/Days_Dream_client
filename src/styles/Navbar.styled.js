@@ -28,6 +28,7 @@ const NavbarComponent = styled.nav`
       border: none;
       color: #c1b49f;
       font-weight: 500;
+      font-size: x-large;
     }
   }
 

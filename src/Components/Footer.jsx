@@ -35,19 +35,35 @@ const Footer = () => {
         <p>Socials:</p>
         <div className="icons">
           <a href="https://twitter.com/am_stevenanongo">
-            <FontAwesomeIcon fontSize={"2rem"} color="blue" icon={faTwitterSquare} />
+            <FontAwesomeIcon
+              fontSize={"2rem"}
+              color="#1DA1F2"
+              icon={faTwitterSquare}
+            />
           </a>
           <a href="https://instagram.com/am_stevee">
-            <FontAwesomeIcon fontSize={"2rem"} icon={faInstagramSquare} />
+            <FontAwesomeIcon
+              fontSize={"2rem"}
+              id="insta"
+              icon={faInstagramSquare}
+            />
           </a>
           <a href="https://twitter.com/amStevee">
             <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
           </a>
           <a href="https://youtube.com/daysdreamhub">
-            <FontAwesomeIcon fontSize={"2rem"} color="red" icon={faYoutubeSquare} />
+            <FontAwesomeIcon
+              fontSize={"2rem"}
+              color="red"
+              icon={faYoutubeSquare}
+            />
           </a>
           <a href="https://telegram.com/daysdreamhub">
-            <FontAwesomeIcon fontSize={"2rem"} color="blue" icon={faTelegram} />
+            <FontAwesomeIcon
+              fontSize={"2rem"}
+              color="#1DA1F2"
+              icon={faTelegram}
+            />
           </a>
         </div>
       </div>
