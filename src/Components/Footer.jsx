@@ -68,8 +68,10 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h4>Developed by</h4>
-        <a href="https://twitter.com/am_stevenanongo" style={{color:'#fff'}}>Steven Anongo</a>
+        <h4>Developed by:</h4>
+        <a href="https://twitter.com/am_stevenanongo" style={{ color: "#fff" }}>
+          Steven Anongo
+        </a>
       </div>
 
       <div className="copyright">&copy; {year} Days Dream Blog</div>
