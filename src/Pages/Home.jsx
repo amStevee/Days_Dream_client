@@ -62,7 +62,7 @@ const Home = () => {
             <Loading />
           ) : (
             <>
-              {posts === [] || null ? <div><h3>No contents for this category yet</h3></div> : <article className="posts">
+              {posts === null ? <div><h3>No contents for this category yet</h3></div> : <article className="posts">
                 {posts.map((post) => (
                   <div className="post" key={post.id}>
                     <figure className="image">
