@@ -40,9 +40,9 @@ const Footer = () => {
               icon={faTwitterSquare}
             />
           </a>
-          <a href="https://instagram.com/am_stevee" className="instagram">
-            <div></div>
-          </a>
+          <div className="instagram">
+            <a href="https://instagram.com/am_stevee" style={{display:'none'}}>instagram</a>
+          </div>
           <a href="https://twitter.com/amStevee">
             <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
           </a>
