@@ -45,15 +45,19 @@ const AboutUs = () => {
           Thank you for visiting our blog, and we hope that you find our content
           informative, engaging, and inspiring.
         </p>
-        <h3>For Advert placement/Sponsorship contact:</h3>
-        <div className="adv">
-          <a href="https://twitter.com/am_stevenanongo">
-            <FontAwesomeIcon fontSize={"1rem"} icon={faTwitterSquare} /> Twitter
-          </a>
-          <a href="https://instagram.com/am_stevee">
-            <FontAwesomeIcon fontSize={"1rem"} icon={faInstagramSquare} />{" "}
-            Instagram
-          </a>
+
+        <div>
+          <h3>For Advert placement/Sponsorship contact:</h3>
+          <div className="adv">
+            <a href="https://twitter.com/am_stevenanongo">
+              <FontAwesomeIcon fontSize={"1rem"} icon={faTwitterSquare} />{" "}
+              Twitter
+            </a>
+            <a href="https://instagram.com/am_stevee">
+              <FontAwesomeIcon fontSize={"1rem"} icon={faInstagramSquare} />{" "}
+              Instagram
+            </a>
+          </div>
         </div>
       </About>
     </Wraper>
