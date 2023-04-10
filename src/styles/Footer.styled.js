@@ -46,7 +46,7 @@ const FooterComponent = styled.footer`
       gap: 10px;
 
       #insta {
-        background: radial-gradient(
+        color: radial-gradient(
           circle at 30% 107%,
           #fdf497 0%,
           #fdf497 5%,
@@ -58,8 +58,6 @@ const FooterComponent = styled.footer`
         /* Also define standard property for compatibility */
         background-clip: text;
         -webkit-text-fill-color: transparent;
-
-        font-size: 200px; /* change this to change the size*/
       }
     }
   }

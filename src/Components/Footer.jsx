@@ -54,7 +54,7 @@ const Footer = () => {
           <a href="https://youtube.com/daysdreamhub">
             <FontAwesomeIcon
               fontSize={"2rem"}
-              color="red"
+              color="#FF0000"
               icon={faYoutubeSquare}
             />
           </a>
