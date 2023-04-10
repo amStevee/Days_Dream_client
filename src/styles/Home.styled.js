@@ -8,6 +8,7 @@ const HomePage = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
     gap: 2rem;
     color: gray;
   }
