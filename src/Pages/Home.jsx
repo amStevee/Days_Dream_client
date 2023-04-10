@@ -62,66 +62,72 @@ const Home = () => {
             <Loading />
           ) : (
             <>
-              {posts === null ? <div><h3>No contents for this category yet</h3></div> : <article className="posts">
-                {posts.map((post) => (
-                  <div className="post" key={post.id}>
-                    <figure className="image">
-                      <LazyLoadImage
-                        alt={post.title}
-                        src={`${imageUrl}${post.image}`}
-                        height={"200px"}
-                        width={"100%"}
-                        PlaceholderSrc={"../../public/stockphoto.jpg"}
-                      />
-                    </figure>
-
-                    <div className="content">
-                      <Link to={`/posts/${post.id}`}>
-                        <h1>{post.title}</h1>
-                      </Link>
-
-                      <ReactQuill
-                        className="editor"
-                        value={post.description}
-                        readOnly={true}
-                        theme={"bubble"}
-                      />
-
-                      <Link to={`/posts/${post.id}`}>
-                        <Button
-                          border={"1px solid #c1b49f"}
-                          background={"transparent"}
-                          margintop={".5rem"}
-                          padding={".9rem"}
-                          color={"#c1b49f"}
-                          className="readmore"
-                        >
-                          Read More...
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-                <div className="pagination">
-                  <button onClick={handlePrevPage}>
-                    <FontAwesomeIcon
-                      color="gray"
-                      fontSize={"1rem"}
-                      icon={faChevronLeft}
-                    />
-                  </button>
-                  <span>
-                    page {currentPage} of {totalPages}
-                  </span>
-                  <button onClick={handleNextPage}>
-                    <FontAwesomeIcon
-                      color="gray"
-                      fontSize={"1rem"}
-                      icon={faChevronRight}
-                    />
-                  </button>
+              {posts.length === 0 ? (
+                <div>
+                  <h3>No contents for this category yet</h3>
                 </div>
-              </article>}
+              ) : (
+                <article className="posts">
+                  {posts.map((post) => (
+                    <div className="post" key={post.id}>
+                      <figure className="image">
+                        <LazyLoadImage
+                          alt={post.title}
+                          src={`${imageUrl}${post.image}`}
+                          height={"200px"}
+                          width={"100%"}
+                          PlaceholderSrc={"../../public/stockphoto.jpg"}
+                        />
+                      </figure>
+
+                      <div className="content">
+                        <Link to={`/posts/${post.id}`}>
+                          <h1>{post.title}</h1>
+                        </Link>
+
+                        <ReactQuill
+                          className="editor"
+                          value={post.description}
+                          readOnly={true}
+                          theme={"bubble"}
+                        />
+
+                        <Link to={`/posts/${post.id}`}>
+                          <Button
+                            border={"1px solid #c1b49f"}
+                            background={"transparent"}
+                            margintop={".5rem"}
+                            padding={".9rem"}
+                            color={"#c1b49f"}
+                            className="readmore"
+                          >
+                            Read More...
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                  <div className="pagination">
+                    <button onClick={handlePrevPage}>
+                      <FontAwesomeIcon
+                        color="gray"
+                        fontSize={"1rem"}
+                        icon={faChevronLeft}
+                      />
+                    </button>
+                    <span>
+                      page {currentPage} of {totalPages}
+                    </span>
+                    <button onClick={handleNextPage}>
+                      <FontAwesomeIcon
+                        color="gray"
+                        fontSize={"1rem"}
+                        icon={faChevronRight}
+                      />
+                    </button>
+                  </div>
+                </article>
+              )}
             </>
           )}
         </HomePage>
