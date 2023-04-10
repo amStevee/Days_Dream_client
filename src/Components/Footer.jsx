@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <FooterComponent>
       <div className="header">
-        <h4>Days Dream Blog</h4>
+        <h3>Days Dream Blog</h3>
         <div className="hcontentent">
           <Link to={currentUser?.username ? "/posts/write" : "/login"}>
             <button>Write for us</button>
@@ -31,52 +31,34 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="social">
-        <h4>Socials:</h4>
-        <div className="icons">
-          <a href="https://twitter.com/amStevee">
-            <FontAwesomeIcon
-              fontSize={"2rem"}
-              color="#fff"
-              icon={faGithubSquare}
-            />
-          </a>
-          <a href="https://twitter.com/am_stevenanongo">
-            <FontAwesomeIcon
-              fontSize={"2rem"}
-              color="#1DA1F2"
-              icon={faTwitterSquare}
-            />
-          </a>
-          <a href="https://instagram.com/am_stevee">
-            <FontAwesomeIcon
-              fontSize={"2rem"}
-              color="#fff"
-              icon={faInstagramSquare}
-            />
-          </a>
 
-          <a href="https://youtube.com/daysdreamhub">
-            <FontAwesomeIcon
-              fontSize={"2rem"}
-              color="#FF0000"
-              icon={faYoutubeSquare}
-            />
-          </a>
-          <a href="https://telegram.com/daysdreamhub">
-            <FontAwesomeIcon
-              fontSize={"2rem"}
-              color="#1DA1F2"
-              icon={faTelegram}
-            />
-          </a>
-        </div>
-      </div>
       <div>
         <h4>Developed by:</h4>
         <a href="https://twitter.com/am_stevenanongo" style={{ color: "#fff" }}>
           Steven Anongo
         </a>
+      </div>
+
+      <div className="social">
+        <h4>Socials:</h4>
+        <div className="icons">
+          <a href="https://twitter.com/amStevee">
+            <FontAwesomeIcon fontSize={"2rem"} icon={faGithubSquare} />
+          </a>
+          <a href="https://twitter.com/am_stevenanongo">
+            <FontAwesomeIcon fontSize={"2rem"} icon={faTwitterSquare} />
+          </a>
+          <a href="https://instagram.com/am_stevee">
+            <FontAwesomeIcon fontSize={"2rem"} icon={faInstagramSquare} />
+          </a>
+
+          <a href="https://youtube.com/daysdreamhub">
+            <FontAwesomeIcon fontSize={"2rem"} icon={faYoutubeSquare} />
+          </a>
+          <a href="https://telegram.com/daysdreamhub">
+            <FontAwesomeIcon fontSize={"2rem"} icon={faTelegram} />
+          </a>
+        </div>
       </div>
 
       <div className="copyright">&copy; {year} Days Dream Blog</div>
