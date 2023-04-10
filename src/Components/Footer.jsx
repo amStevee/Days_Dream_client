@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 
+// Footer dose not look nice at the moment, need to add better styling to make it look appealing
+
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
