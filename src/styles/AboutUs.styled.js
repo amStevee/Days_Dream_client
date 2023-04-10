@@ -11,6 +11,7 @@ const About = styled.div`
 
   .adv {
     display: flex;
+    gap: 5px;
   }
 `;
 
