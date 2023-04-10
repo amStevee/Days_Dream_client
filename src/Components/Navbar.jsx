@@ -75,8 +75,8 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            ClassName={q === "design" ? "currentLink" : ""}
-            to="/?category=design"
+            ClassName={q === "sport" ? "currentLink" : ""}
+            to="/?category=sport"
           >
             <h4>Sport</h4>
           </NavLink>
