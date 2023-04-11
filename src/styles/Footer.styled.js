@@ -24,6 +24,7 @@ const FooterComponent = styled.footer`
       align-items: center;
       padding: 10px;
       gap: 10px;
+      width: 30px;
 
       button {
         outline: none;

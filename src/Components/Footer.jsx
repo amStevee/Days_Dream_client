@@ -18,6 +18,7 @@ const Footer = () => {
   const year = date.getFullYear();
   const { currentUser } = useContext(AuthContext);
   return (
+    // 
     <div
       style={{
         display: "flex",
