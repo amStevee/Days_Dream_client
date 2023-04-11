@@ -21,10 +21,8 @@ const Footer = () => {
     // 
     <div
       style={{
-        display: "flex",
-        flexDirection:'column',
-        justifyContent: "center",
-        alignItems: "center",
+        margin:'auto',
+        width:'100%'
       }}
     >
       <FooterComponent>
