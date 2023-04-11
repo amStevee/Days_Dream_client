@@ -18,14 +18,9 @@ const Footer = () => {
   const year = date.getFullYear();
   const { currentUser } = useContext(AuthContext);
   return (
-    // 
-    <div
-      style={{
-        margin:'auto',
-        width:'100%'
-      }}
-    >
-      <FooterComponent>
+    //
+    <FooterComponent>
+      <div className="container">
         <h2>Days Dream Blog</h2>
         <div className="header">
           <div className="hcontentent">
@@ -77,9 +72,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </FooterComponent>
-      <div className="copyright">&copy; {year} Days Dream Blog</div>
-    </div>
+      </div>
+      <div className="copyright" style={{margin:'auto'}}>&copy; {year} Days Dream Blog</div>
+    </FooterComponent>
   );
 };
 
