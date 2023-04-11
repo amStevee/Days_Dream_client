@@ -11,6 +11,7 @@ const HomePage = styled.div`
     flex-direction: column;
     gap: 2rem;
     color: gray;
+    max-width: 300px
   }
 
   .ql-editor {
