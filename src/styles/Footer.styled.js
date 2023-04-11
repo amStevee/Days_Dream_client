@@ -50,7 +50,7 @@ const FooterComponent = styled.footer`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
+      align-items: start;
       gap: 10px;
     }
   }
