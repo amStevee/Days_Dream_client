@@ -19,8 +19,8 @@ const Footer = () => {
   const { currentUser } = useContext(AuthContext);
   return (
     //
-    <FooterComponent>
-      
+    <>
+      <FooterComponent>
         <h2>Days Dream Blog</h2>
         <div className="header">
           <div className="hcontentent">
@@ -72,9 +72,12 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      
-      <div className="copyright" style={{margin:'auto', display:'block'}}>&copy; {year} Days Dream Blog</div>
-    </FooterComponent>
+
+      </FooterComponent>
+        <div className="copyright" style={{ margin: "auto", display: "block" }}>
+          &copy; {year} Days Dream Blog
+        </div>
+    </>
   );
 };
 
