@@ -47,6 +47,7 @@ const FooterComponent = styled.footer`
 
     .icons {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
       gap: 10px;
@@ -55,6 +56,9 @@ const FooterComponent = styled.footer`
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    .icons {
+      flex-direction: row;
+    }
 
   }
 `;
