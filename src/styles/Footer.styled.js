@@ -9,11 +9,11 @@ const FooterComponent = styled.footer`
   color: #c1b49f;
   background-color: ${({ theme }) => theme.color.primary_backround};
   padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
 
   .header {
     h2 {
-      font-size: larger;
+      font-size: xx-large;
     }
 
     .hcontentent {
