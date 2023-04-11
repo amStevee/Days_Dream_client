@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
       </FooterComponent>
-        <div className="copyright" style={{ margin: "auto", display: "block" }}>
+        <div className="copyright" style={{ textAlign:'center', display: "block" }}>
           &copy; {year} Days Dream Blog
         </div>
     </>
