@@ -19,10 +19,8 @@ const Footer = () => {
   const { currentUser } = useContext(AuthContext);
   return (
     <FooterComponent>
+      <h2>Days Dream Blog</h2>
       <div className="header">
-        <h2>
-          Days Dream Blog
-        </h2>
         <div className="hcontentent">
           <Link to={currentUser?.username ? "/posts/write" : "/login"}>
             <button>Write for us</button>
@@ -48,19 +46,24 @@ const Footer = () => {
         <div className="icons">
           <a href="https://daysdreamhub@gmail.com">
             <FontAwesomeIcon fontSize={"2rem"} icon={faEnvelope} />
+            daysdreamhub@gmail.com
           </a>
           <a href="https://twitter.com/am_stevenanongo">
             <FontAwesomeIcon fontSize={"2rem"} icon={faTwitterSquare} />
+            Twitter
           </a>
           <a href="https://instagram.com/am_stevee">
             <FontAwesomeIcon fontSize={"2rem"} icon={faInstagramSquare} />
+            Instagram
           </a>
 
           <a href="https://youtube.com/daysdreamhub">
             <FontAwesomeIcon fontSize={"2rem"} icon={faYoutubeSquare} />
+            @daysdreamhub
           </a>
           <a href="https://telegram.com/daysdreamhub">
             <FontAwesomeIcon fontSize={"2rem"} icon={faTelegram} />
+            @Daysdreamhub
           </a>
         </div>
       </div>

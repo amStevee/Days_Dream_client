@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const FooterComponent = styled.footer`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -11,14 +11,15 @@ const FooterComponent = styled.footer`
   padding: 1rem;
   gap: 2rem;
 
+  h2 {
+    font-size: xx-large;
+    font-weight: bolder;
+  }
   .header {
-    h2 {
-      font-size: xx-large;
-      font-weight: bolder;
-    }
-
     .hcontentent {
       display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
@@ -50,6 +51,11 @@ const FooterComponent = styled.footer`
       align-items: center;
       gap: 10px;
     }
+  }
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+
   }
 `;
 
