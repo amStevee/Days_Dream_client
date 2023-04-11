@@ -54,8 +54,6 @@ const Home = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
-  const img404 = ["../../public/images/computer.png"];
-
   return (
     <>
       <Wraper>
@@ -66,9 +64,9 @@ const Home = () => {
             <>
               {posts.length === 0 ? (
                 <div className="noContent">
-                  {img404.map((im) => (
-                    <img src={im} alt="404" />
-                  ))}
+                  
+                    <img src={'/computer.png'} alt="404" />
+                  
                   <h3>
                     Contents for this category are currently not available
                   </h3>
@@ -83,7 +81,7 @@ const Home = () => {
                           src={`${imageUrl}${post.image}`}
                           height={"200px"}
                           width={"100%"}
-                          PlaceholderSrc={"../../public/stockphoto.jpg"}
+                          PlaceholderSrc={"/stockphoto.jpg"}
                         />
                       </figure>
 
