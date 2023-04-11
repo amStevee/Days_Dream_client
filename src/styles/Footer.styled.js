@@ -14,6 +14,7 @@ const FooterComponent = styled.footer`
   .header {
     h2 {
       font-size: xx-large;
+      font-weight: bolder;
     }
 
     .hcontentent {

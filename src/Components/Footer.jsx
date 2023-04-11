@@ -21,7 +21,7 @@ const Footer = () => {
     <FooterComponent>
       <div className="header">
         <h2>
-          <b>Days Dream Blog</b>
+          Days Dream Blog
         </h2>
         <div className="hcontentent">
           <Link to={currentUser?.username ? "/posts/write" : "/login"}>
