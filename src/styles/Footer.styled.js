@@ -20,7 +20,7 @@ const FooterComponent = styled.footer`
     .hcontentent {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
