@@ -72,11 +72,13 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
       </FooterComponent>
-        <div className="copyright" style={{ textAlign:'center', display: "block" }}>
-          &copy; {year} Days Dream Blog
-        </div>
+      <div
+        className="copyright"
+        style={{ textAlign: "center", display: "block" }}
+      >
+        &copy; {year} Days Dream Blog
+      </div>
     </>
   );
 };

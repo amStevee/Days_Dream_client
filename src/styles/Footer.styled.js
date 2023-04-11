@@ -28,6 +28,8 @@ const FooterComponent = styled.footer`
       width: 30px;
 
       button {
+        display: flex;
+        flex-wrap: nowrap;
         outline: none;
         border: none;
         background-color: #f2f2f2;
