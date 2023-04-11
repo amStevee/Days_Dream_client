@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FooterComponent = styled.footer`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     color: #c1b49f;
@@ -59,6 +59,7 @@ const FooterComponent = styled.footer`
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    justify-content: center;
     .icons {
       flex-direction: row;
     }
