@@ -20,7 +20,9 @@ const Footer = () => {
   return (
     <FooterComponent>
       <div className="header">
-        <h3>Days Dream Blog</h3>
+        <h2>
+          <b>Days Dream Blog</b>
+        </h2>
         <div className="hcontentent">
           <Link to={currentUser?.username ? "/posts/write" : "/login"}>
             <button>Write for us</button>
