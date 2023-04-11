@@ -20,16 +20,13 @@ const FooterComponent = styled.footer`
     .hcontentent {
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
       gap: 10px;
-      width: 30px;
 
       button {
-        display: flex;
-        flex-wrap: nowrap;
         outline: none;
         border: none;
         background-color: #f2f2f2;
