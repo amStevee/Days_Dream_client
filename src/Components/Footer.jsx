@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     //
     <FooterComponent>
-      <div className="container">
+      
         <h2>Days Dream Blog</h2>
         <div className="header">
           <div className="hcontentent">
@@ -72,8 +72,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
-      <div className="copyright" style={{margin:'auto'}}>&copy; {year} Days Dream Blog</div>
+      
+      <div className="copyright" style={{margin:'auto', display:'block'}}>&copy; {year} Days Dream Blog</div>
     </FooterComponent>
   );
 };

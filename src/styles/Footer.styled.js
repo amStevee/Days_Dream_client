@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const FooterComponent = styled.footer`
-  .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,6 +10,7 @@ const FooterComponent = styled.footer`
     background-color: ${({ theme }) => theme.color.primary_backround};
     padding: 1rem;
     gap: 2rem;
+    width: 100%;
 
     h2 {
       font-size: xx-large;
@@ -55,7 +55,7 @@ const FooterComponent = styled.footer`
         gap: 10px;
       }
     }
-  }
+  
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
