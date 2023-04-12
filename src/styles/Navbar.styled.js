@@ -13,7 +13,7 @@ const NavbarComponent = styled.nav`
 
   .user {
     border: 1px solid #c1b49f;
-    padding: 3px 4px;
+    padding: 5px 3px;
   }
 
   ul {
