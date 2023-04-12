@@ -12,7 +12,7 @@ const NavbarComponent = styled.nav`
   z-index: 1000;
 
   .user {
-    border: 1px solid inherit;
+    border: 1px solid #c1b49f;
     padding: 3px;
   }
 
