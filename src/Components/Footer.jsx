@@ -36,7 +36,7 @@ const Footer = () => {
           <h4>Developed by:</h4>
           <a
             href="https://twitter.com/am_stevenanongo"
-            style={{ color: "#fff" }}
+            style={{ color: "#f2f2f2" }}
           >
             Steven Anongo
           </a>
