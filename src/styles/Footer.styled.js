@@ -39,6 +39,7 @@ const FooterComponent = styled.footer`
       button:focus {
         transform: scale(0.1);
         transition: all 1s ease-in;
+        background-color: gray;
       }
 
       a {
