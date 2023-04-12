@@ -37,8 +37,8 @@ const FooterComponent = styled.footer`
 
       button:hover,
       button:focus {
-        transform: scale(0.1);
-        transition: all 1s ease-in;
+        transform: scale(1.1);
+        transition: transform 2ms ease-in;
         background-color: gray;
       }
 
