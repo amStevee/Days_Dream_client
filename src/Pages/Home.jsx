@@ -72,7 +72,7 @@ const Home = () => {
                   </h3>
                 </div>
               ) : (
-                <article className="posts">
+                <article className="posts" id="search">
                   {posts.map((post) => (
                     <div className="post" key={post.id}>
                       <figure className="image">
