@@ -68,8 +68,8 @@ const FooterComponent = styled.footer`
       }
     }
 
-    .icons:hover,
-    .icons:focus {
+    .icons a:hover,
+    .icons a:focus {
       transform: scale(1.1);
       transition: transform 2ms ease-in;
       background-color: #f2f2f2;
