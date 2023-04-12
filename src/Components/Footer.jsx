@@ -43,7 +43,6 @@ const Footer = () => {
         </div>
 
         <div className="social">
-          <h4>Socials:</h4>
           <div className="icons">
             <a href="https://daysdreamhub@gmail.com">
               <FontAwesomeIcon fontSize={"2rem"} icon={faEnvelope} />
