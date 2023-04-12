@@ -35,6 +35,12 @@ const FooterComponent = styled.footer`
         color: #000;
       }
 
+      button:hover,
+      button:focus {
+        transform: scale(0.1);
+        transition: all 1s ease-in;
+      }
+
       a {
         color: #f2f2f2;
       }
