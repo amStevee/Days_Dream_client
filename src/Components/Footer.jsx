@@ -46,24 +46,24 @@ const Footer = () => {
           <div className="icons">
             <a href="https://daysdreamhub@gmail.com">
               <FontAwesomeIcon fontSize={"2rem"} icon={faEnvelope} />
-              daysdreamhub@gmail.com
+              <span>daysdreamhub@gmail.com</span>
             </a>
             <a href="https://twitter.com/am_stevenanongo">
               <FontAwesomeIcon fontSize={"2rem"} icon={faTwitterSquare} />
-              Twitter
+              <span>Twitter</span>
             </a>
             <a href="https://instagram.com/am_stevee">
               <FontAwesomeIcon fontSize={"2rem"} icon={faInstagramSquare} />
-              Instagram
+              <span>Instagram</span>
             </a>
 
             <a href="https://youtube.com/daysdreamhub">
               <FontAwesomeIcon fontSize={"2rem"} icon={faYoutubeSquare} />
-              @daysdreamhub
+              <span>@daysdreamhub</span>
             </a>
             <a href="https://telegram.com/daysdreamhub">
               <FontAwesomeIcon fontSize={"2rem"} icon={faTelegram} />
-              @Daysdreamhub
+              <span>@Daysdreamhub</span>
             </a>
           </div>
         </div>
