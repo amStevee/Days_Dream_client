@@ -40,6 +40,7 @@ const FooterComponent = styled.footer`
         transform: scale(1.1);
         transition: transform 2ms ease-in;
         background-color: gray;
+        color: #f2f2f2;
       }
 
       a {
