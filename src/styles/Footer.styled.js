@@ -55,7 +55,7 @@ const FooterComponent = styled.footer`
 
       a {
         span {
-          margin: 5px;
+          margin-left: 10px;
         }
       }
     }
