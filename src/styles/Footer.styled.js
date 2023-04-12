@@ -52,6 +52,12 @@ const FooterComponent = styled.footer`
       justify-content: space-between;
       align-items: start;
       gap: 10px;
+
+      a {
+        span {
+          margin: 5px;
+        }
+      }
     }
   }
 
