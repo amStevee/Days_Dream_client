@@ -72,7 +72,6 @@ const FooterComponent = styled.footer`
     .icons a:focus {
       transform: scale(1.1);
       transition: transform 2ms ease-in;
-      background-color: #f2f2f2;
       color: #f2f2f2;
     }
   }
