@@ -90,7 +90,7 @@ const Navbar = () => {
           </NavLink>
         </li>
 
-        <Link to={"/account"}>
+        <Link to={"/account"} className="user">
           <span>{currentUser?.username}</span>
         </Link>
         {currentUser ? (
