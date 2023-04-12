@@ -67,6 +67,14 @@ const FooterComponent = styled.footer`
         }
       }
     }
+
+    .icons:hover,
+    .icons:focus {
+      transform: scale(1.1);
+      transition: transform 2ms ease-in;
+      background-color: #f2f2f2;
+      color: #f2f2f2;
+    }
   }
 
   @media only screen and (max-width: 600px) {
