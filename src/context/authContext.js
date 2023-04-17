@@ -42,7 +42,6 @@ export const AuthContextProvider = ({ children }) => {
   );
   const [err, setErr] = useState(null);
 
-  const Admin = "Apah4life" || "Alex";
 
   const login = async (inputs) => {
     try {
@@ -76,7 +75,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [currentUser]);
 
   return (
-    <AuthContext.Provider value={{ currentUser, err, login, logout, Admin }}>
+    <AuthContext.Provider value={{ currentUser, err, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
