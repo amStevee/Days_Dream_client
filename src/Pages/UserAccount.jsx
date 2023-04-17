@@ -14,9 +14,9 @@ export default function UserAccount() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
-  const [bloggerid, setBloggerid] = useState('')
-  const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
-  const [activedel, setActivedel] = useState(false);
+  // const [bloggerid, setBloggerid] = useState('')
+  // const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
+  // const [activedel, setActivedel] = useState(false);
   const { currentUser } = useContext(AuthContext);
   const [image, setImage] = useState(null);
   const [input, setInput] = useState({});
@@ -104,31 +104,24 @@ export default function UserAccount() {
               </div>
             </div>
             <hr />
-            <Verify
-              handleDelete={() => makeUserAdmin(bloggerid)}
-              desc={message}
-              activedel={activedel}
-              setActivedel={setActivedel}
-              setBloggerid={bloggerid}
-            />
+
             {users.map((blogger) => (
-              <ul>
-                <li>
-                  <span>{blogger.username}</span>
-                  <span>{blogger.isadmin}</span>
-                  <button
-                    onClick={
-                      (() => setActivedel(true), setBloggerid(blogger.userid))
-                    }
-                  >
-                    {blogger.isadmin ? (
-                      <FontAwesomeIcon icon={faCheck} />
-                    ) : (
-                      "make admin"
-                    )}
-                  </button>
-                </li>
-              </ul>
+              <>
+                <ul>
+                  <li>
+                    <span>{blogger.username}</span>
+                    <span>{blogger.isadmin}</span>
+                    <button onClick={() => makeUserAdmin(blogger.userid)}>
+                      {blogger.isadmin ? (
+                        <FontAwesomeIcon icon={faCheck} />
+                      ) : (
+                        "make admin"
+                      )}
+                    </button>
+                    <button>Remove admin</button>
+                  </li>
+                </ul>
+              </>
             ))}
           </div>
         )}
