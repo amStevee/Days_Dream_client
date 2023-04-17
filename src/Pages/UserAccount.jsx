@@ -8,7 +8,7 @@ import Wraper from "../Components/reuseables/Wraper";
 import { AuthContext } from "../context/authContext";
 import User from "../styles/UserAccount.styled";
 import { faBlogger } from "@fortawesome/free-brands-svg-icons";
-import Verify from "../Components/reuseables/Verify";
+// import Verify from "../Components/reuseables/Verify";
 
 export default function UserAccount() {
   const navigate = useNavigate();
