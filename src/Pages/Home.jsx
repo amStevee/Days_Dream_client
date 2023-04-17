@@ -57,7 +57,7 @@ const Home = () => {
   return (
     <>
       <Wraper>
-        <HomePage id="search">
+        <HomePage>
           {loading ? (
             <Loading />
           ) : (
