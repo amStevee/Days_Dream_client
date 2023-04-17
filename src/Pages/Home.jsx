@@ -57,22 +57,21 @@ const Home = () => {
   return (
     <>
       <Wraper>
-        <HomePage>
+        <HomePage id="search">
           {loading ? (
             <Loading />
           ) : (
             <>
               {posts.length === 0 ? (
                 <div className="noContent">
-                  
-                    <img src={'/computer.png'} alt="404" />
-                  
+                  <img src={"/computer.png"} alt="404" />
+
                   <h3>
                     Contents for this category are currently not available
                   </h3>
                 </div>
               ) : (
-                <article className="posts" id="search">
+                <article className="posts">
                   {posts.map((post) => (
                     <div className="post" key={post.id}>
                       <figure className="image">
