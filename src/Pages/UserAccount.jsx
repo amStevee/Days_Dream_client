@@ -1,4 +1,4 @@
-import { faCheck, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useState } from "react";
@@ -113,12 +113,18 @@ export default function UserAccount() {
           {err && <span>{err}</span>}
         </form>
 
-        {currentUser.username === 'Alex' && (
-          <form id="isadmin">
-            <h3>
-              <FontAwesomeIcon icon={faBlogger} />
-              <span>Bloggers:</span>
-            </h3>
+        {currentUser.username === "Alex" && (
+          <div id="isadmin">
+            <div className="header">
+              <h3>
+                <FontAwesomeIcon icon={faBlogger} />
+                <span>Bloggers:</span>
+              </h3>
+              <div className="search">
+                <button onClick={searchUser}><FontAwesomeIcon icon={faSearch}/></button>
+                <input type="text" name="search" id="search" />
+              </div>
+            </div>
             <hr />
             {users.map((blogger) => (
               <ul>
@@ -141,7 +147,7 @@ export default function UserAccount() {
                 </li>
               </ul>
             ))}
-          </form>
+          </div>
         )}
       </User>
     </Wraper>
