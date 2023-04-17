@@ -18,6 +18,7 @@ const Single = () => {
   const navigate = useNavigate();
   const location = useLocation().pathname.split("/")[2];
   const [post, setPost] = useState([]);
+  const message = `Are you sure you want to delete this content?`;
   const [loading, setLoading] = useState(true);
   const [activedel, setActivedel] = useState(false);
   const { currentUser } = useContext(AuthContext);
@@ -106,7 +107,7 @@ const Single = () => {
               </article>
               <Verify
                 handleDelete={handleDelete}
-                desc={"article"}
+                desc={message}
                 activedel={activedel}
                 setActivedel={setActivedel}
               />

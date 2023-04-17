@@ -1,4 +1,4 @@
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useState } from "react";
@@ -7,10 +7,15 @@ import { useNavigate } from "react-router-dom";
 import Wraper from "../Components/reuseables/Wraper";
 import { AuthContext } from "../context/authContext";
 import User from "../styles/UserAccount.styled";
+import { faBlogger } from "@fortawesome/free-brands-svg-icons";
+import Verify from "../Components/reuseables/Verify";
 
 export default function UserAccount() {
   const navigate = useNavigate();
-  const { currentUser } = useContext(AuthContext);
+  const [users, setUsers] = useState([])
+  const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`
+  const [activedel, setActivedel] = useState(false);
+  const { currentUser, Admin } = useContext(AuthContext);
   const [image, setImage] = useState(null);
   const [input, setInput] = useState({});
   const [err, setErr] = useState(null);
@@ -50,6 +55,16 @@ export default function UserAccount() {
       console.log(err);
     }
   };
+
+  const makeUserAdmin = async (id) => {
+    try {
+      const {data} =await axios.post(`${url}/api/v1/user/?user:${userid}`, {id})
+      if (data) navigate("/account");
+    } catch (error) {
+      setErr(error.message)
+    }
+
+  }
   return (
     <Wraper>
       <User>
@@ -93,6 +108,37 @@ export default function UserAccount() {
 
           {err && <span>{err}</span>}
         </form>
+
+        {currentUser.username === Admin && (
+          <form id="isadmin">
+            <h3>
+              <FontAwesomeIcon icon={faBlogger} />
+              <span>Bloggers:</span>
+            </h3>
+            <hr />
+            {users.map((blogger) => (
+              <ul>
+                <Verify
+                  handleDelete={makeUserAdmin(blogger.userid)}
+                  desc={message}
+                  activedel={activedel}
+                  setActivedel={setActivedel}
+                />
+                <li>
+                  <span>{blogger.username}</span>
+                  <span>{blogger.isadmin}</span>
+                  <button onClick={() => setActivedel(true)}>
+                    {blogger.isadmin ? (
+                      <FontAwesomeIcon icon={faCheck} />
+                    ) : (
+                      "make admin"
+                    )}
+                  </button>
+                </li>
+              </ul>
+            ))}
+          </form>
+        )}
       </User>
     </Wraper>
   );

@@ -42,6 +42,8 @@ export const AuthContextProvider = ({ children }) => {
   );
   const [err, setErr] = useState(null);
 
+  const Admin = "Apah4life" || "Alex";
+
   const login = async (inputs) => {
     try {
       const { data } = await axios({
@@ -74,7 +76,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [currentUser]);
 
   return (
-    <AuthContext.Provider value={{ currentUser, err, login, logout }}>
+    <AuthContext.Provider value={{ currentUser, err, login, logout, Admin }}>
       {children}
     </AuthContext.Provider>
   );

@@ -10,7 +10,7 @@ export default function Verify({
     <VerifyComponent>
       <div className={activedel ? "content" : "rmv"}>
         <div className={"contain"}>
-          <h3>Are you sure you want to delete this {desc} </h3>
+          <h3>{desc} </h3>
           <div className="btn">
             <button onClick={handleDelete}>Yes</button>
             <button onClick={() => setActivedel(false)}>No</button>
