@@ -5,8 +5,25 @@ const User = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   background-color: #f7f7f7;
   height: 100vh;
+
+  #isadmin {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+
+    ul li {
+      display: flex;
+      gap: 1rem;
+    }
+
+    ul li:nth-child(even) {
+      background-color: #ececec;
+    }
+  }
 
   form {
     display: flex;

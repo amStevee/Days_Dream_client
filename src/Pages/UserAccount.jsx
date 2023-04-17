@@ -70,6 +70,7 @@ export default function UserAccount() {
     const searchedTerm = users.filter((user) => user.username === search);
     setUsers(searchedTerm);
   };
+  console.log(search)
 
   const makeUserAdmin = async (id) => {
     try {
