@@ -41,7 +41,9 @@ const HomePage = styled.div`
     padding: 1rem;
 
     .editor {
-      height: 40%;
+      height: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       border: none;
       padding: 0;
       margin: 0;
