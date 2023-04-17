@@ -13,6 +13,7 @@ import Verify from "../Components/reuseables/Verify";
 export default function UserAccount() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
+  const [search, setSearch] = useState("");
   const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
   const [activedel, setActivedel] = useState(false);
   const { currentUser } = useContext(AuthContext);
@@ -25,7 +26,7 @@ export default function UserAccount() {
 
   useEffect(() => {
     const getUsers = async () => {
-      const { data } = await axios.get(`${url}/api/v1/users`);
+      const { data } = await axios.get(`${url}/api/v1/user`);
       setUsers(data);
     };
     getUsers();
@@ -65,7 +66,8 @@ export default function UserAccount() {
   };
 
   const searchUser = () => {
-    setUsers([]);
+    const searchedTerm = users.filter((user) => user.username === search);
+    setUsers(searchedTerm);
   };
 
   const makeUserAdmin = async (id) => {
@@ -133,7 +135,12 @@ export default function UserAccount() {
                 <button onClick={searchUser}>
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
-                <input type="text" name="search" id="search" />
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  onChange={(e) => setSearch(e.target.value)}
+                />
               </div>
             </div>
             <hr />
