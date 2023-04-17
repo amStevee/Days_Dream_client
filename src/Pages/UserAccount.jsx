@@ -56,6 +56,10 @@ export default function UserAccount() {
     }
   };
 
+  const searchUser = () => {
+    setUsers([])
+  }
+
   const makeUserAdmin = async (id) => {
     try {
       const {data} =await axios.post(`${url}/api/v1/user/?user:${userid}`, {id})
