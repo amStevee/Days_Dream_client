@@ -109,7 +109,7 @@ export default function UserAccount() {
           {err && <span>{err}</span>}
         </form>
 
-        {currentUser.username === Admin && (
+        {currentUser.username === 'Alex' && (
           <form id="isadmin">
             <h3>
               <FontAwesomeIcon icon={faBlogger} />
