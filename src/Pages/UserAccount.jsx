@@ -105,7 +105,7 @@ export default function UserAccount() {
             </div>
             <hr />
             <Verify
-              handleDelete={makeUserAdmin(bloggerid)}
+              handleDelete={() => makeUserAdmin(bloggerid)}
               desc={message}
               activedel={activedel}
               setActivedel={setActivedel}
