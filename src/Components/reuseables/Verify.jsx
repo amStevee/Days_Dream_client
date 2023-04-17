@@ -1,11 +1,6 @@
 import VerifyComponent from "../../styles/Verify.styled";
 
-export default function Verify({
-  handleDelete,
-  desc,
-  activedel,
-  setActivedel,
-}) {
+export default function Verify({ handleDelete, desc, activedel, setActivedel, setBloggerid }) {
   return (
     <VerifyComponent>
       <div className={activedel ? "content" : "rmv"}>

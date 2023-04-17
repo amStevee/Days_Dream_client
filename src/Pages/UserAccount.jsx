@@ -14,6 +14,7 @@ export default function UserAccount() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
+  const [bloggerid, setBloggerid] = useState('')
   const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
   const [activedel, setActivedel] = useState(false);
   const { currentUser } = useContext(AuthContext);
@@ -83,6 +84,55 @@ export default function UserAccount() {
   return (
     <Wraper>
       <User>
+        {currentUser.username === "Alex" && (
+          <div id="isadmin">
+            <div className="header">
+              <h3>
+                <FontAwesomeIcon icon={faBlogger} />
+                <span>Bloggers:</span>
+              </h3>
+              <div className="search">
+                <button onClick={searchUser}>
+                  <FontAwesomeIcon icon={faSearch} />
+                </button>
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+              </div>
+            </div>
+            <hr />
+            <Verify
+              handleDelete={makeUserAdmin(bloggerid)}
+              desc={message}
+              activedel={activedel}
+              setActivedel={setActivedel}
+              setBloggerid={bloggerid}
+            />
+            {users.map((blogger) => (
+              <ul>
+                <li>
+                  <span>{blogger.username}</span>
+                  <span>{blogger.isadmin}</span>
+                  <button
+                    onClick={
+                      (() => setActivedel(true), setBloggerid(blogger.userid))
+                    }
+                  >
+                    {blogger.isadmin ? (
+                      <FontAwesomeIcon icon={faCheck} />
+                    ) : (
+                      "make admin"
+                    )}
+                  </button>
+                </li>
+              </ul>
+            ))}
+          </div>
+        )}
+
         <form onSubmit={handleUpdate}>
           <label htmlFor="file" className="file">
             {currentUser.user_image ? (
@@ -123,50 +173,6 @@ export default function UserAccount() {
 
           {err && <span>{err}</span>}
         </form>
-
-        {currentUser.username === "Alex" && (
-          <div id="isadmin">
-            <div className="header">
-              <h3>
-                <FontAwesomeIcon icon={faBlogger} />
-                <span>Bloggers:</span>
-              </h3>
-              <div className="search">
-                <button onClick={searchUser}>
-                  <FontAwesomeIcon icon={faSearch} />
-                </button>
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-            </div>
-            <hr />
-            {users.map((blogger) => (
-              <ul>
-                <Verify
-                  handleDelete={makeUserAdmin(blogger.userid)}
-                  desc={message}
-                  activedel={activedel}
-                  setActivedel={setActivedel}
-                />
-                <li>
-                  <span>{blogger.username}</span>
-                  <span>{blogger.isadmin}</span>
-                  <button onClick={() => setActivedel(true)}>
-                    {blogger.isadmin ? (
-                      <FontAwesomeIcon icon={faCheck} />
-                    ) : (
-                      "make admin"
-                    )}
-                  </button>
-                </li>
-              </ul>
-            ))}
-          </div>
-        )}
       </User>
     </Wraper>
   );
