@@ -1,7 +1,7 @@
 import { faCheck, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Wraper from "../Components/reuseables/Wraper";
@@ -12,8 +12,8 @@ import Verify from "../Components/reuseables/Verify";
 
 export default function UserAccount() {
   const navigate = useNavigate();
-  const [users, setUsers] = useState([])
-  const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`
+  const [users, setUsers] = useState([]);
+  const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
   const [activedel, setActivedel] = useState(false);
   const { currentUser } = useContext(AuthContext);
   const [image, setImage] = useState(null);
@@ -22,6 +22,14 @@ export default function UserAccount() {
   const userid = currentUser.userid;
   const url = "https://day-dream-server.onrender.com";
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const { data } = await axios.get(`${url}/api/v1/users`);
+      setUsers(data);
+    };
+    getUsers();
+  }, []);
 
   const handleUpload = async () => {
     try {
@@ -57,18 +65,19 @@ export default function UserAccount() {
   };
 
   const searchUser = () => {
-    setUsers([])
-  }
+    setUsers([]);
+  };
 
   const makeUserAdmin = async (id) => {
     try {
-      const {data} =await axios.post(`${url}/api/v1/user/?user:${userid}`, {id})
+      const { data } = await axios.post(`${url}/api/v1/user/?user:${userid}`, {
+        id,
+      });
       if (data) navigate("/account");
     } catch (error) {
-      setErr(error.message)
+      setErr(error.message);
     }
-
-  }
+  };
   return (
     <Wraper>
       <User>
@@ -121,7 +130,9 @@ export default function UserAccount() {
                 <span>Bloggers:</span>
               </h3>
               <div className="search">
-                <button onClick={searchUser}><FontAwesomeIcon icon={faSearch}/></button>
+                <button onClick={searchUser}>
+                  <FontAwesomeIcon icon={faSearch} />
+                </button>
                 <input type="text" name="search" id="search" />
               </div>
             </div>
