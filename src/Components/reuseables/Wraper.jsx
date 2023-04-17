@@ -6,7 +6,7 @@ export default function Wraper({ children }) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <div>{children}</div>
       <Footer />
     </>
   );
