@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import NavbarComponent from "../styles/Navbar.styled";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCancel } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext";
 
@@ -31,7 +31,7 @@ const Navbar = () => {
 
       {windowSize <= 667 ? (
         <FontAwesomeIcon
-          icon={faBars}
+          icon={dropDown ? faBars : faCancel}
           onClick={() => setDropDown(!dropDown)}
           className="hambugar-menu"
         />
