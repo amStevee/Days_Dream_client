@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import NavbarComponent from "../styles/Navbar.styled";
-import { faBars, faCancel, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext";
 
