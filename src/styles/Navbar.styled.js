@@ -60,7 +60,7 @@ const NavbarComponent = styled.nav`
 
     ul {
       position: absolute;
-      top: -25.5rem;
+      top: -26.5rem;
       right: 0;
       left: 0;
       width: 100vw;
