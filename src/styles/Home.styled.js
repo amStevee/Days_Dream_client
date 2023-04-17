@@ -19,6 +19,8 @@ const HomePage = styled.div`
   .ql-editor {
     text-align: justify;
     padding: 0 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .readm {
@@ -52,6 +54,8 @@ const HomePage = styled.div`
       p {
         margin: 0;
         padding: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
