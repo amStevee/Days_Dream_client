@@ -85,7 +85,56 @@ export default function UserAccount() {
   return (
     <Wraper>
       <User>
-        {Admin.includes(currentUser.username) && (
+        {Admin.map(addm => {
+          if (addm === currentUser.username) {
+            return (
+              <div id="isadmin">
+                <div className="header">
+                  <h3>
+                    <FontAwesomeIcon icon={faBlogger} />
+                    <span>Bloggers:</span>
+                  </h3>
+                  <div className="search">
+                    <button onClick={searchUser}>
+                      <FontAwesomeIcon icon={faSearch} />
+                    </button>
+                    <input
+                      type="text"
+                      name="search"
+                      id="search"
+                      placeholder="Search user"
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
+                  </div>
+                </div>
+                <hr />
+                <ul className="headTitle">
+                  <li>Username</li>
+                  <li>Isadmin</li>
+                  <li>Make Admin</li>
+                  <li>Remove Admin</li>
+                </ul>
+                {users.map((blogger) => (
+                  <ul className="list">
+                    <li>
+                      <span>{blogger.username}</span>
+                      <span>{blogger.isadmin ? "True" : "False"}</span>
+                      <button onClick={() => makeUserAdmin(blogger.userid)}>
+                        {blogger.isadmin ? (
+                          <FontAwesomeIcon icon={faCheck} />
+                        ) : (
+                          "make admin"
+                        )}
+                      </button>
+                      <button>Remove admin</button>
+                    </li>
+                  </ul>
+                ))}
+              </div>
+            );
+          }
+})}
+        {/* {Admin.includes(currentUser.username) && (
           <div id="isadmin">
             <div className="header">
               <h3>
@@ -129,7 +178,7 @@ export default function UserAccount() {
               </ul>
             ))}
           </div>
-        )}
+        )} */}
 
         <form onSubmit={handleUpdate}>
           <label htmlFor="file" className="file">
