@@ -25,6 +25,7 @@ const User = styled.div`
       gap: 1.5rem;
       text-decoration: none;
       list-style: none;
+      font-weight: 800;
     }
 
     .header {
@@ -60,7 +61,7 @@ const User = styled.div`
         background-color: #ffeeeeee;
       }
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       gap: 1.9rem;
 
       button {
