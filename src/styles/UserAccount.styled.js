@@ -15,7 +15,6 @@ const User = styled.div`
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    width: 100vw;
 
     .header {
       display: flex;
