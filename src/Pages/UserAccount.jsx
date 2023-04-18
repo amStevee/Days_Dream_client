@@ -66,9 +66,10 @@ export default function UserAccount() {
     }
   };
 
-  
+  const searchUser = async () => {
     const searchedTerm = users.filter((user) => user.username === search);
-  
+    setUsers(searchedTerm);
+  }
 
   const makeUserAdmin = async (id) => {
     try {
@@ -91,7 +92,7 @@ export default function UserAccount() {
                 <span>Bloggers:</span>
               </h3>
               <div className="search">
-                <button>
+                <button onClick={searchUser}>
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
                 <input
@@ -99,7 +100,7 @@ export default function UserAccount() {
                   name="search"
                   id="search"
                   placeholder="Search user"
-                  onChange={(e) => {setSearch(e.target.value); setUsers(searchedTerm)}}
+                  onChange={(e) => setSearch(e.target.value)}
                 />
               </div>
             </div>
