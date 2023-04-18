@@ -67,7 +67,7 @@ export const AuthContextProvider = ({ children }) => {
       if (data) setCurrentUser(null);
     } catch (err) {
       setErr(err.response.data.msg);
-      console.log(err.response);
+      console.log(err.response.data.msg);
     }
   };
 
