@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation().search || null;
   const params = new URLSearchParams(location);
   const q = params.get("category");
-  const { currentUser, logout, Admin } = useContext(AuthContext);
+  const { currentUser, logout } = useContext(AuthContext);
   const windowSize = window.innerWidth;
   const [dropDown, setDropDown] = useState(false);
 
