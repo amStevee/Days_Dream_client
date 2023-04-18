@@ -15,14 +15,18 @@ const User = styled.div`
     padding: 1rem;
     gap: 1rem;
 
+    .headTitle {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .header {
       display: flex;
       justify-content: space-between;
 
       .search {
         border: 1px solid gray;
-        border-radius: 40%;
-        padding: 0.8rem;
+        border-radius: 50%;
         height: 40px;
         gap: 2px;
         input {
@@ -30,7 +34,7 @@ const User = styled.div`
           outline-color: lightgray;
           border-radius: 40%;
           padding: 1rem;
-          height: 39.5px;
+          height: fit-content;
         }
       }
     }

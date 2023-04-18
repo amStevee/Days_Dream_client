@@ -106,29 +106,27 @@ export default function UserAccount() {
               </div>
             </div>
             <hr />
+            <ul className="headTitle">
+              <li>Username</li>
+              <li>Isadmin</li>
+              <li>Make Admin</li>
+              <li>Remove Admin</li>
+            </ul>
             {users.map((blogger) => (
-              <>
-                <ul>
-                  <li>Username</li>
-                  <li>Isadmin</li>
-                  <li>Make Admin</li>
-                  <li>Remove Admin</li>
-                </ul>
-                <ul>
-                  <li>
-                    <span>{blogger.username}</span>
-                    <span>{blogger.isadmin ? "True" : "False"}</span>
-                    <button onClick={() => makeUserAdmin(blogger.userid)}>
-                      {blogger.isadmin ? (
-                        <FontAwesomeIcon icon={faCheck} />
-                      ) : (
-                        "make admin"
-                      )}
-                    </button>
-                    <button>Remove admin</button>
-                  </li>
-                </ul>
-              </>
+              <ul>
+                <li>
+                  <span>{blogger.username}</span>
+                  <span>{blogger.isadmin ? "True" : "False"}</span>
+                  <button onClick={() => makeUserAdmin(blogger.userid)}>
+                    {blogger.isadmin ? (
+                      <FontAwesomeIcon icon={faCheck} />
+                    ) : (
+                      "make admin"
+                    )}
+                  </button>
+                  <button>Remove admin</button>
+                </li>
+              </ul>
             ))}
           </div>
         )}
