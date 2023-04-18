@@ -9,7 +9,7 @@ const HomePage = styled.div`
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     color: gray;
     img {
       max-width: 300px;
@@ -21,6 +21,11 @@ const HomePage = styled.div`
     padding: 0 !important;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: inherit;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .readm {
