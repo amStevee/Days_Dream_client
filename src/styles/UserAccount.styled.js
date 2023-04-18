@@ -13,11 +13,13 @@ const User = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    max-width: max-content;
     gap: 1rem;
 
     .headTitle {
       display: flex;
       justify-content: space-between;
+      font-size: x-large;
     }
 
     .header {
@@ -26,13 +28,20 @@ const User = styled.div`
 
       .search {
         border: 1px solid gray;
-        border-radius: 50%;
+        border-radius: 7px;
         height: 40px;
         gap: 2px;
+
+        i,
+        button {
+          border: none;
+          background-color: inherit;
+        }
+
         input {
           border: none;
           outline-color: lightgray;
-          border-radius: 50%;
+          border-radius: 7px;
           padding: 1rem;
           height: fit-content;
         }
@@ -40,6 +49,9 @@ const User = styled.div`
     }
 
     ul li {
+      :nth-child(even) {
+        background-color: #ffeeeeee;
+      }
       display: flex;
       justify-content: space-between;
 
@@ -52,10 +64,6 @@ const User = styled.div`
         border: none;
         font-weight: bold;
       }
-    }
-
-    ul li:nth-child(even) {
-      background-color: #ffeeeeee;
     }
   }
 
