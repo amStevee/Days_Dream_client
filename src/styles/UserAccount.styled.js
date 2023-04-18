@@ -5,7 +5,8 @@ const User = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  padding: 2rem;
+  gap: 1rem;
   background-color: #f7f7f7;
   height: 100vh;
 
@@ -14,10 +15,35 @@ const User = styled.div`
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
+    width: 100vw;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+
+      .search {
+        border: 1px solid gray;
+        border-radius: 40%;
+        padding: 0.8rem;
+        height: 40px;
+        gap: 2px;
+        input {
+          border: none;
+          outline-color: lightgray;
+          border-radius: 40%;
+          padding: 1rem;
+          height: 39.5px;
+        }
+      }
+    }
 
     ul li {
       display: flex;
-      gap: 1rem;
+      justify-content: space-between;
+
+      span {
+        font-size: x-large;
+      }
     }
 
     ul li:nth-child(even) {
@@ -31,7 +57,7 @@ const User = styled.div`
     gap: 20px;
     max-width: 500px;
     width: 300px;
-    margin: 50%;
+    /* margin: 50%; */
     padding: 10px;
 
     .file {

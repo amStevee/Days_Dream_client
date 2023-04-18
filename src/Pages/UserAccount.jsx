@@ -100,14 +100,13 @@ export default function UserAccount() {
                   type="text"
                   name="search"
                   id="search"
+                  placeholder="Search user"
                   onChange={(e) => setSearch(e.target.value)}
                 />
               </div>
             </div>
-            <hr />
-
+<hr/>
             {users.map((blogger) => (
-              <>
                 <ul>
                   <li>
                     <span>{blogger.username}</span>
@@ -122,7 +121,6 @@ export default function UserAccount() {
                     <button>Remove admin</button>
                   </li>
                 </ul>
-              </>
             ))}
           </div>
         )}
