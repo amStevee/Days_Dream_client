@@ -113,7 +113,7 @@ export default function UserAccount() {
                     <span>{blogger.isadmin}</span>
                     <button onClick={() => makeUserAdmin(blogger.userid)}>
                       {blogger.isadmin ? (
-                        <FontAwesomeIcon icon={faCheck} />
+                        <FontAwesomeIcon icon={faCheck} className="check" />
                       ) : (
                         "make admin"
                       )}

@@ -44,10 +44,21 @@ const User = styled.div`
       span {
         font-size: x-large;
       }
+
+      button {
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+
+        .check {
+          background-color: limegreen;
+          color: white;
+        }
+      }
     }
 
     ul li:nth-child(even) {
-      background-color: #ececec;
+      background-color: #ccc;
     }
   }
 
