@@ -94,7 +94,7 @@ const Navbar = () => {
           <span>{currentUser?.username}</span>
         </Link>
         {currentUser ? (
-          <Link to={"/"} onClick={logout}>
+          <Link to="/" onClick={logout}>
             Logout
           </Link>
         ) : (
@@ -103,23 +103,15 @@ const Navbar = () => {
             <button onClick={register}>Register</button>
           </>
         )}
-        {currentUser?.isadmin ? (
+        {currentUser?.isadmin && (
           <li>
             <span className="writeCategory">
-              <Link to="/posts/write">
+              <Link to={currentUser?.username ? "/posts/write" : '/register'}>
                 Write
               </Link>
             </span>
           </li>
-        ) : (
-          <li>
-            <span className="writeCategory">
-              <Link to="/register">
-                Write
-              </Link>
-            </span>
-          </li>
-        )}
+        ) }
       </ul>
     </NavbarComponent>
   );
