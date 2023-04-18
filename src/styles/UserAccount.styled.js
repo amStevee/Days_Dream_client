@@ -21,6 +21,8 @@ const User = styled.div`
       display: flex;
       justify-content: space-between;
       gap: 1.5rem;
+      text-decoration: none;
+      list-style: none;
     }
 
     .header {
