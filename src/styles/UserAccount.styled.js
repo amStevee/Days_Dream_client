@@ -33,7 +33,7 @@ const User = styled.div`
 
       .search {
         border: 1px solid gray;
-        padding: 2px;
+        padding: 5px;
         border-radius: 7px;
         height: 40px;
         gap: 2px;
@@ -61,7 +61,7 @@ const User = styled.div`
       }
       display: flex;
       justify-content: space-between;
-      gap: 1.5rem;
+      gap: 1.9rem;
 
       button {
         padding: 1rem;
