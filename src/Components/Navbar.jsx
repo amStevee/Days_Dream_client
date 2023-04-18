@@ -95,8 +95,8 @@ const Navbar = () => {
         </Link>
 
         {currentUser?.username ? (
-          <Link to="/">
-            <button onClick={logout}>Logout</button>
+          <Link to="/login" onClick={logout}>
+            Logout
           </Link>
         ) : (
           <>
