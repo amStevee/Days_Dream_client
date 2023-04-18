@@ -77,7 +77,7 @@ export default function UserAccount() {
       const { data } = await axios.post(`${url}/api/v1/user/?user:${userid}`, {
         id,
       });
-      if (data) navigate("/account");
+     if (data) window.location.reload(true)
     } catch (error) {
       setErr(error.message);
     }
