@@ -91,7 +91,7 @@ export default function UserAccount() {
                 <span>Bloggers:</span>
               </h3>
               <div className="search">
-                <button onChange={() => setUsers(searchedTerm)}>
+                <button>
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
                 <input
@@ -99,7 +99,7 @@ export default function UserAccount() {
                   name="search"
                   id="search"
                   placeholder="Search user"
-                  onChange={(e) => setSearch(e.target.value)}
+                  onChange={(e) => {setSearch(e.target.value); setUsers(searchedTerm)}}
                 />
               </div>
             </div>
