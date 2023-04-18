@@ -14,7 +14,7 @@ const User = styled.div`
     flex-direction: column;
     padding: 1rem;
     max-width: 700px;
-    width: 500px;
+    width: 100%;
     height: 500px;
     overflow: scroll;
     gap: 1rem;
