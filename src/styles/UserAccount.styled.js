@@ -20,7 +20,7 @@ const User = styled.div`
     .headTitle {
       display: flex;
       justify-content: space-between;
-      font-size: x-large;
+      gap: 1.5rem;
     }
 
     .header {
@@ -29,6 +29,7 @@ const User = styled.div`
 
       .search {
         border: 1px solid gray;
+        padding: 2px;
         border-radius: 7px;
         height: 40px;
         gap: 2px;
@@ -44,21 +45,19 @@ const User = styled.div`
           outline-color: lightgray;
           border-radius: 7px;
           padding: 1rem;
-          height: fit-content;
+          height: 37px;
+          background-color: inherit;
         }
       }
     }
 
-    ul li {
+    .list li {
       :nth-child(even) {
         background-color: #ffeeeeee;
       }
       display: flex;
       justify-content: space-between;
-
-      span {
-        font-size: x-large;
-      }
+      gap: 1.5rem;
 
       button {
         padding: 1rem;

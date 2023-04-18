@@ -113,7 +113,7 @@ export default function UserAccount() {
               <li>Remove Admin</li>
             </ul>
             {users.map((blogger) => (
-              <ul>
+              <ul className="list">
                 <li>
                   <span>{blogger.username}</span>
                   <span>{blogger.isadmin ? "True" : "False"}</span>
