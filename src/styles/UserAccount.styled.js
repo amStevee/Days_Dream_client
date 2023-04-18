@@ -58,7 +58,7 @@ const User = styled.div`
     }
 
     ul li:nth-child(even) {
-      background-color: #ccc;
+      background-color: #ffeeeeee;
     }
   }
 
