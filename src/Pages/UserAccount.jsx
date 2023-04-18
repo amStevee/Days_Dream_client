@@ -8,17 +8,13 @@ import Wraper from "../Components/reuseables/Wraper";
 import { AuthContext } from "../context/authContext";
 import User from "../styles/UserAccount.styled";
 import { faBlogger } from "@fortawesome/free-brands-svg-icons";
-// import Verify from "../Components/reuseables/Verify";
+
 
 export default function UserAccount() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
-  // const [bloggerid, setBloggerid] = useState('')
-  // const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
-  // const [activedel, setActivedel] = useState(false);
-  const { currentUser } = useContext(AuthContext);
-  const Admin = ["Apah4life", "Lorem"];
+  const { currentUser, Admin } = useContext(AuthContext);
   const [image, setImage] = useState(null);
   const [input, setInput] = useState({});
   const [err, setErr] = useState(null);
@@ -85,7 +81,7 @@ export default function UserAccount() {
   return (
     <Wraper>
       <User>
-        {Admin.map(addm => {
+        {/* {Admin.map(addm => {
           if (addm === currentUser.username) {
             return (
               <div id="isadmin">
@@ -133,8 +129,8 @@ export default function UserAccount() {
               </div>
             );
           }
-})}
-        {/* {Admin.includes(currentUser.username) && (
+})} */}
+        {Admin.includes(currentUser.username) && (
           <div id="isadmin">
             <div className="header">
               <h3>
@@ -178,7 +174,7 @@ export default function UserAccount() {
               </ul>
             ))}
           </div>
-        )} */}
+        )}
 
         <form onSubmit={handleUpdate}>
           <label htmlFor="file" className="file">
