@@ -14,7 +14,7 @@ export default function UserAccount() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
-  const { currentUser, Admin } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   const [image, setImage] = useState(null);
   const [input, setInput] = useState({});
   const [err, setErr] = useState(null);
@@ -82,7 +82,7 @@ export default function UserAccount() {
   return (
     <Wraper>
       <User>
-        {Admin.includes(currentUser.username) && (
+        {currentUser?.isadmin && (
           <div id="isadmin">
             <div className="header">
               <h3>
