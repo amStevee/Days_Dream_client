@@ -32,7 +32,7 @@ const User = styled.div`
         input {
           border: none;
           outline-color: lightgray;
-          border-radius: 40%;
+          border-radius: 50%;
           padding: 1rem;
           height: fit-content;
         }
