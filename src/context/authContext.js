@@ -41,6 +41,7 @@ export const AuthContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("user") || null)
   );
   const [err, setErr] = useState(null);
+  const Admin = ['Apah4life', 'Lorem'];
 
 
   const login = async (inputs) => {
@@ -75,7 +76,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [currentUser]);
 
   return (
-    <AuthContext.Provider value={{ currentUser, err, login, logout }}>
+    <AuthContext.Provider value={{ currentUser, err, login, logout, Admin }}>
       {children}
     </AuthContext.Provider>
   );
