@@ -15,6 +15,8 @@ const User = styled.div`
     padding: 1rem;
     max-width: 700px;
     width: 500px;
+    height: 500px;
+    overflow: scroll;
     gap: 1rem;
 
     .headTitle {
