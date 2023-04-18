@@ -36,7 +36,6 @@ const User = styled.div`
         border: 1px solid gray;
         padding: 5px;
         border-radius: 7px;
-        height: 40px;
         gap: 2px;
 
         i,
