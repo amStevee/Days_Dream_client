@@ -8,7 +8,6 @@ const User = styled.div`
   padding: 2rem;
   gap: 1rem;
   background-color: #f7f7f7;
-  height: 100vh;
 
   #isadmin {
     display: flex;
@@ -48,11 +47,6 @@ const User = styled.div`
         padding: 1rem;
         border: none;
         font-weight: bold;
-
-        .check {
-          background-color: limegreen;
-          color: white;
-        }
       }
     }
 
