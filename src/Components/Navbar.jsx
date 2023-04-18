@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation().search || null;
   const params = new URLSearchParams(location);
   const q = params.get("category");
-  const { currentUser, logout } = useContext(AuthContext);
+  const { currentUser, logout, Admin } = useContext(AuthContext);
   const windowSize = window.innerWidth;
   const [dropDown, setDropDown] = useState(false);
 
@@ -103,7 +103,7 @@ const Navbar = () => {
             <button onClick={register}>Register</button>
           </>
         )}
-        {currentUser.isadmin && <li>
+        {Admin.includes(currentUser.username) && <li>
           <span className="writeCategory">
             <Link to={currentUser?.username ? "/posts/write" : "/login"}>
               Write
