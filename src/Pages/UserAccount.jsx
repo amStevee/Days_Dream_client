@@ -17,7 +17,8 @@ export default function UserAccount() {
   // const [bloggerid, setBloggerid] = useState('')
   // const message = `Are you sure you want to make this user an admin? <br/> This user will be able to post articles on this blog if made admin`;
   // const [activedel, setActivedel] = useState(false);
-  const { currentUser, Admin } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
+  const Admin = ["Apah4life", "Lorem"];
   const [image, setImage] = useState(null);
   const [input, setInput] = useState({});
   const [err, setErr] = useState(null);
