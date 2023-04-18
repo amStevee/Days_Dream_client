@@ -13,7 +13,8 @@ const User = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    max-width: max-content;
+    max-width: 700px;
+    width: 500px;
     gap: 1rem;
 
     .headTitle {
