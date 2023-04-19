@@ -132,7 +132,7 @@ export default function UserAccount() {
                   <td>
                     <button onClick={() => makeUserAdmin(blogger.userid)}>
                       {blogger.isadmin ? (
-                        <FontAwesomeIcon icon={faCheck} />
+                        <FontAwesomeIcon icon={faCheck}> <span>Admin</span></FontAwesomeIcon>
                       ) : (
                         "make admin"
                       )}
