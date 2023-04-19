@@ -19,7 +19,6 @@ const User = styled.div`
     overflow: scroll;
     gap: 1rem;
 
-
     .header {
       display: flex;
       flex-wrap: wrap;
@@ -60,12 +59,13 @@ const User = styled.div`
       padding: 8px;
     }
 
- tr {
+    tr {
       :nth-child(even) {
         background-color: #ddd;
       }
+      text-align: center;
 
-     td button {
+      td button {
         padding: 1rem;
         border: none;
         font-weight: bold;
