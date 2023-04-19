@@ -107,7 +107,7 @@ const Navbar = () => {
 
         <li>
           <span className="writeCategory">
-            <Link to={currentUser?.username ? "/posts/write" : "/login"}>
+            <Link to={currentUser?.isadmin ? "/posts/write" : "/register"}>
               Write
             </Link>
           </span>
