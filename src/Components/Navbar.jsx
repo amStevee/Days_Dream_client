@@ -104,15 +104,14 @@ const Navbar = () => {
             <button onClick={register}>Register</button>
           </>
         )}
-        {currentUser?.isadmin && (
-          <li>
-            <span className="writeCategory">
-              <Link to={currentUser?.username ? "/posts/write" : "/register"}>
-                Write
-              </Link>
-            </span>
-          </li>
-        )}
+
+        <li>
+          <span className="writeCategory">
+            <Link to={currentUser?.username ? "/posts/write" : "/login"}>
+              Write
+            </Link>
+          </span>
+        </li>
       </ul>
     </NavbarComponent>
   );
