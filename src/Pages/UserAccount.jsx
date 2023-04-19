@@ -72,12 +72,23 @@ export default function UserAccount() {
       await axios.post(`${url}/api/v1/user/?user:${userid}`, {
         id,
       });
-      //  window.location.reload(true)
-      navigate("/accout");
+       window.location.reload(true)
     } catch (error) {
       setErr(error.message);
     }
   };
+
+  const removeAdmin = async (id) => {
+    try {
+      await axios.put(`${url}/api/v1/user/?user:${userid}`, {
+        id,
+      });
+      window.location.reload(true);
+    } catch (error) {
+      setErr(error.message);
+    }
+  }
+
   return (
     <Wraper>
       <User>
@@ -128,7 +139,7 @@ export default function UserAccount() {
                     </button>
                   </td>
                   <td>
-                    <button>Remove admin</button>
+                    <button onClick={() => removeAdmin(blogger.userid)}>Remove admin</button>
                   </td>
                 </tr>
               ))}
