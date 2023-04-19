@@ -9,7 +9,6 @@ import { AuthContext } from "../context/authContext";
 import User from "../styles/UserAccount.styled";
 import { faBlogger } from "@fortawesome/free-brands-svg-icons";
 
-
 export default function UserAccount() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
@@ -66,15 +65,15 @@ export default function UserAccount() {
   const searchUser = async () => {
     const searchedTerm = users.filter((user) => user.username === search);
     setUsers(searchedTerm);
-  }
+  };
 
   const makeUserAdmin = async (id) => {
     try {
       await axios.post(`${url}/api/v1/user/?user:${userid}`, {
         id,
       });
-    //  window.location.reload(true)
-    navigate('/accout')
+      //  window.location.reload(true)
+      navigate("/accout");
     } catch (error) {
       setErr(error.message);
     }
@@ -103,28 +102,37 @@ export default function UserAccount() {
               </div>
             </div>
             <hr />
-            <ul className="headTitle">
-              <li>Username</li>
-              <li>Isadmin</li>
-              <li>Make Admin</li>
-              <li>Remove Admin</li>
-            </ul>
-            {users.map((blogger) => (
-              <ul className="list">
-                <li>
-                  <span>{blogger.username}</span>
-                  <span>{blogger.isadmin ? "True" : "False"}</span>
-                  <button onClick={() => makeUserAdmin(blogger.userid)}>
-                    {blogger.isadmin ? (
-                      <FontAwesomeIcon icon={faCheck} />
-                    ) : (
-                      "make admin"
-                    )}
-                  </button>
-                  <button>Remove admin</button>
-                </li>
-              </ul>
-            ))}
+            <table>
+              <tr>
+                <th>Username</th>
+                <th>Isadmin</th>
+                <th>Make Admin</th>
+                <th>Remove Admin</th>
+              </tr>
+
+              {users.map((blogger) => (
+                <tr className="list">
+                  <td>
+                    <span>{blogger.username}</span>
+                  </td>
+                  <td>
+                    <span>{blogger.isadmin ? "True" : "False"}</span>
+                  </td>
+                  <td>
+                    <button onClick={() => makeUserAdmin(blogger.userid)}>
+                      {blogger.isadmin ? (
+                        <FontAwesomeIcon icon={faCheck} />
+                      ) : (
+                        "make admin"
+                      )}
+                    </button>
+                  </td>
+                  <td>
+                    <button>Remove admin</button>
+                  </td>
+                </tr>
+              ))}
+            </table>
           </div>
         )}
 

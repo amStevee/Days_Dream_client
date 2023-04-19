@@ -19,14 +19,6 @@ const User = styled.div`
     overflow: scroll;
     gap: 1rem;
 
-    .headTitle {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5rem;
-      text-decoration: none;
-      list-style: none;
-      font-weight: 800;
-    }
 
     .header {
       display: flex;
@@ -56,15 +48,24 @@ const User = styled.div`
       }
     }
 
-    .list li {
-      :nth-child(even) {
-        background-color: #ffeeeeee;
-      }
-      display: flex;
-      justify-content: space-evenly;
-      gap: 1.9rem;
+    table {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-      button {
+    td th {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+ tr {
+      :nth-child(even) {
+        background-color: #ddd;
+      }
+
+     td button {
         padding: 1rem;
         border: none;
         font-weight: bold;
