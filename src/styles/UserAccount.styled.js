@@ -56,7 +56,7 @@ const User = styled.div`
 
     td th {
       border: 1px solid #ddd;
-      text-align: left;
+      text-align: center;
       padding: 8px;
     }
 
