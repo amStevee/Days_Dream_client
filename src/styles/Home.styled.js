@@ -17,6 +17,7 @@ const HomePage = styled.div`
   }
 
   .quill-ellipsis {
+    height: inherit;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -87,6 +88,14 @@ const HomePage = styled.div`
       .content {
         flex: 3;
       }
+    }
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #777;
     }
 
     .pagination {

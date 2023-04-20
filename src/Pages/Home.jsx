@@ -13,6 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import moment from 'moment';
 
 
 const Home = () => {
@@ -83,6 +84,10 @@ const Home = () => {
                           width={'100%'}
                           PlaceholderSrc={'/stockphoto.jpg'}
                         />
+                        <figcaption>
+                          <span>{moment(post.created_at).fromNow()}</span>
+                          <span>by {post?.username}</span>
+                        </figcaption>
                       </figure>
 
                       <div className="content">
