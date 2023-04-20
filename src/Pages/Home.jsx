@@ -91,7 +91,6 @@ const Home = () => {
                         </Link>
 
                         <ReactEllipsisText
-                          text={post.description}
                           length={'100'}
                         >
                           <ReactQuill
