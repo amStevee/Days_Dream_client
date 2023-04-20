@@ -95,6 +95,7 @@ const Home = () => {
                             value={post.description}
                             readOnly={true}
                             theme={'bubble'}
+                            im
                           />                  
 
                         <Link to={`/posts/${post.id}`}>

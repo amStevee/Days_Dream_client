@@ -16,6 +16,12 @@ const HomePage = styled.div`
     }
   }
 
+  .quill-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   .ql-editor {
     text-align: justify;
     padding: 0 !important;
