@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import ReactEllipsisText from 'react-ellipsis-text'
+import EllipsisText from 'react-ellipsis-text'
 
 const Home = () => {
   const location = useLocation().search || null;
@@ -90,14 +90,14 @@ const Home = () => {
                           <h1>{post.title}</h1>
                         </Link>
 
-                        <ReactEllipsisText length={100}>
+                        <EllipsisText length={100}>
                           <ReactQuill
                             className="editor"
                             value={post.description}
                             readOnly={true}
                             theme={'bubble'}
                           />
-                        </ReactEllipsisText>
+                        </EllipsisText>
 
                         <Link to={`/posts/${post.id}`}>
                           <Button
