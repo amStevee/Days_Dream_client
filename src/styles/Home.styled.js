@@ -90,13 +90,20 @@ const HomePage = styled.div`
       }
     }
 
-    figcaption {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #777;
+    figure {
+      position: relative;
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: lightgray;
+        position: absolute;
+        bottom: 1px;
+        left: 1px;
+      }
     }
+
 
     .pagination {
       margin: 10px;
