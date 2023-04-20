@@ -72,7 +72,7 @@ export default function UserAccount() {
       await axios.post(`${url}/api/v1/user/?user:${userid}`, {
         id,
       });
-       window.location.reload(true)
+       navigate('/');
     } catch (error) {
       setErr(error.message);
     }
@@ -83,7 +83,7 @@ export default function UserAccount() {
       await axios.put(`${url}/api/v1/user/?user:${userid}`, {
         id,
       });
-      window.location.reload(true);
+      navigate('/')
     } catch (error) {
       setErr(error.message);
     }
