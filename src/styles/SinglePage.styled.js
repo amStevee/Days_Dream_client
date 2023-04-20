@@ -5,6 +5,13 @@ const SinglePage = styled.div`
   gap: 50px;
   margin: 10px;
 
+  .ql-editor {
+    text-align: justify;
+    p {
+      text-align: justify;
+    }
+  }
+
   .content {
     flex: 5;
     display: flex;
@@ -48,7 +55,6 @@ const SinglePage = styled.div`
         p {
           margin: 0;
           padding: 0;
-          text-align: justify;
         }
       }
     }
