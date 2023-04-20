@@ -86,7 +86,6 @@ const Home = () => {
                         />
                         <figcaption>
                           <span>{moment(post.created_at).fromNow()}</span>
-                          <span>by {post?.username}</span>
                         </figcaption>
                       </figure>
 

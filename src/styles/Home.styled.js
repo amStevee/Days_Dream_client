@@ -99,8 +99,8 @@ const HomePage = styled.div`
         background-color: rgba(0, 0, 0, 0.3);
         color: lightgray;
         position: absolute;
-        bottom: 1px;
-        left: 1px;
+        bottom: 3px;
+        left: 3px;
       }
     }
 
