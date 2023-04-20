@@ -1,30 +1,30 @@
-import HomePage from "../styles/Home.styled";
-import { Link, useLocation } from "react-router-dom";
-import Button from "../styles/Button.styled";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import ReactQuill from "react-quill";
-import Loading from "../Components/reuseables/Loading";
-import Wraper from "../Components/reuseables/Wraper";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HomePage from '../styles/Home.styled';
+import { Link, useLocation } from 'react-router-dom';
+import Button from '../styles/Button.styled';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ReactQuill from 'react-quill';
+import Loading from '../Components/reuseables/Loading';
+import Wraper from '../Components/reuseables/Wraper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
   faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import ReactEllipsisText from 'react-ellipsis-text'
+} from '@fortawesome/free-solid-svg-icons';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import ReactEllipsisText from 'react-ellipsis-text';
 
 const Home = () => {
   const location = useLocation().search || null;
   const params = new URLSearchParams(location);
-  const q = params.get("category");
+  const q = params.get('category');
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   let perPage = 10;
   const [loading, setLoading] = useState(true);
-  const url = "https://day-dream-server.onrender.com";
+  const url = 'https://day-dream-server.onrender.com';
   const imageUrl = `https://daysdreamhub.s3.amazonaws.com/`;
 
   useEffect(() => {
@@ -90,7 +90,10 @@ const Home = () => {
                           <h1>{post.title}</h1>
                         </Link>
 
-                        <ReactEllipsisText text={post.description}>
+                        <ReactEllipsisText
+                          text={post.description}
+                          length={'100'}
+                        >
                           <ReactQuill
                             className="editor"
                             value={post.description}
