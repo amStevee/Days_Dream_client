@@ -95,12 +95,13 @@ const HomePage = styled.div`
       figcaption {
         display: flex;
         flex-direction: column;
+        padding: 3px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.3);
         color: #fff;
         position: absolute;
-        bottom: 3px;
-        left: 3px;
+        bottom: 0px;
+        left: 0px;
       }
     }
 
