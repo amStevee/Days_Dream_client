@@ -25,6 +25,7 @@ const HomePage = styled.div`
     p {
       overflow: hidden;
       text-overflow: ellipsis;
+      text-align: justify;
     }
   }
 
