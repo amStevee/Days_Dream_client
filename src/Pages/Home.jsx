@@ -90,14 +90,14 @@ const Home = () => {
                           <h1>{post.title}</h1>
                         </Link>
 
+                        <div className="quill-ellipsis">
                           <ReactQuill
                             className="editor"
                             value={post.description}
                             readOnly={true}
                             theme={'bubble'}
-                          >
-                            <div className='quill-ellipsis'>{post.description}</div>
-                            </ReactQuill>       
+                          />
+                        </div>
 
                         <Link to={`/posts/${post.id}`}>
                           <Button
