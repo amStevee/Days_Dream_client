@@ -60,6 +60,18 @@ export default function Write() {
     }
   };
 
+  const toolbarOptions = {
+    toolbar: {
+      container: [
+        ['bold', 'italic', 'underline', 'strike'],
+        ['link'],
+        [{'list': 'ordered'}, {'list': 'bullet'}],
+        ['clean']
+      ],
+      handlers: {}
+    }
+  }
+
   return (
     <>
       <Wraper>
@@ -80,6 +92,7 @@ export default function Write() {
                   theme="snow"
                   value={value}
                   onChange={setValue}
+                  modules={toolbarOptions}
                 />
               </div>
             </div>
