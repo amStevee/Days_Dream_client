@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import ReactEllipsisText from 'react-ellipsis-text'
 
 const Home = () => {
   const location = useLocation().search || null;
@@ -64,7 +65,7 @@ const Home = () => {
             <>
               {posts.length === 0 ? (
                 <div className="noContent">
-                  <img src={"/computer.png"} alt="404" />
+                  <img src={'/computer.png'} alt="404" />
 
                   <h3>
                     Contents for this category are currently not available
@@ -78,9 +79,9 @@ const Home = () => {
                         <LazyLoadImage
                           alt={post.title}
                           src={`${imageUrl}${post.image}`}
-                          height={"200px"}
-                          width={"100%"}
-                          PlaceholderSrc={"/stockphoto.jpg"}
+                          height={'200px'}
+                          width={'100%'}
+                          PlaceholderSrc={'/stockphoto.jpg'}
                         />
                       </figure>
 
@@ -89,20 +90,22 @@ const Home = () => {
                           <h1>{post.title}</h1>
                         </Link>
 
-                        <ReactQuill
-                          className="editor"
-                          value={post.description}
-                          readOnly={true}
-                          theme={"bubble"}
-                        />
+                        <ReactEllipsisText length={100}>
+                          <ReactQuill
+                            className="editor"
+                            value={post.description}
+                            readOnly={true}
+                            theme={'bubble'}
+                          />
+                        </ReactEllipsisText>
 
                         <Link to={`/posts/${post.id}`}>
                           <Button
-                            border={"1px solid #c1b49f"}
-                            background={"transparent"}
-                            margintop={".5rem"}
-                            padding={".9rem"}
-                            color={"#c1b49f"}
+                            border={'1px solid #c1b49f'}
+                            background={'transparent'}
+                            margintop={'.5rem'}
+                            padding={'.9rem'}
+                            color={'#c1b49f'}
                             className="readmore"
                           >
                             Read More...
@@ -115,7 +118,7 @@ const Home = () => {
                     <button onClick={handlePrevPage}>
                       <FontAwesomeIcon
                         color="gray"
-                        fontSize={"1rem"}
+                        fontSize={'1rem'}
                         icon={faChevronLeft}
                       />
                     </button>
@@ -125,7 +128,7 @@ const Home = () => {
                     <button onClick={handleNextPage}>
                       <FontAwesomeIcon
                         color="gray"
-                        fontSize={"1rem"}
+                        fontSize={'1rem'}
                         icon={faChevronRight}
                       />
                     </button>
