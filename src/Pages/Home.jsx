@@ -95,8 +95,9 @@ const Home = () => {
                             value={post.description}
                             readOnly={true}
                             theme={'bubble'}
-                            im
-                          />                  
+                          >
+                            <div className='quill-ellipsis'>{post.description}</div>
+                            </ReactQuill>       
 
                         <Link to={`/posts/${post.id}`}>
                           <Button
