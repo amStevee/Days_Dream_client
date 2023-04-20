@@ -97,7 +97,7 @@ const HomePage = styled.div`
         flex-direction: column;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.3);
-        color: lightgray;
+        color: #fff;
         position: absolute;
         bottom: 3px;
         left: 3px;
