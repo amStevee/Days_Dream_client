@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const HomePage = styled.div`
   margin: 1rem;
@@ -95,7 +95,7 @@ const HomePage = styled.div`
       figcaption {
         display: flex;
         flex-direction: column;
-        padding: 3px;
+        padding: 5px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.3);
         color: #fff;
@@ -104,7 +104,6 @@ const HomePage = styled.div`
         left: 0px;
       }
     }
-
 
     .pagination {
       margin: 10px;
