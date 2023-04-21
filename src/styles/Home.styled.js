@@ -57,8 +57,11 @@ const HomePage = styled.div`
 
     .editor {
       height: 80px;
+      width: inherit;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      text-overflow: ellipsis;
       border: none;
       padding: 0;
       margin: 0;
@@ -67,8 +70,11 @@ const HomePage = styled.div`
       p {
         margin: 0;
         padding: 0;
+        width: inherit;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
         overflow: hidden;
-        text-overflow: ellipsis;
       }
     }
 
