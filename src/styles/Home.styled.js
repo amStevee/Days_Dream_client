@@ -26,12 +26,16 @@ const HomePage = styled.div`
   .ql-editor {
     text-align: justify;
     padding: 0 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
     height: inherit;
     p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      text-overflow: ellipsis;
       text-align: justify;
     }
   }
